@@ -8,7 +8,7 @@ class Company(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    company_name = db.Column(db.String(50))
+    company_name = db.Column(db.String(50), nullable=False, unique=True)
     address = db.Column(db.String(100))
     address_2 = db.Column(db.String(100))
 

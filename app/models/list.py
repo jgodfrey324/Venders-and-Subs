@@ -8,7 +8,7 @@ class List(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    list = db.Column(db.Integer, nullable=False)
+    list = db.Column(db.Integer, nullable=False, unique=True)
 
     entries = db.relationship('Entry', back_populates='list')
 
