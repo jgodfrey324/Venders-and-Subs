@@ -1,7 +1,7 @@
-"""empty message
+"""initial migration
 
 Revision ID: 8c041714e0bc
-Revises: 
+Revises:
 Create Date: 2023-09-28 23:08:09.025927
 
 """
