@@ -12,6 +12,8 @@ class Company(db.Model):
     address = db.Column(db.String(100))
     address_2 = db.Column(db.String(100))
 
+    entries = db.relationship('Entry', back_populates='company')
+
     def to_dict(self):
         return {
             'id': self.id,
