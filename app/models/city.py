@@ -10,6 +10,8 @@ class City(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     city = db.Column(db.String(20))
 
+    entries = db.relationship('Entry', back_populates='city')
+
     def to_dict(self):
         return {
             'id': self.id,
