@@ -10,6 +10,8 @@ class List(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     list = db.Column(db.Integer, nullable=False)
 
+    entries = db.relationship('Entry', back_populates='list')
+
     def to_dict(self):
         return {
             'id': self.id,

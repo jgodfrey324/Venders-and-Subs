@@ -10,6 +10,8 @@ class Description(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     description = db.Column(db.String(255))
 
+    entries = db.relationship('Entry', back_populates='description', cascade="all, delete-orphan")
+
     def to_dict(self):
         return {
             'id': self.id,

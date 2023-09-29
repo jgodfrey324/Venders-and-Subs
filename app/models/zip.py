@@ -10,6 +10,8 @@ class Zip(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     zip_code = db.Column(db.String(5))
 
+    entries = db.relationship('Entry', back_populates='zip')
+
     def to_dict(self):
         return {
             'id': self.id,
