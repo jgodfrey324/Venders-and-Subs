@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
+import SearchPage from "./components/SearchPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +20,9 @@ function App() {
         <Switch>
           <Route path="/login" >
             <LoginFormPage />
+          </Route>
+          <Route exact path="/">
+            <SearchPage />
           </Route>
         </Switch>
       )}
