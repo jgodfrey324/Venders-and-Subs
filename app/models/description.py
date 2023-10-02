@@ -8,7 +8,7 @@ class Description(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    description = db.Column(db.String(255))
+    description = db.Column(db.String(255), nullable=False, unique=True)
 
     entries = db.relationship('Entry', back_populates='description')
 

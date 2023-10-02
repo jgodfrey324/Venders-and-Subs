@@ -8,7 +8,7 @@ class Zip(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    zip_code = db.Column(db.String(5))
+    zip_code = db.Column(db.String(5), nullable=False, unique=True)
 
     entries = db.relationship('Entry', back_populates='zip')
 

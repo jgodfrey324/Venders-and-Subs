@@ -8,7 +8,7 @@ class Category(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    category = db.Column(db.String(50), nullable=False)
+    category = db.Column(db.String(50), nullable=False, unique=True)
 
     entries = db.relationship('Entry', back_populates='category')
 
