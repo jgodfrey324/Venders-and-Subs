@@ -298,8 +298,145 @@ def seed_zips():
 
     avon = Zip(zip_code='81620')
 
+    pueblo_1 = Zip(zip_code='81003')
+    pueblo_2 = Zip(zip_code='81001')
 
-    list = [grand_junc_1, grand_junc_2, grand_junc_3, grand_junc_4, grand_junc_5, grand_junc_6, grand_junc_7, carbondale, loma, rifle_1, rifle_2, montrose_1, montrose_2, montrose_3, silt, nucla, union_grove, delta_1, delta_2, silverthorne, lincoln_1, lincoln_2, new_castle, craig, commerce_city_1, commerce_city_2, centennial_1, centennial_2, spokane, clifton, denver_1, denver_2, denver_3, denver_4, denver_5, denver_6, denver_7, denver_8, denver_9, denver_10, denver_11, denver_12, denver_13, denver_14, denver_15, hotchkiss, olathe, steamboat_springs_1, steamboat_springs_2, steamboat_springs_3, glenwood_springs_1, glenwood_springs_2, telluride, golden, thornton, panama_city, fruita, gladstone, vernal_1, vernal_2, gunnison, ridgeway, pueblo_west, windsor, kalama, empire, highlands_ranch_1, highlands_ranch_2, aurora_1, aurora_2, aurora_3, aurora_4, aurora_5, aurora_6, paonia, aspen, mesa, myron, buffdale, parachute, frisco, kremmling, breckenridge, palisade, parker_1, parker_2, colorado_springs_1, colorado_springs_2, colorado_springs_3, colorado_springs_4, colorado_springs_5, colorado_springs_6, colorado_springs_7, colorado_springs_8, hayden, basalt, idaho_springs, farmington, roosevelt, frederick_1, frederick_2, norwood, ft_lupton, fort_collins_1, fort_collins_2, fort_collins_3, fort_collins_4, st_augustine, eagle, loveland_1, loveland_2, loveland_3, englewood, durango_1, durango_2, durango_3, santa_ana, gypsum, longmont_1, longmont_2, phoenix_1, phoenix_2, brighton_1, brighton_2, dacono, ouray, los_angelas, wolcott, arvada_1, arvada_2, arvada_3, littleton_1, littleton_2, littleton_3, littleton_4, dove_creek, lindon, scottsbluff, oklahoma_city, wood_dale, columbus, herber_city, grand_island, austin, cumming, johnstown, san_diego_1, san_diego_2, stafford, bogart, de_beque, modesto, lehi, champlain, delray_beach, san_francisco, draper, wheat_ridge, yoder, cheyenne, caldwell, moroni, cave_creek, salt_lake_city_1, salt_lake_city_2, salt_lake_city_3, salt_lake_city_4, salt_lake_city_5, salt_lake_city_6, salt_lake_city_7, tarzana, denton, castle_rock_1, castle_rock_2, fargo, kansas_city, hildale, collbran, lakewood_1, lakewood_2, lakewood_3, avon]
+    garland = Zip(zip_code='75040')
+
+    greenwood_village = Zip(zip_code='80111')
+
+    albuquerque = Zip(zip_code='87113')
+
+    marietta = Zip(zip_code='30064')
+
+    morrison = Zip(zip_code='80465')
+
+    belgrade = Zip(zip_code='59714')
+
+    crawford = Zip(zip_code='81415')
+
+    troy = Zip(zip_code='48098')
+
+    sandy = Zip(zip_code='84070')
+
+    greeley = Zip(zip_code='80631')
+
+    broomfield_1 = Zip(zip_code='80020')
+    broomfield_2 = Zip(zip_code='80023')
+
+    carson = Zip(zip_code='90749')
+
+    houston = Zip(zip_code='77067')
+
+    cortez = Zip(zip_code='81321')
+
+    whitewater = Zip(zip_code='81527')
+
+    greenville = Zip(zip_code='29615')
+
+    mchenry = Zip(zip_code='60050')
+
+    madison = Zip(zip_code='68748')
+
+    flagstaff = Zip(zip_code='86004')
+
+    portsmouth = Zip(zip_code='03802')
+
+    midway = Zip(zip_code='84049')
+
+    hoboken = Zip(zip_code='07030')
+
+    cincinnati = Zip(zip_code='45249')
+
+    monument = Zip(zip_code='80132')
+
+    little_canada = Zip(zip_code='55117')
+
+    grand_rapids = Zip(zip_code='49548')
+
+    cedaredge = Zip(zip_code='81413')
+
+    glade_park = Zip(zip_code='81523')
+
+    granby = Zip(zip_code='80446')
+
+    gentry = Zip(zip_code='72734')
+
+    provo = Zip(zip_code='84601')
+
+    casa_grande = Zip(zip_code='85122')
+
+    west_jordan = Zip(zip_code='84081')
+
+    gaithersburg = Zip(zip_code='20898')
+
+    carrollton = Zip(zip_code='75006')
+
+    farmers_branch = Zip(zip_code='75234')
+
+    milwaukee = Zip(zip_code='53214')
+
+    centerville = Zip(zip_code='84014')
+
+    lake_elmo = Zip(zip_code='55042')
+
+    dallas = Zip(zip_code='75247')
+
+    muskego = Zip(zip_code='53150')
+
+    brighton_ut = Zip(zip_code='84121')
+
+    janesville = Zip(zip_code='53547')
+
+    cleveland = Zip(zip_code='44190')
+
+    venus = Zip(zip_code='76084')
+
+    cerritos = Zip(zip_code='90703')
+
+    e_setauket = Zip(zip_code='11733')
+
+    westfield = Zip(zip_code='01085')
+
+    downey = Zip(zip_code='90241')
+
+    medina = Zip(zip_code='14103')
+
+    san_antonio_1 = Zip(zip_code='78215')
+    san_antonio_2 = Zip(zip_code='78249')
+    san_antonio_3 = Zip(zip_code='78240')
+
+    west_warwick = Zip(zip_code='02893')
+
+    conway = Zip(zip_code='72032')
+
+    kent = Zip(zip_code='98032')
+
+    thousand_palms = Zip(zip_code='92276')
+
+    walton_hills = Zip(zip_code='44146')
+
+    londonerry = Zip(zip_code='03053')
+
+    crown_point = Zip(zip_code='46308')
+
+    tulsa = Zip(zip_code='74145')
+
+    snowmass = Zip(zip_code='81654')
+
+    rangley = Zip(zip_code='81648')
+
+    ripon = Zip(zip_code='54971')
+
+    trinidad = Zip(zip_code='81082')
+
+    phippsburg = Zip(zip_code='80469')
+
+    crested_butte = Zip(zip_code='81224')
+
+    leadville = Zip(zip_code='80461')
+
+    list = [grand_junc_1, grand_junc_2, grand_junc_3, grand_junc_4, grand_junc_5, grand_junc_6, grand_junc_7, carbondale, loma, rifle_1, rifle_2, montrose_1, montrose_2, montrose_3, silt, nucla, union_grove, delta_1, delta_2, silverthorne, lincoln_1, lincoln_2, new_castle, craig, commerce_city_1, commerce_city_2, centennial_1, centennial_2, spokane, clifton, denver_1, denver_2, denver_3, denver_4, denver_5, denver_6, denver_7, denver_8, denver_9, denver_10, denver_11, denver_12, denver_13, denver_14, denver_15, hotchkiss, olathe, steamboat_springs_1, steamboat_springs_2, steamboat_springs_3, glenwood_springs_1, glenwood_springs_2, telluride, golden, thornton, panama_city, fruita, gladstone, vernal_1, vernal_2, gunnison, ridgeway, pueblo_west, windsor, kalama, empire, highlands_ranch_1, highlands_ranch_2, aurora_1, aurora_2, aurora_3, aurora_4, aurora_5, aurora_6, paonia, aspen, mesa, myron, buffdale, parachute, frisco, kremmling, breckenridge, palisade, parker_1, parker_2, colorado_springs_1, colorado_springs_2, colorado_springs_3, colorado_springs_4, colorado_springs_5, colorado_springs_6, colorado_springs_7, colorado_springs_8, hayden, basalt, idaho_springs, farmington, roosevelt, frederick_1, frederick_2, norwood, ft_lupton, fort_collins_1, fort_collins_2, fort_collins_3, fort_collins_4, st_augustine, eagle, loveland_1, loveland_2, loveland_3, englewood, durango_1, durango_2, durango_3, santa_ana, gypsum, longmont_1, longmont_2, phoenix_1, phoenix_2, brighton_1, brighton_2, dacono, ouray, los_angelas, wolcott, arvada_1, arvada_2, arvada_3, littleton_1, littleton_2, littleton_3, littleton_4, dove_creek, lindon, scottsbluff, oklahoma_city, wood_dale, columbus, herber_city, grand_island, austin, cumming, johnstown, san_diego_1, san_diego_2, stafford, bogart, de_beque, modesto, lehi, champlain, delray_beach, san_francisco, draper, wheat_ridge, yoder, cheyenne, caldwell, moroni, cave_creek, salt_lake_city_1, salt_lake_city_2, salt_lake_city_3, salt_lake_city_4, salt_lake_city_5, salt_lake_city_6, salt_lake_city_7, tarzana, denton, castle_rock_1, castle_rock_2, fargo, kansas_city, hildale, collbran, lakewood_1, lakewood_2, lakewood_3, avon, pueblo_1, pueblo_2, garland, greenwood_village, albuquerque, marietta, morrison, belgrade, crawford, troy, sandy, greeley, broomfield_1, broomfield_2, carson, houston, cortez, whitewater, greenville, mchenry, madison, flagstaff, portsmouth, midway, hoboken, cincinnati, monument, little_canada, grand_rapids, cedaredge, glade_park, granby, gentry, provo, casa_grande, west_jordan, gaithersburg, carrollton, farmers_branch, milwaukee, centerville, lake_elmo, dallas, muskego, brighton_ut, janesville, cleveland, venus, cerritos, e_setauket, westfield, downey, medina, san_antonio_1, san_antonio_2, san_antonio_3, west_warwick, conway, kent, thousand_palms, walton_hills, londonerry, crown_point, tulsa, snowmass, rangley, ripon, trinidad, phippsburg, crested_butte, leadville]
 
     db.session.commit()
 
