@@ -2,6 +2,7 @@ from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .categories import seed_categories, undo_categories
 from .zips import seed_zips, undo_zips
+from .cities import seed_cities, undo_cities
 
 from app.models.db import db, environment, SCHEMA
 
@@ -23,6 +24,7 @@ def seed():
     # Add other seed functions here
     seed_categories()
     seed_zips()
+    seed_cities()
 
 
 # Creates the `flask seed undo` command
@@ -32,3 +34,4 @@ def undo():
     # Add other undo functions here
     undo_categories()
     undo_zips()
+    undo_cities()
