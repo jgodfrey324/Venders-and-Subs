@@ -36,7 +36,7 @@ def seed_states():
     rhode_island = State(state='Rhode Island')
     indiana = State(state='Indiana')
 
-    list = []
+    list = [colorado, washington, wisonsin, nebraska, florida, missouri, utah, new_mexico, california, arizona, oklahoma, illinois, georgia, texas, new_york, wyoming, idaho, north_dakota, montana, michigan, south_carolina, new_hampshire, new_jersey, ohio, minneasota, arkansas, maryland, massachusetts, rhode_island, indiana]
 
     [db.session.add(item) for item in list]
     db.session.commit()
