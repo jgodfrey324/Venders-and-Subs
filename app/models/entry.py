@@ -18,7 +18,6 @@ class Entry(db.Model):
     city_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('cities.id')))
     state_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('states.id')))
     zip_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('zips.id')))
-    description_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('descriptions.id')))
     list_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('lists.id')), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('categories.id')), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
@@ -26,7 +25,7 @@ class Entry(db.Model):
     user = db.relationship('User', back_populates='entries')
     category = db.relationship('Category', back_populates='entries')
     list = db.relationship('List', back_populates='entries')
-    description = db.relationship('Description', back_populates='entries')
+    sub_categories = db.relationship('SubCategory', secondary='sub_categories', back_populates='entries')
     zip = db.relationship('Zip', back_populates='entries')
     state = db.relationship('State', back_populates='entries')
     city = db.relationship('City', back_populates='entries')
@@ -55,7 +54,7 @@ class Entry(db.Model):
                 'email': self.email
             },
             'list': self.list.list,
-            'description': self.description.description,
+            'sub_categories': self.sub_categories,
             'location': {
                 'city': self.city.city,
                 'state': self.state.state,
