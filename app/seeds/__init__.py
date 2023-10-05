@@ -5,6 +5,7 @@ from .zips import seed_zips, undo_zips
 from .cities import seed_cities, undo_cities
 from .states import seed_states, undo_states
 from .lists import seed_lists, undo_lists
+from .sub_categories import seed_sub_categories, undo_sub_categories
 
 from app.models.db import db, environment, SCHEMA
 
@@ -29,6 +30,7 @@ def seed():
     seed_cities()
     seed_states()
     seed_lists()
+    seed_sub_categories()
 
 
 # Creates the `flask seed undo` command
@@ -41,3 +43,4 @@ def undo():
     undo_cities()
     undo_states()
     undo_lists()
+    undo_sub_categories()
