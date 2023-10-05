@@ -1,0 +1,126 @@
+from app.models import db, SubCategory, environment, SCHEMA
+from sqlalchemy.sql import text
+
+
+# Adds a demo user, you can add other users here if you want
+def seed_sub_categories():
+
+    engineering = SubCategory(sub_category='Engineering')
+    estimation = SubCategory(sub_category='Estimation')
+    maintenance = SubCategory(sub_category='Maintenance')
+    excavation = SubCategory(sub_category='Excavation')
+    consulting = SubCategory(sub_category='Consulting')
+    moving = SubCategory(sub_category='Moving')
+    trucking = SubCategory(sub_category='Trucking')
+    surveying = SubCategory(sub_category='Surveying')
+    rentals = SubCategory(sub_category='Rentals')
+    septic_services = SubCategory(sub_category='Septic Services')
+    garbage = SubCategory(sub_category='Garbage')
+    storage = SubCategory(sub_category='Storage')
+    design = SubCategory(sub_category='Design')
+    specs_reproduction = SubCategory(sub_category='Specs Reproduction')
+    concrete = SubCategory(sub_category='Concrete')
+    safety = SubCategory(sub_category='Safety')
+    cleaning = SubCategory(sub_category='Cleaning')
+    construction_management = SubCategory(sub_category='Construction Management')
+    scaffolding = SubCategory(sub_category='Scaffolding')
+    demolition = SubCategory(sub_category='Demolition')
+    propane = SubCategory(sub_category='Propane')
+    staffing = SubCategory(sub_category='Staffing')
+    traffic_control = SubCategory(sub_category='Traffic Control')
+    quality_control = SubCategory(sub_category='Quality Control')
+    fencing = SubCategory(sub_category='Fencing')
+    asphalt = SubCategory(sub_category='Asphalt')
+    utilities = SubCategory(sub_category='Utilities')
+    landscaping = SubCategory(sub_category='Landscaping')
+    erosion_control = SubCategory(sub_category='Erosion Control')
+    piers = SubCategory(sub_category='Piers')
+    piles = SubCategory(sub_category='Piles')
+    drilling = SubCategory(sub_category='Drilling')
+    water_treatment_systems = SubCategory(sub_category='Water Treatment Systems')
+    rock = SubCategory(sub_category='Rock')
+    gravel = SubCategory(sub_category='Gravel')
+    earthwork = SubCategory(sub_category='Earthwork')
+    irrigation = SubCategory(sub_category='Irrigation')
+    stormwater = SubCategory(sub_category='Stormwater')
+    caisson = SubCategory(sub_category='Caisson')
+    trench = SubCategory(sub_category='Trench')
+    billing = SubCategory(sub_category='Billing')
+    steel = SubCategory(sub_category='Steel')
+    stabilization = SubCategory(sub_category='Stabilization')
+    compaction = SubCategory(sub_category='Compaction')
+    masonry = SubCategory(sub_category='Masonry')
+    stone = SubCategory(sub_category='Stone')
+    countertops = SubCategory(sub_category='Countertops')
+    showers = SubCategory(sub_category='Showers')
+    marble = SubCategory(sub_category='Marble')
+    granite = SubCategory(sub_category='Granite')
+    quartz = SubCategory(sub_category='Quartz')
+    brick = SubCategory(sub_category='Brick')
+    stucco = SubCategory(sub_category='Stucco')
+    walls = SubCategory(sub_category='Walls')
+    roofing = SubCategory(sub_category='Roofing')
+    interior_plaster = SubCategory(sub_category='Interior Plaster')
+    welding = SubCategory(sub_category='Welding')
+    fabrication = SubCategory(sub_category='Fabrication')
+    foundations = SubCategory(sub_category='Foundations')
+    metal = SubCategory(sub_category='Metal')
+    ladders = SubCategory(sub_category='Ladders')
+    lumber = SubCategory(sub_category='Lumber')
+    framing = SubCategory(sub_category='Framing')
+    cabinetry = SubCategory(sub_category='Cabinetry')
+    carpentry = SubCategory(sub_category='Carpentry')
+    millwork = SubCategory(sub_category='Millwork')
+    siding = SubCategory(sub_category='Siding')
+    trim = SubCategory(sub_category='Trim')
+    trusses = SubCategory(sub_category='Trusses')
+    flooring = SubCategory(sub_category='Flooring')
+    doors = SubCategory(sub_category='Doors')
+    appliances = SubCategory(sub_category='Appliances')
+    chinking = SubCategory(sub_category='Chinking')
+    plastics = SubCategory(sub_category='Plastics')
+    composites = SubCategory(sub_category='Composites')
+    remodeling = SubCategory(sub_category='Remodeling')
+    stairs = SubCategory(sub_category='Stairs')
+    windows = SubCategory(sub_category='Windows')
+    insulating = SubCategory(sub_category='Insulating')
+    proofing = SubCategory(sub_category='Proofing')
+    fascial = SubCategory(sub_category='Fascial')
+    soffit = SubCategory(sub_category='Soffit')
+    parrapet = SubCategory(sub_category='Parrapet')
+    gutters = SubCategory(sub_category='Gutters')
+    glass = SubCategory(sub_category='Glass')
+    hardware = SubCategory(sub_category='Hardware')
+    painting = SubCategory(sub_category='Painting')
+    ceilings = SubCategory(sub_category='Ceilings')
+    tile = SubCategory(sub_category='Tile')
+    specialties = SubCategory(sub_category='Specialties')
+    equipment = SubCategory(sub_category='Equipment')
+    elevators = SubCategory(sub_category='Elevators')
+    fire_protection = SubCategory(sub_category='Fire Protection')
+    hvac = SubCategory(sub_category='HVAC')
+    plumbing = SubCategory(sub_category='Plumbing')
+    security = SubCategory(sub_category='Security')
+    electrical = SubCategory(sub_category='Electrical')
+    communications = SubCategory(sub_category='Communications')
+
+
+    list = [communications, electrical, security, plumbing, hvac, fire_protection, elevators, equipment, specialties, tile, ceilings, painting, hardware, glass, gutters, parrapet, soffit, fascial, proofing, insulating, windows, stairs, remodeling, composites, plastics, chinking, appliances, doors, flooring, trusses, trim, siding, millwork, carpentry, cabinetry, framing, lumber, ladders, metal, foundations, fabrication, welding, interior_plaster, roofing, walls, stucco, brick, quartz, granite, marble, showers, countertops, stone, masonry, compaction, stabilization, steel, billing, trench, caisson, stormwater, irrigation, earthwork, gravel, rock, water_treatment_systems, drilling, piles, piers, erosion_control, landscaping, utilities, asphalt, fencing, quality_control, traffic_control, staffing, propane, demolition, scaffolding, construction_management, cleaning, safety, concrete, specs_reproduction, design, storage, garbage, septic_services, rentals, surveying, trucking, moving, consulting, excavation, maintenance, estimation, engineering]
+
+    [db.session.add(item) for item in list]
+    db.session.commit()
+
+
+# Uses a raw SQL query to TRUNCATE or DELETE the users table. SQLAlchemy doesn't
+# have a built in function to do this. With postgres in production TRUNCATE
+# removes all the data from the table, and RESET IDENTITY resets the auto
+# incrementing primary key, CASCADE deletes any dependent entities.  With
+# sqlite3 in development you need to instead use DELETE to remove all data and
+# it will reset the primary keys for you as well.
+def undo_sub_categories():
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.sub_categories RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute(text("DELETE FROM sub_categories"))
+
+    db.session.commit()
