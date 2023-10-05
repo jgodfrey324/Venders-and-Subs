@@ -1,4 +1,5 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .entry_sub_category import entry_sub_category
 
 
 class Entry(db.Model):
@@ -25,7 +26,7 @@ class Entry(db.Model):
     user = db.relationship('User', back_populates='entries')
     category = db.relationship('Category', back_populates='entries')
     list = db.relationship('List', back_populates='entries')
-    sub_categories = db.relationship('SubCategory', secondary='sub_categories', back_populates='entries')
+    sub_categories = db.relationship('SubCategory', secondary=entry_sub_category, back_populates='entries')
     zip = db.relationship('Zip', back_populates='entries')
     state = db.relationship('State', back_populates='entries')
     city = db.relationship('City', back_populates='entries')
