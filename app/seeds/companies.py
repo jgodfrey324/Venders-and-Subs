@@ -5,6 +5,7 @@ from sqlalchemy.sql import text
 # Adds a demo user, you can add other users here if you want
 def seed_companies():
 
+    # GENERAL CONDITIONS
     aamold_engineering = Company(company_name='Aamold Engineering', address='579 Elkhart Lane', address_2='')
     action_design_construction = Company(company_name='Aamold Engineering', address='579 Elkhart Lane', address_2='')
     all_pro_moving = Company(company_name='All Pro Moving', address='559 Sandhill Lane #202', address_2='')
@@ -67,9 +68,31 @@ def seed_companies():
     powers_ent = Company(company_name='Powers Enterprises, Inc.', address='1790 W. Victory Way', address_2='')
     rifle_works = Company(company_name='Rifle Works', address='124 E. 4th Street', address_2='')
     rw_trucking = Company(company_name='RW Trucking, LLC', address='599 McMullin Drive', address_2='')
+    san_juan_surveying = Company(company_name='San Juan Surveying', address='160 Society Drive', address_2='')
+    sensera_sys = Company(company_name='Sensera Systems', address='1212 Arapahoe Street', address_2='')
+    skch_enterprise = Company(company_name='SKCH Enterprises, Inc.', address='P.O Box 938', address_2='')
+    sgm_engineering = Company(company_name='SGM Engineering, Consulting & Surveying', address='118 W. 6th Street, Suite 200', address_2='')
+    solar_valley_enterprise = Company(company_name='Solar Valley Enterprises, LLC', address='2618 West 13th', address_2='')
+    stanton_engineering = Company(company_name='Stanton Engineering Solutions', address='P.O. Box 2510', address_2='')
+    sterling_crane = Company(company_name='Sterling Crane', address='9351 Grant Street, Suite 250', address_2='')
+    superior_traffic = Company(company_name='Superior Traffic Control', address='516 Fruitvale Court', address_2='')
+    tanglewood = Company(company_name='Tanglewood', address='2355 County Road 226', address_2='')
+    terracon = Company(company_name='Terracon', address='2308 Interstate Ave.', address_2='')
+    tforce_engergy = Company(company_name='Tforce Energy Services', address='767 Valley Court', address_2='')
+    total_personnel = Company(company_name='Total Personnel Management', address='2829 North Ave., Suite 202', address_2='')
+    united_rentals = Company(company_name='United Rentals', address='2316 Interstate Ave.', address_2='')
+    united_site_services = Company(company_name='United Site Services', address='5 Powerline Road', address_2='')
+    united_site_colorado = Company(company_name='United Site Services of Colorado, Inc.', address='P.O. Box 219', address_2='')
+    usc_labor_sol = Company(company_name='USC Labor Solutions, Inc.', address='1402 South Mail Street', address_2='')
+    xtreme_crane = Company(company_name='Xtreme Crane', address='2701 Caribbean Drive', address_2='')
+    yeh_associates = Company(company_name='Yeh & Associates, Inc.', address='588 North Commercial Drive', address_2='')
+    your_way_safety = Company(company_name='Your Way Safety & Sign Supply', address='749 Winters Ave.', address_2='')
+    zimmermann_construction = Company(company_name='Zimmermann Construction Staffing', address='701 Jenks Ave.', address_2='')
+
+    # SITE CONSTRUCTION
 
 
-    list = [aamold_engineering, action_design_construction, all_pro_moving, areas_best_maintenance, arches_engineering, aspen_earthmoving, avant_environmental_spec, bailey_house_movers, bighorn_consulting, black_diamond, bookcliff_survey_serv, bridger_crane_rigging, buckhorn_geotech, commercial_refuse, enterprises_traffic_control, ccs_crane, cert_business_serv, clymer_trucking, cosco_industries, crawford_trucking, creative_lifting, croisant_cleaning, cr_surveying, ctl_thompson, custom_industries, delmont_consultants, design_perspectives, design_source_west, dh_surveys, down_valley_septic, eco_contracting, elwood_staffing, essman_trucking, force_deconstruction, four_points, geotech_engineering, goodwin_services, grand_river_environ, grand_valley_repro, ground_engineering, hawk_contracting, hepworth_geotech, hi_desert, high_desert, huddleston_engineering, hy_safe_tech, industrial_sys, jk_trucking, key_people, kn_window, mary_vees_cleaning, mcgrath, midwest_scafford, mmd_engineering, mwe_services, neils_landscape, phase_environ_consult, pioneer_propane, polaris_survey, powers_ent, rifle_works, rw_trucking]
+    list = [aamold_engineering, action_design_construction, all_pro_moving, areas_best_maintenance, arches_engineering, aspen_earthmoving, avant_environmental_spec, bailey_house_movers, bighorn_consulting, black_diamond, bookcliff_survey_serv, bridger_crane_rigging, buckhorn_geotech, commercial_refuse, enterprises_traffic_control, ccs_crane, cert_business_serv, clymer_trucking, cosco_industries, crawford_trucking, creative_lifting, croisant_cleaning, cr_surveying, ctl_thompson, custom_industries, delmont_consultants, design_perspectives, design_source_west, dh_surveys, down_valley_septic, eco_contracting, elwood_staffing, essman_trucking, force_deconstruction, four_points, geotech_engineering, goodwin_services, grand_river_environ, grand_valley_repro, ground_engineering, hawk_contracting, hepworth_geotech, hi_desert, high_desert, huddleston_engineering, hy_safe_tech, industrial_sys, jk_trucking, key_people, kn_window, mary_vees_cleaning, mcgrath, midwest_scafford, mmd_engineering, mwe_services, neils_landscape, phase_environ_consult, pioneer_propane, polaris_survey, powers_ent, rifle_works, rw_trucking, san_juan_surveying, sensera_sys, skch_enterprise, sgm_engineering, solar_valley_enterprise, stanton_engineering, sterling_crane, superior_traffic, tanglewood, terracon, tforce_engergy, total_personnel, united_rentals, united_site_services, united_site_colorado, usc_labor_sol, xtreme_crane, yeh_associates, your_way_safety, zimmermann_construction]
 
     db.session.commit()
 
