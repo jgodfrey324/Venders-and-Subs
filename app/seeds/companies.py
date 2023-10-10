@@ -99,6 +99,17 @@ def seed_companies():
     armor_proseal = Company(company_name='Armor Proseal', address='3518 Congress Street', address_2='')
     arnies_excavating = Company(company_name='Arnie\'s Excavating', address='407 N. 7th Street', address_2='')
     artificial_turf = Company(company_name='Artificial Turf Supply', address='', address_2='')
+    atlas_construction = Company(company_name='Atlas Construction', address='587 Health Drive', address_2='')
+    avalon_landscaping = Company(company_name='Avalon Landscaping & Maintenance', address='312 East Highland Drive', address_2='')
+    asphalt_specialists = Company(company_name='Asphalt Specialists Supply, Inc.', address='2462 Industrial Blvd.', address_2='')
+    bolinger_queen = Company(company_name='Bolinger & Queen', address='32874 J Rd.', address_2='')
+    ben_dowd_excav = Company(company_name='Ben Dowd Excavating', address='550 32 Road', address_2='')
+    bookcliff_gardens = Company(company_name='Bookcliff Gardens', address='755 26 Road', address_2='')
+    busy_beaver_landscaping = Company(company_name='Busy Beaver Landscaping', address='530 34 Road', address_2='')
+    canyon_excavation = Company(company_name='Canyon Excavating', address='545 Canyon Creek Drive', address_2='')
+    choate_excavating = Company(company_name='Choate Excavating', address='101 Fisher Canyon Drive', address_2='')
+    clarke_co = Company(company_name='Clarke & Co.', address='3017 Highway 50', address_2='')
+    co_asphalt_sealcoating = Company(company_name='Colorado Asphalt Sealcoating & Landscaping', address='', address_2='')
 
 
     list = [aamold_engineering, action_design_construction, all_pro_moving, areas_best_maintenance, arches_engineering, aspen_earthmoving, avant_environmental_spec, bailey_house_movers, bighorn_consulting, black_diamond, bookcliff_survey_serv, bridger_crane_rigging, buckhorn_geotech, commercial_refuse, enterprises_traffic_control, ccs_crane, cert_business_serv, clymer_trucking, cosco_industries, crawford_trucking, creative_lifting, croisant_cleaning, cr_surveying, ctl_thompson, custom_industries, delmont_consultants, design_perspectives, design_source_west, dh_surveys, down_valley_septic, eco_contracting, elwood_staffing, essman_trucking, force_deconstruction, four_points, geotech_engineering, goodwin_services, grand_river_environ, grand_valley_repro, ground_engineering, hawk_contracting, hepworth_geotech, hi_desert, high_desert, huddleston_engineering, hy_safe_tech, industrial_sys, jk_trucking, key_people, kn_window, mary_vees_cleaning, mcgrath, midwest_scafford, mmd_engineering, mwe_services, neils_landscape, phase_environ_consult, pioneer_propane, polaris_survey, powers_ent, rifle_works, rw_trucking, san_juan_surveying, sensera_sys, skch_enterprise, sgm_engineering, solar_valley_enterprise, stanton_engineering, sterling_crane, superior_traffic, tanglewood, terracon, tforce_engergy, total_personnel, united_rentals, united_site_services, united_site_colorado, usc_labor_sol, xtreme_crane, yeh_associates, your_way_safety, zimmermann_construction, accurate_construction, adf_west, allred_paving, all_service_septic, alvin_landis]
