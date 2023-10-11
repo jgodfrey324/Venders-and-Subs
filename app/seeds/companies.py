@@ -173,10 +173,28 @@ def seed_companies():
     misty_mountain_sprink = Company(company_name='Misty Mountain Sprinkler Systems (WOE)', address='1808 Story Lane', address_2='')
     mountain_valley_contract = Company(company_name='Mountain Valley Contracting', address='605 -28 1/4 Road, Suite B', address_2='')
     munro_supply = Company(company_name='Munro Supply, Inc.', address='P.O. Box 519', address_2='')
-    munro_supply = Company(company_name='Munro Supply, Inc.', address='P.O. Box 519', address_2='')
+    neils_lunceford = Company(company_name='Neils Lunceford, Inc.', address='P.O. Box 2130', address_2='740 Blue River...?')
+    northwest_ready_mix = Company(company_name='Northwest Ready Mix, Inc.', address='2930 E. Hwy 40', address_2='')
+    oec_construction = Company(company_name='OEC Construction', address='1100 Fruit Park Trail', address_2='')
+    old_castle = Company(company_name='Old Castle', address='', address_2='')
+    olsson_associates = Company(company_name='Olsson Associates', address='760 Horizon Drive, Suite 102', address_2='')
+    on_grade_excavation = Company(company_name='On Grade Excavation', address='2811 Patterson Road', address_2='')
+    palisade_constructors = Company(company_name='Palisade Constructors, Inc. (DO NOT USE)', address='695 36 Road', address_2='')
+    paragon_excavating = Company(company_name='Paragon Excavating Services', address='P.O. Box 1432', address_2='')
+    parkerson_construction = Company(company_name='Parkerson Construction', address='710 S. 15th Street', address_2='')
+    patriot_highway_markings = Company(company_name='Patriot Highway Markings', address='P.O. Box 1628', address_2='')
+    penley_concrete = Company(company_name='Penley Concrete & Caisson Drilling', address='P.O. Box 759', address_2='')
+    professional_pipe_concrete = Company(company_name='Professional Pipe & Concrete', address='', address_2='')
+    quality_underground = Company(company_name='Quality Underground', address='3785 Interpark Drive', address_2='')
+    rainbow_valley_asphalt = Company(company_name='Rainbow Valley Asphalt', address='1920 M. Road', address_2='')
+    rainmaker = Company(company_name='Rainmaker, Inc.', address='17656 Highway 550', address_2='')
+    rdc_inc = Company(company_name='RDC, Inc.', address='40320 CR 80', address_2='')
+    rex_phelps = Company(company_name='Rex Phelps for Landscaping & Irrigation', address='372 29 5/8 Road', address_2='')
+    rocky_mountain_civil = Company(company_name='Rocky Mountain Civil, Inc.', address='2875 C 1/2 Road #6', address_2='')
+    rocky_mountain_rebar = Company(company_name='Rocky Mountain Rebar, H & H Bolt', address='686 Industrial Blvd.', address_2='')
 
 
-    list_2 = [accurate_construction, adf_west, allred_paving, all_service_septic, alvin_landis, a_maes_ing, armor_proseal, arnies_excavating, artificial_turf, atlas_construction, avalon_landscaping, asphalt_specialists, bolinger_queen, ben_dowd_excav, bookcliff_gardens, busy_beaver_landscaping, canyon_excavation, choate_excavating, clarke_co, co_asphalt_sealcoating, co_asphalt_main, co_grouting, co_piling, coloscapes_concrete, co_west_contracting, crazy_final_touch, cw_construction, dale_quality_land, deep_creek, dependable_land, dj_landscaping, downing_diversified, down_to_earth, dynamic_hardscape, eagles_nest_contract, elam_construction, elite_field_services, empire_demo, england_fence, environ_connection, excel_environ, farmsworth_construction, filter_tech, flattop_steel, four_evergreen_land, four_seasons_main, frontier_paving, g_g_paving, grade_plus, grand_junc_ready_mix, great_divide_earth, gross_excavating, gunnison_construc, gunnison_gravel, hawk_excavation, hi_river_construc, hill_builders, intermountain_helical, intermountain_landscape, j_c_excavating, jmi_excavating, kb_construction, k_d_construction, kr_swerdfeger, kumar_associates, landscape_tech, m_m_excavation, m_a_concrete, maple_leaf_landscape, martin_construction, maximum_services, mays_concrete, mays_construction, meeker_sand_gravel, metro_fence_company, metzger_brothers_concrete, misty_mountain_sprink, mountain_valley_contract, munro_supply]
+    list_2 = [accurate_construction, adf_west, allred_paving, all_service_septic, alvin_landis, a_maes_ing, armor_proseal, arnies_excavating, artificial_turf, atlas_construction, avalon_landscaping, asphalt_specialists, bolinger_queen, ben_dowd_excav, bookcliff_gardens, busy_beaver_landscaping, canyon_excavation, choate_excavating, clarke_co, co_asphalt_sealcoating, co_asphalt_main, co_grouting, co_piling, coloscapes_concrete, co_west_contracting, crazy_final_touch, cw_construction, dale_quality_land, deep_creek, dependable_land, dj_landscaping, downing_diversified, down_to_earth, dynamic_hardscape, eagles_nest_contract, elam_construction, elite_field_services, empire_demo, england_fence, environ_connection, excel_environ, farmsworth_construction, filter_tech, flattop_steel, four_evergreen_land, four_seasons_main, frontier_paving, g_g_paving, grade_plus, grand_junc_ready_mix, great_divide_earth, gross_excavating, gunnison_construc, gunnison_gravel, hawk_excavation, hi_river_construc, hill_builders, intermountain_helical, intermountain_landscape, j_c_excavating, jmi_excavating, kb_construction, k_d_construction, kr_swerdfeger, kumar_associates, landscape_tech, m_m_excavation, m_a_concrete, maple_leaf_landscape, martin_construction, maximum_services, mays_concrete, mays_construction, meeker_sand_gravel, metro_fence_company, metzger_brothers_concrete, misty_mountain_sprink, mountain_valley_contract, munro_supply, neils_lunceford, northwest_ready_mix, oec_construction, old_castle, olsson_associates, on_grade_excavation, palisade_constructors, paragon_excavating, parkerson_construction, patriot_highway_markings, penley_concrete, professional_pipe_concrete, quality_underground, rainbow_valley_asphalt, rainmaker, rdc_inc, rex_phelps, rocky_mountain_civil, rocky_mountain_rebar]
 
     db.session.commit()
 
