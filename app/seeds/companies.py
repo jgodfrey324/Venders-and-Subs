@@ -236,10 +236,28 @@ def seed_companies():
 
 
     # CONCRETE
-    # rdc_inc = Company(company_name='RDC, Inc.', address='40320 CR 80', address_2='')
+    a_s_sandblasting = Company(company_name='A & S Sandblasting & Coating, LLC', address='2488 Commerce Blvd', address_2='')
+    accurate_concrete = Company(company_name='Accurate Concrete Cutting, Inc.', address='1133 23 1/2 Road', address_2='')
+    ach_foam_tech = Company(company_name='ACH Foam Technologies, LLC', address='5250 N. Sherman Street', address_2='')
+    adcock_concrete = Company(company_name='Adcock Concrete', address='2458 Industrial Blvd., Suite 1', address_2='')
+    advanced_concrete_co = Company(company_name='Advanced Concrete of Colorado', address='170 T2 Trail', address_2='')
+    aleman_concrete = Company(company_name='Aleman Concrete', address='1061 W. Beaver Creek Blvd.', address_2='')
+    architectural_concrete = Company(company_name='Architectural Concrete Finishes', address='P.O. Box 1342', address_2='')
+    arco_concrete = Company(company_name='ARCO Concrete, Inc.', address='12672 WCR 6 1/4', address_2='')
+    bear_concrete = Company(company_name='Bear Concrete', address='2243 Wakefield Drive', address_2='')
+    brundage_bone_concrete = Company(company_name='Brundage-Bone Concrete Pumping', address='', address_2='')
+    beyond_your_ordinary = Company(company_name='Beyond Your Ordinary Recreation', address='405 Golfway West Drive, Suite 302', address_2='')
+    burner_construction = Company(company_name='Burner Construction, LLC', address='118 North Willow Street', address_2='')
+    calco_concrete = Company(company_name='Calco Concrete Pumping, Inc.', address='P.O. Box 3775', address_2='')
+    carver_brothers = Company(company_name='Carver Brothers, Inc.', address='P.O. Box 175', address_2='')
+    co_concrete = Company(company_name='Colorado Concrete Accessories', address='2474 Industrial Blvd.', address_2='')
+    co_precast = Company(company_name='Colorado Precast Concrete', address='1820 E. Hwy 402', address_2='')
+    concrete_equip_supply = Company(company_name='Concrete Equipment & Supply', address='145 W. Main', address_2='')
+    concrete_floor_sys = Company(company_name='Concrete Floor Systems, LLC', address='2051 W. College Ave.', address_2='')
+    concrete_sys = Company(company_name='Concrete Systems, Inc.', address='881 Bidwell Ave.', address_2='')
 
 
-    list_3 = []
+    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys]
 
 
     db.session.commit()
