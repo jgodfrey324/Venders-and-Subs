@@ -255,9 +255,31 @@ def seed_companies():
     concrete_equip_supply = Company(company_name='Concrete Equipment & Supply', address='145 W. Main', address_2='')
     concrete_floor_sys = Company(company_name='Concrete Floor Systems, LLC', address='2051 W. College Ave.', address_2='')
     concrete_sys = Company(company_name='Concrete Systems, Inc.', address='881 Bidwell Ave.', address_2='')
+    contracting_specialties = Company(company_name='Contracting Specialties', address='93 Silver Trails Rd.', address_2='')
+    copeland_concrete = Company(company_name='Copeland Concrete, Inc.', address='28803 Hwy. 6', address_2='')
+    crm_concrete = Company(company_name='CRM Concrete, Inc.', address='922 - 20 Road', address_2='')
+    cutting_edge_concrete = Company(company_name='Cutting Edge Concrete Sawing', address='P.O. Box 40341', address_2='')
+    dalco = Company(company_name='Dalco', address='3730 Salem Street', address_2='')
+    eagle_valley_found = Company(company_name='Eagle Valley Foundations', address='189 Spring Creek Road', address_2='')
+    ecs_corp = Company(company_name='ECS Corporation', address='2678 Hwy. 50', address_2='')
+    fitzgerald_formliners = Company(company_name='Fitzgerald Formliners', address='1500 E. Chestnut Ave', address_2='')
+    fruita_grand_junc_body = Company(company_name='Fruita Grand Junction Body & Paint, Inc.', address='', address_2='')
+    gary_rinderle_construction = Company(company_name='Gary Rinderle Construction, Inc.', address='P.O. Box 1380', address_2='')
+    gonzales_construction = Company(company_name='Gonzales Concrete Construction', address='960 - 20 1/2 Road', address_2='')
+    hawxby_concrete = Company(company_name='Hawxby Concrete', address='103 Brown Road', address_2='')
+    hcc_flooring = Company(company_name='HCC Flooring Solutions', address='715 N. Ventura Street', address_2='')
+    high_con_inc = Company(company_name='High-Con, Inc.', address='100 Elk Run Drive', address_2='')
+    highline_concrete_pumping = Company(company_name='Highline Concrete Pumping, LLC', address='P.O. Box 1022', address_2='')
+    hooper_sons_concrete = Company(company_name='Hooper & Sons Concrete, Inc.', address='634 E. 250 N.', address_2='')
+    k_g_rebar = Company(company_name='K & G Rebar, LLC', address='4491 - 5950 Road', address_2='')
+    k_k_concrete = Company(company_name='K & K Concrete, Inc.', address='P.O. Box 578', address_2='')
+    lawson_construction = Company(company_name='Lawson Construction', address='P.O. Box 1318', address_2='20 South Sun')
+    lm_scofield_comp = Company(company_name='L.M Scofield Company', address='1710 East Mountain Sky Ave.', address_2='')
+    lms_drilling = Company(company_name='LMS Drilling, Inc.', address='10420 E. 107th Place', address_2='')
+    mm_concrete_construction = Company(company_name='M & M Concrete Construction, Inc.', address='384 - 27 1/2 Road', address_2='')
 
 
-    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys]
+    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys, contracting_specialties, copeland_concrete, crm_concrete, cutting_edge_concrete, dalco, eagle_valley_found, ecs_corp, fitzgerald_formliners, fruita_grand_junc_body, gary_rinderle_construction, gonzales_construction, hawxby_concrete, hcc_flooring, high_con_inc, highline_concrete_pumping, hooper_sons_concrete, k_g_rebar, k_k_concrete, lawson_construction, lm_scofield_comp, lms_drilling, mm_concrete_construction]
 
 
     db.session.commit()
