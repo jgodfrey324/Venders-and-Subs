@@ -255,6 +255,16 @@ def seed_companies():
     concrete_equip_supply = Company(company_name='Concrete Equipment & Supply', address='145 W. Main', address_2='')
     concrete_floor_sys = Company(company_name='Concrete Floor Systems, LLC', address='2051 W. College Ave.', address_2='')
     concrete_sys = Company(company_name='Concrete Systems, Inc.', address='881 Bidwell Ave.', address_2='')
+    contracting_specialties = Company(company_name='Contracting Specialties', address='93 Silver Trails Rd.', address_2='')
+    copeland_concrete = Company(company_name='Copeland Concrete, Inc.', address='28803 Hwy. 6', address_2='')
+    crm_concrete = Company(company_name='CRM Concrete, Inc.', address='922 - 20 Road', address_2='')
+    cutting_edge_concrete = Company(company_name='Cutting Edge Concrete Sawing', address='P.O. Box 40341', address_2='')
+    dalco = Company(company_name='Dalco', address='3730 Salem Street', address_2='')
+    eagle_valley_found = Company(company_name='Eagle Valley Foundations', address='189 Spring Creek Road', address_2='')
+    ecs_corp = Company(company_name='ECS Corporation', address='2678 Hwy. 50', address_2='')
+    fitzgerald_formliners = Company(company_name='Fitzgerald Formliners', address='1500 E. Chestnut Ave', address_2='')
+    fruita_grand_junc_body = Company(company_name='Fruita Grand Junction Body & Paint, Inc.', address='', address_2='')
+    gary_rinderle_construction = Company(company_name='Gary Rinderle Construction, Inc.', address='P.O. Box 1380', address_2='')
 
 
     list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys]
