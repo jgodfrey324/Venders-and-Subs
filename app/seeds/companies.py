@@ -265,6 +265,11 @@ def seed_companies():
     fitzgerald_formliners = Company(company_name='Fitzgerald Formliners', address='1500 E. Chestnut Ave', address_2='')
     fruita_grand_junc_body = Company(company_name='Fruita Grand Junction Body & Paint, Inc.', address='', address_2='')
     gary_rinderle_construction = Company(company_name='Gary Rinderle Construction, Inc.', address='P.O. Box 1380', address_2='')
+    gonzales_construction = Company(company_name='Gonzales Concrete Construction', address='960 - 20 1/2 Road', address_2='')
+    hawxby_concrete = Company(company_name='Hawxby Concrete', address='103 Brown Road', address_2='')
+    hcc_flooring = Company(company_name='HCC Flooring Solutions', address='715 N. Ventura Street', address_2='')
+    high_con_inc = Company(company_name='High-Con, Inc.', address='100 Elk Run Drive', address_2='')
+    highline_concrete_pumping = Company(company_name='Highline Concrete Pumping, LLC', address='P.O. Box 1022', address_2='')
 
 
     list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys]
