@@ -279,7 +279,7 @@ def seed_companies():
     mm_concrete_construction = Company(company_name='M & M Concrete Construction, Inc.', address='384 - 27 1/2 Road', address_2='')
 
 
-    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys]
+    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys, contracting_specialties, copeland_concrete, crm_concrete, cutting_edge_concrete, dalco, eagle_valley_found, ecs_corp, fitzgerald_formliners, fruita_grand_junc_body, gary_rinderle_construction, gonzales_construction, hawxby_concrete, hcc_flooring, high_con_inc, highline_concrete_pumping, hooper_sons_concrete, k_g_rebar, k_k_concrete, lawson_construction, lm_scofield_comp, lms_drilling, mm_concrete_construction]
 
 
     db.session.commit()
