@@ -305,6 +305,19 @@ def seed_companies():
     list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys, contracting_specialties, copeland_concrete, crm_concrete, cutting_edge_concrete, dalco, eagle_valley_found, ecs_corp, fitzgerald_formliners, fruita_grand_junc_body, gary_rinderle_construction, gonzales_construction, hawxby_concrete, hcc_flooring, high_con_inc, highline_concrete_pumping, hooper_sons_concrete, k_g_rebar, k_k_concrete, lawson_construction, lm_scofield_comp, lms_drilling, mm_concrete_construction, mountain_concrete, new_millennium_concrete, nimthor_inc, octaform_systems, preferred_denver, r_r_concrete_pumping, rcd_construction, reliance_precast, r_c_concrete, rms_concrete, rodco_concrete, s2m_construction, speedys_concrete, star_precast_concrete, stearns_construction, straight_line_construction, summit_concrete, surevoid_products, t_c_concrete, tdm_concrete, tennant_company, williams_industrial_coat, zaabadick_construction]
 
 
+    # MASONRY
+    allens_masonry = Company(company_name='Allen\'s Masonry Company', address='P.O. Box 69', address_2='')
+    alpine_meadow_mason = Company(company_name='Alpine Meadow Masonry, Inc.', address='P.O. Box 197', address_2='')
+    ammex_masonry = Company(company_name='Ammex Masonry, Inc.', address='P.O. Box 1272', address_2='')
+    asco_masonry = Company(company_name='ASCO Masonry & Construction, LLC', address='2140 Broadway, #101', address_2='')
+    berich_masonry = Company(company_name='Berich Masonry Mountain Division', address='P.O. Box 3207', address_2='')
+    bg_harrison_mason = Company(company_name='B.G. Harrison Masonry, Inc.', address='389 Roberts Court', address_2='')
+    brickstone_inc = Company(company_name='Brickstone, Inc.', address='17921 West 77th Drive', address_2='')
+
+
+    list_4 = [allens_masonry, alpine_meadow_mason, ammex_masonry, asco_masonry, berich_masonry, bg_harrison_mason, brickstone_inc]
+
+
     db.session.commit()
 
 
