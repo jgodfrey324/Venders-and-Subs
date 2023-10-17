@@ -325,9 +325,23 @@ def seed_companies():
     le_dangler_masonry = Company(company_name='LE Dangler Masonry', address='3147 B Road', address_2='')
     lone_rock_mason = Company(company_name='Lone Rock Masonry, LLC', address='3952 Heartherglenn Lane', address_2='')
     markely_construction = Company(company_name='Markely Construction Company, LLC', address='6456 S. Quebec Street, Suite 25', address_2='')
+    moore_masonry = Company(company_name='Moore Masonry, LLC', address='1680 M Road', address_2='')
+    mountain_view_surfaces = Company(company_name='Mountain View Surfaces', address='255 E. 2nd Street', address_2='P.O. Box 957...?')
+    peterson_masonry = Company(company_name='Peterson Masonry', address='P.O. Box 489', address_2='')
+    procoat_roof_depot = Company(company_name='ProCoat / Roof Depot', address='4343 Holly Street', address_2='')
+    ray_ball_masonry = Company(company_name='Ray Ball Masonry, LLC', address='2272 Paintbrush Court', address_2='')
+    rivera_masonry = Company(company_name='Rivera Masonry', address='2371 Rana Road', address_2='')
+    rni_masonry = Company(company_name='RNI Masonry', address='P.O. Box 653', address_2='')
+    robert_stone = Company(company_name='Robert Stone, Inc.', address='2317 Interstate Ave.', address_2='')
+    robinson_brick = Company(company_name='Robinson Brick - General Shale', address='2122 Hwy. 6 & 50', address_2='')
+    santos_stone_mason = Company(company_name='Santos Stone Masonry', address='2388 State Highway 135, Lot #12', address_2='')
+    scarbrough_construction = Company(company_name='Scarbrough Construction', address='2508 Van Buren Ave.', address_2='')
+    specialty_wall_systems = Company(company_name='Specialty Wall Systems', address='', address_2='')
+    stonebilt = Company(company_name='StoneBilt', address='2311 River Road', address_2='')
+    trig_masonry = Company(company_name='Trig Masonry / Durango Plastering', address='P.O. Box 578', address_2='')
 
 
-    list_4 = [allens_masonry, alpine_meadow_mason, ammex_masonry, asco_masonry, berich_masonry, bg_harrison_mason, brickstone_inc, c_m_enterprises, central_masonry, collins_corp, grasso_masonry, hankins_stone, heritage_masonry, ims_masonry, infintity_surfaces, knifer_masonry, le_dangler_masonry, lone_rock_mason, markely_construction]
+    list_4 = [allens_masonry, alpine_meadow_mason, ammex_masonry, asco_masonry, berich_masonry, bg_harrison_mason, brickstone_inc, c_m_enterprises, central_masonry, collins_corp, grasso_masonry, hankins_stone, heritage_masonry, ims_masonry, infintity_surfaces, knifer_masonry, le_dangler_masonry, lone_rock_mason, markely_construction, moore_masonry, mountain_view_surfaces, peterson_masonry, procoat_roof_depot, ray_ball_masonry, rivera_masonry, rni_masonry, robert_stone, robinson_brick, santos_stone_mason, scarbrough_construction, specialty_wall_systems, stonebilt, trig_masonry]
 
 
     db.session.commit()
