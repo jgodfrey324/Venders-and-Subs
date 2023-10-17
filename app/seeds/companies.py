@@ -175,7 +175,7 @@ def seed_companies():
     munro_supply = Company(company_name='Munro Supply, Inc.', address='P.O. Box 519', address_2='')
     neils_lunceford = Company(company_name='Neils Lunceford, Inc.', address='P.O. Box 2130', address_2='740 Blue River...?')
     northwest_ready_mix = Company(company_name='Northwest Ready Mix, Inc.', address='2930 E. Hwy 40', address_2='')
-    oec_construction = Company(company_name='OEC Construction', address='1100 Fruit Park Trail', address_2='')
+    oec_construction = Company(company_name='OEC Construction (OUT OF BUSINESS?)', address='1100 Fruit Park Trail', address_2='')
     old_castle = Company(company_name='Old Castle', address='', address_2='')
     olsson_associates = Company(company_name='Olsson Associates', address='760 Horizon Drive, Suite 102', address_2='')
     on_grade_excavation = Company(company_name='On Grade Excavation', address='2811 Patterson Road', address_2='')
@@ -277,9 +277,32 @@ def seed_companies():
     lm_scofield_comp = Company(company_name='L.M Scofield Company', address='1710 East Mountain Sky Ave.', address_2='')
     lms_drilling = Company(company_name='LMS Drilling, Inc.', address='10420 E. 107th Place', address_2='')
     mm_concrete_construction = Company(company_name='M & M Concrete Construction, Inc.', address='384 - 27 1/2 Road', address_2='')
+    mountain_concrete = Company(company_name='Mountain Concrete', address='615 Mountain View Road', address_2='')
+    new_millennium_concrete = Company(company_name='New Millennium Concrete', address='237 Arroya Drive', address_2='')
+    nimthor_inc = Company(company_name='Nimthor, Inc.', address='686 Industrial Boulevard', address_2='')
+    octaform_systems = Company(company_name='Octaform Systems, Inc.', address='520 - 885 Dunsmuir Street', address_2='')
+    preferred_denver = Company(company_name='Preferred Denver, LLC', address='7245 Gilpin Way, Suite 230', address_2='')
+    r_r_concrete_pumping = Company(company_name='R & R Concrete Pumping, LLC', address='170 TX Trail', address_2='')
+    rcd_construction = Company(company_name='R.C.D. Construction', address='P.O. Box 322', address_2='')
+    reliance_precast = Company(company_name='Reliance Precast, LLC', address='4558 Grand View Blvd.', address_2='')
+    r_c_concrete = Company(company_name='R & C Concrete, LLC', address='358 - 5th Street', address_2='')
+    rms_concrete = Company(company_name='RMS Concrete', address='P.O. Box 670', address_2='6702 Hwy. 82')
+    rodco_concrete = Company(company_name='Rodco Concrete, LLC', address='P.O. Box 304', address_2='')
+    s2m_construction = Company(company_name='S2M Construction, Inc.', address='P.O. Box 1578', address_2='282 Center Drive')
+    speedys_concrete = Company(company_name='Speedy\'s Concrete', address='135 Fedel Ct.', address_2='')
+    star_precast_concrete = Company(company_name='Star Precast Concrete', address='1500 County Road 259', address_2='135 River Fro...?')
+    stearns_construction = Company(company_name='Stearns Construction, Inc.', address='2746 Pebble Acres Drive', address_2='')
+    straight_line_construction = Company(company_name='Straight Line Construction Co.', address='94 N. Mission Drive', address_2='')
+    summit_concrete = Company(company_name='Summit Concrete', address='', address_2='')
+    surevoid_products = Company(company_name='SureVoid Products, Inc.', address='1895 W. Dartmouth Ave.', address_2='')
+    t_c_concrete = Company(company_name='T & C Concrete', address='P.O. Box 126', address_2='')
+    tdm_concrete = Company(company_name='TDM Concrete', address='1277 Satitarius Street', address_2='')
+    tennant_company = Company(company_name='Tennant Company - Architectural Coatings', address='1311 Beverly Green Drive', address_2='')
+    williams_industrial_coat = Company(company_name='Williams Industrial Coatings, LLC', address='524 Garnet Drive', address_2='')
+    zaabadick_construction = Company(company_name='Zaabadick Construction', address='710 Sierra Vista Way', address_2='')
 
 
-    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys, contracting_specialties, copeland_concrete, crm_concrete, cutting_edge_concrete, dalco, eagle_valley_found, ecs_corp, fitzgerald_formliners, fruita_grand_junc_body, gary_rinderle_construction, gonzales_construction, hawxby_concrete, hcc_flooring, high_con_inc, highline_concrete_pumping, hooper_sons_concrete, k_g_rebar, k_k_concrete, lawson_construction, lm_scofield_comp, lms_drilling, mm_concrete_construction]
+    list_3 = [a_s_sandblasting, accurate_concrete, ach_foam_tech, adcock_concrete, advanced_concrete_co, aleman_concrete, architectural_concrete, arco_concrete, bear_concrete, brundage_bone_concrete, beyond_your_ordinary, burner_construction, calco_concrete, carver_brothers, co_concrete, co_precast, concrete_equip_supply, concrete_floor_sys, concrete_sys, contracting_specialties, copeland_concrete, crm_concrete, cutting_edge_concrete, dalco, eagle_valley_found, ecs_corp, fitzgerald_formliners, fruita_grand_junc_body, gary_rinderle_construction, gonzales_construction, hawxby_concrete, hcc_flooring, high_con_inc, highline_concrete_pumping, hooper_sons_concrete, k_g_rebar, k_k_concrete, lawson_construction, lm_scofield_comp, lms_drilling, mm_concrete_construction, mountain_concrete, new_millennium_concrete, nimthor_inc, octaform_systems, preferred_denver, r_r_concrete_pumping, rcd_construction, reliance_precast, r_c_concrete, rms_concrete, rodco_concrete, s2m_construction, speedys_concrete, star_precast_concrete, stearns_construction, straight_line_construction, summit_concrete, surevoid_products, t_c_concrete, tdm_concrete, tennant_company, williams_industrial_coat, zaabadick_construction]
 
 
     db.session.commit()
