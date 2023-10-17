@@ -313,9 +313,21 @@ def seed_companies():
     berich_masonry = Company(company_name='Berich Masonry Mountain Division', address='P.O. Box 3207', address_2='')
     bg_harrison_mason = Company(company_name='B.G. Harrison Masonry, Inc.', address='389 Roberts Court', address_2='')
     brickstone_inc = Company(company_name='Brickstone, Inc.', address='17921 West 77th Drive', address_2='')
+    c_m_enterprises = Company(company_name='C & M Enterprises', address='64275 Oakland Road', address_2='')
+    central_masonry = Company(company_name='Central Masonry Corp.', address='8159 Brandon Drive', address_2='')
+    collins_corp = Company(company_name='Collins Corporation', address='1850 Launa Drive, #7', address_2='')
+    grasso_masonry = Company(company_name='Grasso Masonry, Inc.', address='P.O. Box 2643', address_2='721 Arrowest...?')
+    hankins_stone = Company(company_name='Hankins Stone Company', address='P.O. Box 164', address_2='')
+    heritage_masonry = Company(company_name='Heritage Masonry, LLC', address='P.O. Box 996', address_2='')
+    ims_masonry = Company(company_name='IMS Masonry, Inc.', address='335 South 1250 West', address_2='')
+    infintity_surfaces = Company(company_name='Infinity Surfaces, Inc.', address='587 1/2 N. Westgate Drive', address_2='')
+    knifer_masonry = Company(company_name='Knifer Masonry', address='130 Columbia Way', address_2='')
+    le_dangler_masonry = Company(company_name='LE Dangler Masonry', address='3147 B Road', address_2='')
+    lone_rock_mason = Company(company_name='Lone Rock Masonry, LLC', address='3952 Heartherglenn Lane', address_2='')
+    markely_construction = Company(company_name='Markely Construction Company, LLC', address='6456 S. Quebec Street, Suite 25', address_2='')
 
 
-    list_4 = [allens_masonry, alpine_meadow_mason, ammex_masonry, asco_masonry, berich_masonry, bg_harrison_mason, brickstone_inc]
+    list_4 = [allens_masonry, alpine_meadow_mason, ammex_masonry, asco_masonry, berich_masonry, bg_harrison_mason, brickstone_inc, c_m_enterprises, central_masonry, collins_corp, grasso_masonry, hankins_stone, heritage_masonry, ims_masonry, infintity_surfaces, knifer_masonry, le_dangler_masonry, lone_rock_mason, markely_construction]
 
 
     db.session.commit()
