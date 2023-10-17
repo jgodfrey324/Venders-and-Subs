@@ -344,6 +344,13 @@ def seed_companies():
     list_4 = [allens_masonry, alpine_meadow_mason, ammex_masonry, asco_masonry, berich_masonry, bg_harrison_mason, brickstone_inc, c_m_enterprises, central_masonry, collins_corp, grasso_masonry, hankins_stone, heritage_masonry, ims_masonry, infintity_surfaces, knifer_masonry, le_dangler_masonry, lone_rock_mason, markely_construction, moore_masonry, mountain_view_surfaces, peterson_masonry, procoat_roof_depot, ray_ball_masonry, rivera_masonry, rni_masonry, robert_stone, robinson_brick, santos_stone_mason, scarbrough_construction, specialty_wall_systems, stonebilt, trig_masonry]
 
 
+    # STEEL
+    abc_supply = Company(company_name='ABC Supply Co., Inc.', address='1110 Kimball Ave.', address_2='')
+    alliance_steel = Company(company_name='Alliance Steel Building Systems', address='3333 South Council Road', address_2='')
+
+
+    list_5 = [abc_supply, alliance_steel]
+
     db.session.commit()
 
 
