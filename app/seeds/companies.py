@@ -347,9 +347,39 @@ def seed_companies():
     # STEEL
     abc_supply = Company(company_name='ABC Supply Co., Inc.', address='1110 Kimball Ave.', address_2='')
     alliance_steel = Company(company_name='Alliance Steel Building Systems', address='3333 South Council Road', address_2='')
+    all_metals_welding = Company(company_name='All Metals Welding', address='1707 1-70 Business Loop', address_2='')
+    all_steel = Company(company_name='All Steel, Inc.', address='8498 - 61 1/2 Road', address_2='')
+    american_standard_steel = Company(company_name='American Standard Steel Building Systems', address='P.O. Box 110602', address_2='')
+    artec = Company(company_name='Artec', address='700 Creel Drive', address_2='')
+    b_c_steel_corp = Company(company_name='B & C Steel Corp.', address='P.O. Box 1099', address_2='')
+    behlen_building = Company(company_name='Behlen Building Systems', address='4025 E. 23rd Street', address_2='')
+    bishop_welding_fabrication = Company(company_name='Bishop Welding & Fabrication', address='3139 A 1/2 Road', address_2='')
+    blaze_constructors = Company(company_name='Blaze Constructors', address='', address_2='')
+    braemar_building = Company(company_name='Braemar Building Systems', address='925 West Kenyon Ave., Suite 6', address_2='')
+    butler_manufacturing = Company(company_name='Butler Manufacturing', address='1235 S. 4370 E.', address_2='')
+    ceco_building_systems = Company(company_name='Ceco Building Systems', address='5942 Nicklaus Drive', address_2='')
+    chief_buildings = Company(company_name='Chief Buildings', address='3942 W. Old Highway 30', address_2='')
+    c_l_welding = Company(company_name='C & L Welding', address='20726 Fairview Road', address_2='')
+    cladding_component_sol = Company(company_name='Cladding & Component Solutions, Inc.', address='2705 Northgate Court', address_2='')
+    clemmer_welding = Company(company_name='Clemmer Welding, LLC', address='714 Arrowest Court', address_2='')
+    collins_metal_design = Company(company_name='Collins Metal Design, LLC', address='', address_2='')
+    contact_welding_services = Company(company_name='Contact Welding Services, Inc.', address='2907 Hill Ave.', address_2='')
+    custom_structural_steel = Company(company_name='Custom Structural Steel, Inc.', address='P.O. Box 1017', address_2='4941 B Count...?')
+    division_iv = Company(company_name='Division IV, Inc.', address='2925 58th Avenue', address_2='')
+    dmd_fab = Company(company_name='DMD Fab, LLC', address='4255 South Buckley Road, Suite 212', address_2='')
+    dons_welding = Company(company_name='Don\'s Welding, LLC', address='869 - 18 1/2 Road', address_2='')
+    doughty_steel_machine = Company(company_name='Doughty Steel & Machine', address='P.O. Box 690', address_2='')
+    duane_phipps = Company(company_name='Duane Phipps', address='491 - 28 1/2 Road', address_2='')
+    dw_metal_works = Company(company_name='DW Metal Works', address='725 Scarlet Drive', address_2='')
+    dynamic_metal_works = Company(company_name='Dynamic Metal Works', address='7620 County Road 1', address_2='')
+    empire_steel_buildings = Company(company_name='Empire Steel Buildings', address='5230 Carroll Canyon Road, #300', address_2='')
+    fast_e_nal = Company(company_name='Fast-e-nal Erectors', address='', address_2='')
+    foundation_repair_western_co = Company(company_name='Foundation Repair of Western Colorado, LLC', address='121 Chipeta Ave.', address_2='')
+    freedom_steel_buildings = Company(company_name='Freedom Steel Buildings', address='', address_2='')
+    frontier_steel_building = Company(company_name='Frontier Steel Building Corp.', address='10940 S. Parker Road', address_2='')
 
 
-    list_5 = [abc_supply, alliance_steel]
+    list_5 = [abc_supply, alliance_steel, all_metals_welding, all_steel, american_standard_steel, artec, b_c_steel_corp, behlen_building, bishop_welding_fabrication, blaze_constructors, braemar_building, butler_manufacturing, ceco_building_systems, chief_buildings, c_l_welding, cladding_component_sol, clemmer_welding, collins_metal_design, contact_welding_services, custom_structural_steel, division_iv, dmd_fab, dons_welding, doughty_steel_machine, duane_phipps, dw_metal_works, dynamic_metal_works, empire_steel_buildings, fast_e_nal, foundation_repair_western_co, freedom_steel_buildings, frontier_steel_building]
 
     db.session.commit()
 
