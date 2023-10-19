@@ -428,6 +428,18 @@ def seed_companies():
 
     list_5 = [abc_supply, alliance_steel, all_metals_welding, all_steel, american_standard_steel, artec, b_c_steel_corp, behlen_building, bishop_welding_fabrication, blaze_constructors, braemar_building, butler_manufacturing, ceco_building_systems, chief_buildings, c_l_welding, cladding_component_sol, clemmer_welding, collins_metal_design, contact_welding_services, custom_structural_steel, division_iv, dmd_fab, dons_welding, doughty_steel_machine, duane_phipps, dw_metal_works, dynamic_metal_works, empire_steel_buildings, fast_e_nal, foundation_repair_western_co, freedom_steel_buildings, frontier_steel_building, garfield_steel_machine, greylen_steel_buildings, industrial_systems, insulated_panel_systems, iron_man_mize, iron_monkey_metal, keystone_custom_builders, kingspan, j_m_steel_sol, leachs_industrial_service, mach2_construction, mackey_metal_roofing, metal_building_services, mcs_corp, mbmi_metal_building, metallic_building_comp, midwest_steel_works, murr_welding_design, myers_comp_arch_metals, nall_company, pacific_coast_steel, pioneer_steel, pitkin_iron_corp, portland_systems, pro_steel, puma_steel, r_m_steel_comp, redd_iron, ricks_welding, rigid_global_building, rocky_mountain_steel, rocky_mountain_steel_structures, sanpete_steel, s_s_welding_fabrication, schaenburg_flexadux, stryan_structural_systems, sunward_consolidated_group, thunder_mountain_testing, timberwolf_welding, todds_welding, tpi_industrial, united_metal_fabrication, varco_pruden_buildings, vulcraft_sales, western_slope_iron, wilkins_masonry_works, zimkor]
 
+
+    # WOOD & PLASTICS
+    eighty_four_lumber = Company(company_name='84 Lumber Co.', address='779 - 22 Road', address_2='')
+    ac_construction = Company(company_name='AC Construction', address='', address_2='')
+    a_golden_touch = Company(company_name='A Golden Touch', address='2891 Texas Ave.', address_2='')
+    alpine_chinking = Company(company_name='Alpine Chinking', address='13374 6650 Road', address_2='')
+    alpine_lumber = Company(company_name='Alpine Lumber Co.', address='61408 Jay Jay Road', address_2='')
+    ark_woodworks = Company(company_name='Ark Woodworks', address='878 Baseline Place, Unit A', address_2='')
+
+
+    list_6 = [eighty_four_lumber, ac_construction, a_golden_touch, alpine_chinking, alpine_lumber, ark_woodworks]
+
     db.session.commit()
 
 
