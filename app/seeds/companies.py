@@ -468,7 +468,7 @@ def seed_companies():
     marquez_constrution = Company(company_name='Marquez Construction, LLC', address='P.O. Box 3087', address_2='')
     millenium_west_builders = Company(company_name='Millenium West Builders', address='1667 Laveta Street', address_2='')
     osburn_cabinets_design = Company(company_name='Osburn Cabinets & Design', address='682 West Gunnison Ave.', address_2='')
-    overholt_truss = Company(company_name='Overholt Truss Co.', address='1796 Hwy. 50', address_2='')
+    overholt_truss = Company(company_name='Overholt Truss Co.', address='1796 Hwy. 50', address_2='739 Rood Ave.')
     peak_1_stairs_woodworking = Company(company_name='Peak 1 Stairs & Woodworking, LLC', address='5243 South Rio Grande Street, Suite A', address_2='')
     prime_win_corp = Company(company_name='Prime Win Corporation', address='P.O. Box 365', address_2='')
     pro_build = Company(company_name='Pro-Build', address='2773 Riverside Parkway', address_2='16 W. Main')
@@ -492,6 +492,53 @@ def seed_companies():
 
 
     list_6 = [eighty_four_lumber, ac_construction, a_golden_touch, alpine_chinking, alpine_lumber, ark_woodworks, best_tops, bettos_construction, boise_cascade, break_of_dawn_construc, cart_works_company, cedar_creek_builders, colbran_supply, concepts_milwork, construction_crew, cornerstone_construction, czzh_enterprises, dallas_creek_construction, danish_craftsmen, d_z_construction, dca_discount_cabinets, delta_cabinet_comp, donnie_suaza_construc, dubworks, fort_collins_truss, frontier_log_homes, hadden_enterprises, haldeman_homme, hellers_interiors, j_k10_cabinetry, ked_development, kinney_construction, kitchen_bath_designs, knights_construction, m_m_countertops, marquez_constrution, millenium_west_builders, osburn_cabinets_design, overholt_truss, peak_1_stairs_woodworking, prime_win_corp, pro_build, reeder_construction, rpa_chinking, schnell_builders, sma_framing, strength_construction, timberline_fasteners, tims_custom_countertops, the_kitchen_center, tj_builders, the_spacecreators, trumble_builders, truss_co, valley_lumber_co, van_dyk_construction, western_cabinets, woodworkers_of_gj]
+
+
+    # THERMAL & MOISTURE PROTECTION
+    aaa_waterproofing = Company(company_name='AAA Waterproofing, Inc.', address='1779 Airport Road', address_2='')
+    accurate_insulation = Company(company_name='Accurate Insulation, Inc.', address='685 W. Gunnison #106', address_2='113 Rose Lane, Unit F')
+    adobe_creek_environmental = Company(company_name='Adobe Creek Environmental Services', address='1987 N. Road', address_2='')
+    allied_building_products = Company(company_name='Allied Building Products', address='2495 West Mesa Court', address_2='')
+    allied_insulation = Company(company_name='Allied Insulation', address='6395 Brighton Blvd.', address_2='')
+    alpine_mechanical_insul = Company(company_name='Alpine Mechanical Insulators, Inc.', address='331 S. 13th Street', address_2='')
+    american_roof_co = Company(company_name='American Roof Co.', address='656 Larkspur Lane', address_2='')
+    bauen = Company(company_name='Bauen', address='801 E. 52nd Ave.', address_2='')
+    bay_insulation = Company(company_name='Bay Insulation Co.', address='3700 Havana Street, Unit 312', address_2='')
+    black_canyon_roofing = Company(company_name='Black Canyon Roofing', address='P.O. Box 335', address_2='')
+    central_states_roofing = Company(company_name='Central States Roofing', address='5925 Omaha Blvd.', address_2='')
+    co_roofing_waterproofing = Company(company_name='Colorado Roofing & Waterproofing', address='2474 I Road', address_2='')
+    co_west_damproofing = Company(company_name='Colorado West Damproofing', address='2654 Sacoma Court', address_2='')
+    d7_roofing = Company(company_name='D-7 Roofing, LLC', address='1001 S. Galapago Street', address_2='')
+    d_d_roofing = Company(company_name='D & D Roofing', address='6270 East 50th Ave.', address_2='')
+    douglass_colony = Company(company_name='Douglass Colony', address='191 Soccer Field Road', address_2='')
+    emc_roofing = Company(company_name='EMC Roofing', address='1513 M 1/8 Road', address_2='')
+    faith_construction = Company(company_name='Faith Construction (DO NOT USE)', address='504 - 28 1/2 Road', address_2='')
+    front_range_roofing = Company(company_name='Front Range Roofing Systems, LLC', address='222 13th Ave.', address_2='')
+    gzo_sheet_metal_roofing = Company(company_name='GZO Sheet Metal & Roofing', address='P.O. Box 1475', address_2='')
+    hurst_roofing_construction = Company(company_name='Hurst Roofing & Construction Co.', address='703 Nugget Drive', address_2='')
+    innovative_roofing_sol = Company(company_name='Innovative Roofing Solutions', address='', address_2='')
+    j_d_seamless_gutters = Company(company_name='J & D Seamless Gutters, LLC', address='', address_2='')
+    jblanco_enterprises = Company(company_name='JBlanco Enterprises', address='1 Park Street', address_2='')
+    kc_roofing_construction = Company(company_name='KC Roofing & Construction, LLC', address='2810 1/2 Bookcliff Ave.', address_2='')
+    kruger_roofing = Company(company_name='Kruger Roofing, LLC', address='914 South Ave.', address_2='')
+    line_x_gj = Company(company_name='Line-X of Grand Junction', address='549 Bogart Lane', address_2='')
+    mato = Company(company_name='MATO', address='4850 Lima Street', address_2='')
+    mgm_waterproofing_restoration = Company(company_name='M.G.M. Waterproofing & Restoration, Inc.', address='800 E. 64th Ave., Unit 1', address_2='')
+    millennium_waterproofing = Company(company_name='Millennium Waterproofing, Inc.', address='P.O. Box 1499', address_2='')
+    odyssey_construction = Company(company_name='Odyssey Construction, Inc.', address='520 Hwy. 92', address_2='')
+    outwest_drywall = Company(company_name='Outwest Drywall', address='2148 Highway 6 & 50', address_2='')
+    pacific_sheet_metal = Company(company_name='Pacific Sheet Metal', address='P.O. Box 70', address_2='0794 Industry...?')
+    pint_roofing_construction = Company(company_name='Pint Roofing & Construction (OUT OF BUSINESS)', address='573 S. Commercial Drive, Suite 2', address_2='')
+    pioneer_materials_west_slope = Company(company_name='Pioneer Materials West Slope', address='3156 Perkins Drive', address_2='P.O. Box 280')
+    ppp_roofing = Company(company_name='PPP Roofing, Inc.', address='2648 McCormick Ave.', address_2='')
+    purgatory_contracting = Company(company_name='Purgatory Contracting', address='P.O. Box 1294', address_2='')
+    red_eagle_construction = Company(company_name='Red Eagle Construction', address='P.O. Box 398', address_2='')
+    reliant_roofing = Company(company_name='Reliant Roofing, Inc.', address='554 25 Road, Suite 5', address_2='')
+    rocky_mountain_companies = Company(company_name='Rocky Mountain Companies, LLC', address='2944 I-70 Business Loop, #210', address_2='')
+
+
+    list_7 = [aaa_waterproofing, accurate_insulation, adobe_creek_environmental, allied_building_products, allied_insulation, alpine_mechanical_insul, american_roof_co, bauen, bay_insulation, black_canyon_roofing, central_states_roofing, co_roofing_waterproofing, co_west_damproofing, d7_roofing, d_d_roofing, douglass_colony, emc_roofing, faith_construction, front_range_roofing, gzo_sheet_metal_roofing, hurst_roofing_construction, innovative_roofing_sol, j_d_seamless_gutters, jblanco_enterprises, kc_roofing_construction, kruger_roofing, line_x_gj, mato, mgm_waterproofing_restoration, millennium_waterproofing, odyssey_construction, outwest_drywall, pacific_sheet_metal, pint_roofing_construction, pioneer_materials_west_slope, ppp_roofing, purgatory_contracting, red_eagle_construction, reliant_roofing, rocky_mountain_companies]
+
 
     db.session.commit()
 
