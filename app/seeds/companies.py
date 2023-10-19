@@ -408,9 +408,25 @@ def seed_companies():
     ricks_welding = Company(company_name='Rick\'s Welding', address='2124 Hwy. 6 & 50', address_2='')
     rigid_global_building = Company(company_name='Rigid Global Buildings', address='10 Inverness Drive East, Suite 220', address_2='')
     rocky_mountain_steel = Company(company_name='Rocky Mountain Steel, Inc.', address='P.O. Box 486', address_2='')
+    rocky_mountain_steel_structures = Company(company_name='Rocky Mountain Steel Structures', address='353 East Vista Drive', address_2='')
+    sanpete_steel = Company(company_name='Sanpete Steel, LLC', address='685 East Main', address_2='')
+    s_s_welding_fabrication = Company(company_name='S & S Welding and Fabrication, Inc.', address='3138 F 1/2 Road', address_2='')
+    schaenburg_flexadux = Company(company_name='Schaenburg Flexadux', address='2233 Sanford Drive', address_2='')
+    stryan_structural_systems = Company(company_name='Stryan Structural Systems', address='200 S. Wilcox St.', address_2='PMB #306')
+    sunward_consolidated_group = Company(company_name='Sunward Consolidated Group', address='6800 E. Hampden Ave.', address_2='')
+    thunder_mountain_testing = Company(company_name='Thunder Mountain Testing', address='2970 N. Ronlin Ave.', address_2='')
+    timberwolf_welding = Company(company_name='Timberwolf Welding, Inc.', address='3938 Highway 348', address_2='')
+    todds_welding = Company(company_name='Todd\'s Welding, Inc.', address='1560 River Road', address_2='')
+    tpi_industrial = Company(company_name='TPI Industrial, Inc.', address='', address_2='')
+    united_metal_fabrication = Company(company_name='United Metal Fabrication Corp.', address='4224 North Nevada Ave., Suite 110', address_2='')
+    varco_pruden_buildings = Company(company_name='Varco Pruden Buildings', address='27570 Silver Spur Street', address_2='')
+    vulcraft_sales = Company(company_name='Vulcraft Sales', address='2140 S. Ivanhoe Street, Suite G9', address_2='')
+    western_slope_iron = Company(company_name='Western Slope Iron & Supply, Inc.', address='670 23 Road', address_2='')
+    wilkins_masonry_works = Company(company_name='Wilkins\' Masonry Works, Inc.', address='240 Elm Ave.', address_2='')
+    zimkor = Company(company_name='Zimkor, LLC', address='P.O. Box 1006', address_2='')
 
 
-    list_5 = [abc_supply, alliance_steel, all_metals_welding, all_steel, american_standard_steel, artec, b_c_steel_corp, behlen_building, bishop_welding_fabrication, blaze_constructors, braemar_building, butler_manufacturing, ceco_building_systems, chief_buildings, c_l_welding, cladding_component_sol, clemmer_welding, collins_metal_design, contact_welding_services, custom_structural_steel, division_iv, dmd_fab, dons_welding, doughty_steel_machine, duane_phipps, dw_metal_works, dynamic_metal_works, empire_steel_buildings, fast_e_nal, foundation_repair_western_co, freedom_steel_buildings, frontier_steel_building, garfield_steel_machine, greylen_steel_buildings, industrial_systems, insulated_panel_systems, iron_man_mize, iron_monkey_metal, keystone_custom_builders, kingspan, j_m_steel_sol, leachs_industrial_service, mach2_construction, mackey_metal_roofing, metal_building_services, mcs_corp, mbmi_metal_building, metallic_building_comp, midwest_steel_works, murr_welding_design, myers_comp_arch_metals, nall_company, pacific_coast_steel, pioneer_steel, pitkin_iron_corp, portland_systems, pro_steel, puma_steel, r_m_steel_comp, redd_iron, ricks_welding, rigid_global_building, rocky_mountain_steel]
+    list_5 = [abc_supply, alliance_steel, all_metals_welding, all_steel, american_standard_steel, artec, b_c_steel_corp, behlen_building, bishop_welding_fabrication, blaze_constructors, braemar_building, butler_manufacturing, ceco_building_systems, chief_buildings, c_l_welding, cladding_component_sol, clemmer_welding, collins_metal_design, contact_welding_services, custom_structural_steel, division_iv, dmd_fab, dons_welding, doughty_steel_machine, duane_phipps, dw_metal_works, dynamic_metal_works, empire_steel_buildings, fast_e_nal, foundation_repair_western_co, freedom_steel_buildings, frontier_steel_building, garfield_steel_machine, greylen_steel_buildings, industrial_systems, insulated_panel_systems, iron_man_mize, iron_monkey_metal, keystone_custom_builders, kingspan, j_m_steel_sol, leachs_industrial_service, mach2_construction, mackey_metal_roofing, metal_building_services, mcs_corp, mbmi_metal_building, metallic_building_comp, midwest_steel_works, murr_welding_design, myers_comp_arch_metals, nall_company, pacific_coast_steel, pioneer_steel, pitkin_iron_corp, portland_systems, pro_steel, puma_steel, r_m_steel_comp, redd_iron, ricks_welding, rigid_global_building, rocky_mountain_steel, rocky_mountain_steel_structures, sanpete_steel, s_s_welding_fabrication, schaenburg_flexadux, stryan_structural_systems, sunward_consolidated_group, thunder_mountain_testing, timberwolf_welding, todds_welding, tpi_industrial, united_metal_fabrication, varco_pruden_buildings, vulcraft_sales, western_slope_iron, wilkins_masonry_works, zimkor]
 
     db.session.commit()
 
