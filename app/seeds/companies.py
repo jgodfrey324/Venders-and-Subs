@@ -463,10 +463,35 @@ def seed_companies():
     ked_development = Company(company_name='KED Development / Kedrowski Builders', address='P.O. Box 532', address_2='')
     kinney_construction = Company(company_name='Kinney Construction', address='1776 K 6/10 Road', address_2='')
     kitchen_bath_designs = Company(company_name='Kitchen & Bath Designs', address='1601 Oxbow Drive, Unit 360B', address_2='')
+    knights_construction = Company(company_name='Knights Construction', address='2312 Orchard Ave.', address_2='')
+    m_m_countertops = Company(company_name='M & M Countertops', address='11943 County Rd #320', address_2='')
+    marquez_constrution = Company(company_name='Marquez Construction, LLC', address='P.O. Box 3087', address_2='')
+    millenium_west_builders = Company(company_name='Millenium West Builders', address='1667 Laveta Street', address_2='')
+    osburn_cabinets_design = Company(company_name='Osburn Cabinets & Design', address='682 West Gunnison Ave.', address_2='')
+    overholt_truss = Company(company_name='Overholt Truss Co.', address='1796 Hwy. 50', address_2='')
+    peak_1_stairs_woodworking = Company(company_name='Peak 1 Stairs & Woodworking, LLC', address='5243 South Rio Grande Street, Suite A', address_2='')
+    prime_win_corp = Company(company_name='Prime Win Corporation', address='P.O. Box 365', address_2='')
+    pro_build = Company(company_name='Pro-Build', address='2773 Riverside Parkway', address_2='16 W. Main')
+    reeder_construction = Company(company_name='Reeder Construction, Inc.', address='945 E. 6th', address_2='')
+    rpa_chinking = Company(company_name='RPA Chinking', address='1420 Haystack Road', address_2='')
+    schnell_builders = Company(company_name='Schnell Builders', address='P.O. Box 442', address_2='')
+    sma_framing = Company(company_name='SMA Framing', address='3228 Red Maple Court', address_2='')
+    strength_construction = Company(company_name='Strength Construction', address='37090 Highway 550', address_2='')
+    timberline_fasteners = Company(company_name='Timberline Fasteners', address='6195 Clermont Street', address_2='')
+    tims_custom_countertops = Company(company_name='Tim\'s Custom Countertops & Cabinets', address='4040 - 5945 Road', address_2='')
+    the_kitchen_center = Company(company_name='The Kitchen Center', address='1031 S. 15th Street', address_2='')
+    tj_builders = Company(company_name='TJ Builders, LLC', address='2601 CR 233', address_2='')
+    the_spacecreators = Company(company_name='The SpaceCreators', address='361 - 27 1/2 Road', address_2='')
+    trumble_builders = Company(company_name='Trumble Builders', address='4200 Waterfall Drive', address_2='')
+    truss_co = Company(company_name='Truss Co.', address='23360 S. Hwy. 550', address_2='')
+    valley_lumber_co = Company(company_name='Valley Lumber Co.', address='2495 Railroad Ave.', address_2='')
+    van_dyk_construction = Company(company_name='Van Dyk Construction, Inc.', address='12905 Division Street, Unit A', address_2='')
+    western_cabinets = Company(company_name='Western Cabinets', address='2065 East Main', address_2='')
+    woodworkers_of_gj = Company(company_name='Woodworkers of Grand Junction, Inc.', address='2906 I-70 Business Loop', address_2='')
 
 
 
-    list_6 = [eighty_four_lumber, ac_construction, a_golden_touch, alpine_chinking, alpine_lumber, ark_woodworks, best_tops, bettos_construction, boise_cascade, break_of_dawn_construc, cart_works_company, cedar_creek_builders, colbran_supply, concepts_milwork, construction_crew, cornerstone_construction, czzh_enterprises, dallas_creek_construction, danish_craftsmen, d_z_construction, dca_discount_cabinets, delta_cabinet_comp, donnie_suaza_construc, dubworks, fort_collins_truss, frontier_log_homes, hadden_enterprises, haldeman_homme, hellers_interiors, j_k10_cabinetry, ked_development, kinney_construction, kitchen_bath_designs]
+    list_6 = [eighty_four_lumber, ac_construction, a_golden_touch, alpine_chinking, alpine_lumber, ark_woodworks, best_tops, bettos_construction, boise_cascade, break_of_dawn_construc, cart_works_company, cedar_creek_builders, colbran_supply, concepts_milwork, construction_crew, cornerstone_construction, czzh_enterprises, dallas_creek_construction, danish_craftsmen, d_z_construction, dca_discount_cabinets, delta_cabinet_comp, donnie_suaza_construc, dubworks, fort_collins_truss, frontier_log_homes, hadden_enterprises, haldeman_homme, hellers_interiors, j_k10_cabinetry, ked_development, kinney_construction, kitchen_bath_designs, knights_construction, m_m_countertops, marquez_constrution, millenium_west_builders, osburn_cabinets_design, overholt_truss, peak_1_stairs_woodworking, prime_win_corp, pro_build, reeder_construction, rpa_chinking, schnell_builders, sma_framing, strength_construction, timberline_fasteners, tims_custom_countertops, the_kitchen_center, tj_builders, the_spacecreators, trumble_builders, truss_co, valley_lumber_co, van_dyk_construction, western_cabinets, woodworkers_of_gj]
 
     db.session.commit()
 
