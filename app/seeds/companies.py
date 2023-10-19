@@ -436,9 +436,37 @@ def seed_companies():
     alpine_chinking = Company(company_name='Alpine Chinking', address='13374 6650 Road', address_2='')
     alpine_lumber = Company(company_name='Alpine Lumber Co.', address='61408 Jay Jay Road', address_2='')
     ark_woodworks = Company(company_name='Ark Woodworks', address='878 Baseline Place, Unit A', address_2='')
+    best_tops = Company(company_name='Best Tops', address='1250 North 3rd', address_2='')
+    bettos_construction = Company(company_name='Bettos Construction', address='2837 North Ave. #F43', address_2='')
+    boise_cascade = Company(company_name='Boise Cascade', address='', address_2='')
+    break_of_dawn_construc = Company(company_name='Break of Dawn Construction, Inc.', address='9527 Cove Creek Drive', address_2='')
+    cart_works_company = Company(company_name='Cart Works Company', address='1550 West Evans Ave., Unit Z', address_2='')
+    cedar_creek_builders = Company(company_name='Cedar Creek Builders', address='P.O. Box 840869', address_2='')
+    colbran_supply = Company(company_name='Colbran Supply', address='203 Main Street', address_2='')
+    concepts_milwork = Company(company_name='Concepts in Millwork, Inc.', address='1490 Tuskegee Place', address_2='')
+    construction_crew = Company(company_name='Construction Crew, LLC', address='', address_2='')
+    cornerstone_construction = Company(company_name='Cornerstone Construction, LLC', address='441 Denver Ave.', address_2='')
+    czzh_enterprises = Company(company_name='CZZH Enterprises, LLC', address='6881 S. Versailes Way, #102', address_2='')
+    dallas_creek_construction = Company(company_name='Dallas Creek Construction', address='P.O. Box 1270', address_2='')
+    danish_craftsmen = Company(company_name='Danish Craftsmen, Inc.', address='8730 West 14th Ave.', address_2='')
+    d_z_construction = Company(company_name='D & Z Construction', address='637 Round Table Road', address_2='')
+    dca_discount_cabinets = Company(company_name='DCA Discount Cabinets & Appliances', address='P.O. Box 8749', address_2='')
+    delta_cabinet_comp = Company(company_name='Delta Cabinet Company', address='696 Industrial Blvd.', address_2='')
+    donnie_suaza_construc = Company(company_name='Donnie Suaza Construction', address='P.O. Box 253', address_2='')
+    dubworks = Company(company_name='Dubworks', address='205 N. Elizabeth', address_2='')
+    fort_collins_truss = Company(company_name='Fort Collins Truss', address='201 NW Frontage Road', address_2='')
+    frontier_log_homes = Company(company_name='Frontier Log Homes', address='60813 Maple Grove Road', address_2='')
+    hadden_enterprises = Company(company_name='Hadden Enterprises, LLC', address='3002 W. Fox Park Road', address_2='')
+    haldeman_homme = Company(company_name='Haldeman-Homme, Inc.', address='6200 South Syracuse Way, Suite 120', address_2='')
+    hellers_interiors = Company(company_name='Heller\'s Interiors', address='1180 Valley Street', address_2='')
+    j_k10_cabinetry = Company(company_name='J & K10 Cabinetry Ltd.', address='5151 Bannock Street #8', address_2='')
+    ked_development = Company(company_name='KED Development / Kedrowski Builders', address='P.O. Box 532', address_2='')
+    kinney_construction = Company(company_name='Kinney Construction', address='1776 K 6/10 Road', address_2='')
+    kitchen_bath_designs = Company(company_name='Kitchen & Bath Designs', address='1601 Oxbow Drive, Unit 360B', address_2='')
 
 
-    list_6 = [eighty_four_lumber, ac_construction, a_golden_touch, alpine_chinking, alpine_lumber, ark_woodworks]
+
+    list_6 = [eighty_four_lumber, ac_construction, a_golden_touch, alpine_chinking, alpine_lumber, ark_woodworks, best_tops, bettos_construction, boise_cascade, break_of_dawn_construc, cart_works_company, cedar_creek_builders, colbran_supply, concepts_milwork, construction_crew, cornerstone_construction, czzh_enterprises, dallas_creek_construction, danish_craftsmen, d_z_construction, dca_discount_cabinets, delta_cabinet_comp, donnie_suaza_construc, dubworks, fort_collins_truss, frontier_log_homes, hadden_enterprises, haldeman_homme, hellers_interiors, j_k10_cabinetry, ked_development, kinney_construction, kitchen_bath_designs]
 
     db.session.commit()
 
