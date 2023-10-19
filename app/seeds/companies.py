@@ -535,9 +535,14 @@ def seed_companies():
     red_eagle_construction = Company(company_name='Red Eagle Construction', address='P.O. Box 398', address_2='')
     reliant_roofing = Company(company_name='Reliant Roofing, Inc.', address='554 25 Road, Suite 5', address_2='')
     rocky_mountain_companies = Company(company_name='Rocky Mountain Companies, LLC', address='2944 I-70 Business Loop, #210', address_2='')
+    roof_check = Company(company_name='Roof Check', address='1610 Skyway Drive', address_2='')
+    roofing_plus = Company(company_name='Roofing Plus', address='10766 6330 Road', address_2='')
+    roofing_supply_group = Company(company_name='Roofing Supply Group', address='11919 E. 37th Ave.', address_2='')
+    rycenga_construction = Company(company_name='Rycenga Construction, LLC', address='11623 Joyful Way', address_2='')
+    seamless_gutters = Company(company_name='Seamless Gutters by Juan', address='4360 Blue Sage Drive', address_2='')
 
 
-    list_7 = [aaa_waterproofing, accurate_insulation, adobe_creek_environmental, allied_building_products, allied_insulation, alpine_mechanical_insul, american_roof_co, bauen, bay_insulation, black_canyon_roofing, central_states_roofing, co_roofing_waterproofing, co_west_damproofing, d7_roofing, d_d_roofing, douglass_colony, emc_roofing, faith_construction, front_range_roofing, gzo_sheet_metal_roofing, hurst_roofing_construction, innovative_roofing_sol, j_d_seamless_gutters, jblanco_enterprises, kc_roofing_construction, kruger_roofing, line_x_gj, mato, mgm_waterproofing_restoration, millennium_waterproofing, odyssey_construction, outwest_drywall, pacific_sheet_metal, pint_roofing_construction, pioneer_materials_west_slope, ppp_roofing, purgatory_contracting, red_eagle_construction, reliant_roofing, rocky_mountain_companies]
+    list_7 = [aaa_waterproofing, accurate_insulation, adobe_creek_environmental, allied_building_products, allied_insulation, alpine_mechanical_insul, american_roof_co, bauen, bay_insulation, black_canyon_roofing, central_states_roofing, co_roofing_waterproofing, co_west_damproofing, d7_roofing, d_d_roofing, douglass_colony, emc_roofing, faith_construction, front_range_roofing, gzo_sheet_metal_roofing, hurst_roofing_construction, innovative_roofing_sol, j_d_seamless_gutters, jblanco_enterprises, kc_roofing_construction, kruger_roofing, line_x_gj, mato, mgm_waterproofing_restoration, millennium_waterproofing, odyssey_construction, outwest_drywall, pacific_sheet_metal, pint_roofing_construction, pioneer_materials_west_slope, ppp_roofing, purgatory_contracting, red_eagle_construction, reliant_roofing, rocky_mountain_companies, roofing_plus, roof_check, roofing_supply_group, rycenga_construction, seamless_gutters]
 
 
     db.session.commit()
