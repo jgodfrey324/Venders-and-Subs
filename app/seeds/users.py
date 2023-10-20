@@ -10,10 +10,14 @@ def seed_users():
         first_name='Jami', last_name='Huber', username='jlhuber', email='jami@fixturestudio.com', password='password2')
     jeff_huber = User(
         first_name='Jeff', last_name='Huber', username='jjhuber', email='jeff@fixturestudio.com', password='password3')
+    jenna_godfrey = User(
+        first_name='Jenna', last_name='Godfrey', username='jagodfrey', email='jag@fixturestudio.com', password='password4'
+    )
 
     db.session.add(morgan_)
     db.session.add(jami_huber)
     db.session.add(jeff_huber)
+    db.session.add(jenna_godfrey)
     db.session.commit()
 
 
