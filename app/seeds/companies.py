@@ -591,9 +591,24 @@ def seed_companies():
     montrose_glass = Company(company_name='Montrose Glass, Inc.', address='3998 - 5500 Road', address_2='')
     mountain_country_windows_doors = Company(company_name='Mountain Country Windows & Doors', address='2898 I-70 Business Loop', address_2='')
     mountain_view_window_door = Company(company_name='Mountain View Window & Door', address='2511 N. 12th Street', address_2='')
+    overhead_door_co_denver = Company(company_name='Overhead Door Co. of Denver', address='3291 Peoria Street', address_2='')
+    overhead_door_co_gj = Company(company_name='Overhead Door Co. of Grand Junction', address='2944 I-70 Business Loop, Unit 303', address_2='')
+    pella_windows_doors = Company(company_name='Pella Windows & Doors', address='5072 County Road #154', address_2='')
+    pinnacle_glass_co = Company(company_name='Pinnacle Glass Co.', address='549 S. 10th Street', address_2='')
+    pinyon_mesa_auto = Company(company_name='Pinyon Mesa Automatics, Inc.', address='603 N. 1st Street', address_2='')
+    quality_garage_doors = Company(company_name='Quality Garage Doors', address='573 W. Crete Circle, Unit 201', address_2='')
+    r_r_windows_doors = Company(company_name='R & R Windows & Doors', address='4770 Fox Street, Unit 11', address_2='')
+    royal_textile_products = Company(company_name='Royal Textile Products', address='1050 Yuma Street', address_2='')
+    s_s_auto = Company(company_name='S & S Automatics & Door Service, LLC', address='', address_2='')
+    solargreen = Company(company_name='SolarGreen', address='80 Inverness Dr. E., Suite B', address_2='')
+    sutherlands = Company(company_name='Sutherlands', address='2405 F Road', address_2='')
+    halgren_comp = Company(company_name='The Halgren Company', address='2340 Executive Circle', address_2='')
+    west_elk_garage_door = Company(company_name='West Elk Garage Doors', address='935 E. 7th Street', address_2='')
+    western_dock_door = Company(company_name='Western Dock & Door', address='P.O. Box 436', address_2='')
+    western_valley_glass = Company(company_name='Western Valley Glass', address='146 Daniel Ave.', address_2='')
 
 
-    list_8 = [a_i_a, alpine_custom_doors, alpine_glass, ambassador_blind_shutter, anderson_windows_doors, b_b_glass_window, black_canyon_window_design, bratton_window_door, budget_blinds, champion_enterprises, chucks_glass, co_doorways, co_precast_concrete, custom_expressions, denver_hardware_comp, devcon_group, dh_pace_door_service, e_e_door_window, elmer_glass_comp, encore_window_converings, glass_brokerage, glass_pros, glass_doctor, golesh_door, high_class_glass_skylight, jb_window_special, lannie_rund, lucas_drapery_install, lu_tek, mckinney_door_hardware, metro_glass, mike_harmeling_construction, montrose_glass, mountain_country_windows_doors, mountain_view_window_door]
+    list_8 = [a_i_a, alpine_custom_doors, alpine_glass, ambassador_blind_shutter, anderson_windows_doors, b_b_glass_window, black_canyon_window_design, bratton_window_door, budget_blinds, champion_enterprises, chucks_glass, co_doorways, co_precast_concrete, custom_expressions, denver_hardware_comp, devcon_group, dh_pace_door_service, e_e_door_window, elmer_glass_comp, encore_window_converings, glass_brokerage, glass_pros, glass_doctor, golesh_door, high_class_glass_skylight, jb_window_special, lannie_rund, lucas_drapery_install, lu_tek, mckinney_door_hardware, metro_glass, mike_harmeling_construction, montrose_glass, mountain_country_windows_doors, mountain_view_window_door, overhead_door_co_denver, overhead_door_co_gj, pella_windows_doors, pinnacle_glass_co, pinyon_mesa_auto, quality_garage_doors, r_r_windows_doors, royal_textile_products, s_s_auto, solargreen, sutherlands, halgren_comp, west_elk_garage_door, western_dock_door, western_valley_glass]
 
 
     db.session.commit()
