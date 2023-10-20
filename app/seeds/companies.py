@@ -540,9 +540,60 @@ def seed_companies():
     roofing_supply_group = Company(company_name='Roofing Supply Group', address='11919 E. 37th Ave.', address_2='')
     rycenga_construction = Company(company_name='Rycenga Construction, LLC', address='11623 Joyful Way', address_2='')
     seamless_gutters = Company(company_name='Seamless Gutters by Juan', address='4360 Blue Sage Drive', address_2='')
+    sgh_inc = Company(company_name='SGH, Inc.', address='56 Inverness Drive East, Suite 102', address_2='')
+    shingleworks_roofing = Company(company_name='Shingleworks Roofing, Inc.', address='2193 Avenal Lane', address_2='')
+    stealth_roofing = Company(company_name='Stealth Roofing Co.', address='3456 F Road', address_2='')
+    summit_sealants_restoration = Company(company_name='Summit Sealants & Restoration, Inc.', address='13671 Carefree Drive', address_2='')
+    summit_systems_consulting = Company(company_name='Summit Systems Consulting', address='2535 Hall Ave.', address_2='')
+    superior_roofing = Company(company_name='Superior Roofing, Inc.', address='14700 East 39th Ave.', address_2='')
+    team_panels_internat = Company(company_name='TEAM Panels International', address='3700 Windermere Street', address_2='')
+    tecta_america = Company(company_name='Tecta America', address='1881 W. 13th Ave.', address_2='')
+    telluride_roofing = Company(company_name='Telluride Roofing, Inc.', address='P.O. Box 2276', address_2='')
+    tl_roofing = Company(company_name='TL Roofing', address='825 E. 32nd Street', address_2='')
 
 
-    list_7 = [aaa_waterproofing, accurate_insulation, adobe_creek_environmental, allied_building_products, allied_insulation, alpine_mechanical_insul, american_roof_co, bauen, bay_insulation, black_canyon_roofing, central_states_roofing, co_roofing_waterproofing, co_west_damproofing, d7_roofing, d_d_roofing, douglass_colony, emc_roofing, faith_construction, front_range_roofing, gzo_sheet_metal_roofing, hurst_roofing_construction, innovative_roofing_sol, j_d_seamless_gutters, jblanco_enterprises, kc_roofing_construction, kruger_roofing, line_x_gj, mato, mgm_waterproofing_restoration, millennium_waterproofing, odyssey_construction, outwest_drywall, pacific_sheet_metal, pint_roofing_construction, pioneer_materials_west_slope, ppp_roofing, purgatory_contracting, red_eagle_construction, reliant_roofing, rocky_mountain_companies, roofing_plus, roof_check, roofing_supply_group, rycenga_construction, seamless_gutters]
+    list_7 = [aaa_waterproofing, accurate_insulation, adobe_creek_environmental, allied_building_products, allied_insulation, alpine_mechanical_insul, american_roof_co, bauen, bay_insulation, black_canyon_roofing, central_states_roofing, co_roofing_waterproofing, co_west_damproofing, d7_roofing, d_d_roofing, douglass_colony, emc_roofing, faith_construction, front_range_roofing, gzo_sheet_metal_roofing, hurst_roofing_construction, innovative_roofing_sol, j_d_seamless_gutters, jblanco_enterprises, kc_roofing_construction, kruger_roofing, line_x_gj, mato, mgm_waterproofing_restoration, millennium_waterproofing, odyssey_construction, outwest_drywall, pacific_sheet_metal, pint_roofing_construction, pioneer_materials_west_slope, ppp_roofing, purgatory_contracting, red_eagle_construction, reliant_roofing, rocky_mountain_companies, roofing_plus, roof_check, roofing_supply_group, rycenga_construction, seamless_gutters, sgh_inc, shingleworks_roofing, stealth_roofing, summit_sealants_restoration, summit_systems_consulting, superior_roofing, team_panels_internat, tecta_america, telluride_roofing, tl_roofing]
+
+
+    # DOORS & WINDOWS
+    a_i_a = Company(company_name='A.I.A. (Applied Industrial & Architectural)', address='290 East 56th Ave.', address_2='')
+    alpine_custom_doors = Company(company_name='Alpine Custom Doors & Millwork, Inc.', address='P.O. Box 3923', address_2='2842 Chipeta...?')
+    alpine_glass = Company(company_name='Alpine Glass', address='573 West Crete Circle, #201', address_2='')
+    ambassador_blind_shutter = Company(company_name='Ambassador Blind N Shutter, Inc.', address='658 Faircloud Way', address_2='')
+    anderson_windows_doors = Company(company_name='Anderson Windows & Doors', address='', address_2='')
+    b_b_glass_window = Company(company_name='B & B Glass & Window', address='693 Industrial Blvd.', address_2='')
+    black_canyon_window_design = Company(company_name='Black Canyon Window Designs', address='2480 N. Townsend Ave.', address_2='')
+    bratton_window_door = Company(company_name='Bratton Window & Door, Inc.', address='1921 I-70 Business Loop', address_2='')
+    budget_blinds = Company(company_name='Budget Blinds (DO NOT USE)', address='2494 W. Mesa Court', address_2='')
+    champion_enterprises = Company(company_name='Champion Enterprises, Inc.', address='2037 W. 14th Ave.', address_2='')
+    chucks_glass = Company(company_name='Chuck\'s Glass', address='129 W. Main Street', address_2='')
+    co_doorways = Company(company_name='Colorado Doorways', address='5151 Bannock Street, #17', address_2='')
+    co_precast_concrete = Company(company_name='Colorado Precast Concrete', address='1820 E. Hwy. 402', address_2='')
+    custom_expressions = Company(company_name='Custom Expressions', address='1130 Elm Street', address_2='')
+    denver_hardware_comp = Company(company_name='Denver Hardware Company', address='3200 Walnut Street', address_2='')
+    devcon_group = Company(company_name='Devcon Group, Inc. (DO NOT USE)', address='2379 Haystack Road', address_2='')
+    dh_pace_door_service = Company(company_name='DH Pace Door Services', address='4200 Monaco Street', address_2='')
+    e_e_door_window = Company(company_name='E & E Door & Window', address='2898 I-70 Business Loop', address_2='')
+    elmer_glass_comp = Company(company_name='Elmer Glass Company', address='2117 Whiteriver Ave.', address_2='P.O. Box 1209')
+    encore_window_converings = Company(company_name='Encore Window Converings, Inc.', address='3316 Tejon Street', address_2='')
+    glass_brokerage = Company(company_name='Glass Brokerage, Inc.', address='118 N. 22nd Court', address_2='')
+    glass_pros = Company(company_name='Glass Pros', address='2486 Commerce Blvd.', address_2='')
+    glass_doctor = Company(company_name='Glass Doctor', address='2480 N. Townsend Ave.', address_2='')
+    golesh_door = Company(company_name='Golesh Door', address='2345 S. Delaware Street', address_2='')
+    high_class_glass_skylight = Company(company_name='High Class Glass & Skylights, Inc.', address='1485 Kingston Street', address_2='')
+    jb_window_special = Company(company_name='JB Window Specialties', address='P.O. Box 271', address_2='')
+    lannie_rund = Company(company_name='Lannie & Rund, Inc.', address='640 Independent Ave.', address_2='')
+    lucas_drapery_install = Company(company_name='Lucas Drapery Installation', address='132 E. Alcove Drive', address_2='')
+    lu_tek = Company(company_name='Lu-Tek, Inc.', address='5135 W. 58th Ave., Unit #5', address_2='')
+    mckinney_door_hardware = Company(company_name='McKinney Door & Hardware', address='2700 N. Freeway', address_2='')
+    metro_glass = Company(company_name='Metropolitan Glass, Inc.', address='6400 Franklin Street', address_2='')
+    mike_harmeling_construction = Company(company_name='Mike Harmeling Construction Services', address='103 N. Easter Hill Drive', address_2='')
+    montrose_glass = Company(company_name='Montrose Glass, Inc.', address='3998 - 5500 Road', address_2='')
+    mountain_country_windows_doors = Company(company_name='Mountain Country Windows & Doors', address='2898 I-70 Business Loop', address_2='')
+    mountain_view_window_door = Company(company_name='Mountain View Window & Door', address='2511 N. 12th Street', address_2='')
+
+
+    list_8 = [a_i_a, alpine_custom_doors, alpine_glass, ambassador_blind_shutter, anderson_windows_doors, b_b_glass_window, black_canyon_window_design, bratton_window_door, budget_blinds, champion_enterprises, chucks_glass, co_doorways, co_precast_concrete, custom_expressions, denver_hardware_comp, devcon_group, dh_pace_door_service, e_e_door_window, elmer_glass_comp, encore_window_converings, glass_brokerage, glass_pros, glass_doctor, golesh_door, high_class_glass_skylight, jb_window_special, lannie_rund, lucas_drapery_install, lu_tek, mckinney_door_hardware, metro_glass, mike_harmeling_construction, montrose_glass, mountain_country_windows_doors, mountain_view_window_door]
 
 
     db.session.commit()
