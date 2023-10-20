@@ -647,9 +647,12 @@ def seed_companies():
     diversified_builders = Company(company_name='Diversified Builders', address='8360 W. 48th Ave.', address_2='')
     elite_painting = Company(company_name='Elite Painting', address='P.O. Box 1679', address_2='')
     elite_drywallers = Company(company_name='Elite Drywallers, Inc.', address='3762 Highway 82, Suite 1', address_2='')
+    elite_epoxy = Company(company_name='Elite Epoxy', address='', address_2='')
+    el_paso_floor = Company(company_name='El Paso Floor, Inc.', address='1850 Hancock Drive', address_2='')
+    fitzgeralds_painting_drywall = Company(company_name='Fitzgerald\'s Painting & Drywall, LLC', address='', address_2='')
 
 
-    list_9 = [threeD_corporation, abbey_carpet, able_construction, accurate_acoustics, advanced_seamless_flooring, american_acoustics, american_elite_painting, architectural_windows_doors, aspen_drywall, b_b_carpet_tile_install, binkley_sons_painting, build_llc, c_g_painting, calvin_stucco_stone, capco_tile_stone, carpet_direct, carpetland_usa, carpetime, casias_inc, cedaredge_interiors, clark_drywall_construction, co_wallworks, cp_painting, cpc_painting, cunningham_tile_comp, custom_concrete_prep_polish, custom_dry_wall, custom_interiors, daring_hardscapes, daylight_flooring, dexterity_works, distinctive_designs, diversified_builders, elite_drywallers, elite_painting]
+    list_9 = [threeD_corporation, abbey_carpet, able_construction, accurate_acoustics, advanced_seamless_flooring, american_acoustics, american_elite_painting, architectural_windows_doors, aspen_drywall, b_b_carpet_tile_install, binkley_sons_painting, build_llc, c_g_painting, calvin_stucco_stone, capco_tile_stone, carpet_direct, carpetland_usa, carpetime, casias_inc, cedaredge_interiors, clark_drywall_construction, co_wallworks, cp_painting, cpc_painting, cunningham_tile_comp, custom_concrete_prep_polish, custom_dry_wall, custom_interiors, daring_hardscapes, daylight_flooring, dexterity_works, distinctive_designs, diversified_builders, elite_drywallers, elite_painting, elite_epoxy, el_paso_floor, fitzgeralds_painting_drywall]
 
 
     db.session.commit()
