@@ -611,6 +611,47 @@ def seed_companies():
     list_8 = [a_i_a, alpine_custom_doors, alpine_glass, ambassador_blind_shutter, anderson_windows_doors, b_b_glass_window, black_canyon_window_design, bratton_window_door, budget_blinds, champion_enterprises, chucks_glass, co_doorways, co_precast_concrete, custom_expressions, denver_hardware_comp, devcon_group, dh_pace_door_service, e_e_door_window, elmer_glass_comp, encore_window_converings, glass_brokerage, glass_pros, glass_doctor, golesh_door, high_class_glass_skylight, jb_window_special, lannie_rund, lucas_drapery_install, lu_tek, mckinney_door_hardware, metro_glass, mike_harmeling_construction, montrose_glass, mountain_country_windows_doors, mountain_view_window_door, overhead_door_co_denver, overhead_door_co_gj, pella_windows_doors, pinnacle_glass_co, pinyon_mesa_auto, quality_garage_doors, r_r_windows_doors, royal_textile_products, s_s_auto, solargreen, sutherlands, halgren_comp, west_elk_garage_door, western_dock_door, western_valley_glass]
 
 
+    # FINISHES
+    threeD_corporation = Company(company_name='3D Corporation', address='P.O. Box 578', address_2='')
+    abbey_carpet = Company(company_name='Abbey Carpet', address='2565 American Way', address_2='')
+    able_construction = Company(company_name='Able Construction Services, Ltd.', address='862 - 20 1/2 Road', address_2='')
+    accurate_acoustics = Company(company_name='Accurate Acoustics, Inc.', address='7200 Lakeview Court', address_2='')
+    advanced_seamless_flooring = Company(company_name='Advanced Seamless Flooring', address='1429 M Road', address_2='')
+    american_acoustics = Company(company_name='American Acoustics', address='P.O. Box 40542', address_2='')
+    american_elite_painting = Company(company_name='American Elite Painting', address='P.O. Box 641', address_2='')
+    architectural_windows_doors = Company(company_name='Architectural Windows & Doors', address='5317 CR 154, #204', address_2='')
+    aspen_drywall = Company(company_name='Aspen Drywall', address='P.O. Box 873', address_2='')
+    b_b_carpet_tile_install = Company(company_name='B & B Carpet & Tile Installations, Inc.', address='616 Holland Street', address_2='')
+    binkley_sons_painting = Company(company_name='Binkley & Sons Painting', address='2894 Sunridge Road', address_2='')
+    build_llc = Company(company_name='Build, LLC (DO NOT USE)', address='817 Falcon Way, Suite 204', address_2='')
+    c_g_painting = Company(company_name='C & G Painting, Inc.', address='1111 Osage Street, Suite 28', address_2='')
+    calvin_stucco_stone = Company(company_name='Calvin Stucco & Stone', address='4208 Kannah Creek Road', address_2='')
+    capco_tile_stone = Company(company_name='Capco Tile & Stone', address='5800 East Jewell Ave.', address_2='')
+    carpet_direct = Company(company_name='Carpet Direct', address='2440 Applewood Circle', address_2='')
+    carpetland_usa = Company(company_name='Carpetland USA', address='2830 North Ave.', address_2='')
+    carpetime = Company(company_name='Carpetime', address='2920 I-70 Business Loop', address_2='')
+    casias_inc = Company(company_name='Casias, Inc.', address='62644 Jacob Road', address_2='')
+    cedaredge_interiors = Company(company_name='Cedaredge Interiors', address='P.O. Box 519', address_2='')
+    clark_drywall_construction = Company(company_name='Clark Drywall & Construction, Inc.', address='1170 Micaelas Place', address_2='')
+    co_wallworks = Company(company_name='Colorado Wallworks, Inc.', address='P.O. Box 1281', address_2='')
+    cp_painting = Company(company_name='CP Painting', address='', address_2='')
+    cpc_painting = Company(company_name='CPC Painting, Inc.', address='6553 S. Brentwood Way', address_2='')
+    cunningham_tile_comp = Company(company_name='Cunningham Tile Company, Inc.', address='P.O. Box 371', address_2='')
+    custom_concrete_prep_polish = Company(company_name='Custom Concrete Prep & Polish', address='', address_2='')
+    custom_dry_wall = Company(company_name='Custom Dry Wall, LLC', address='66444 Raspberry Lane', address_2='')
+    custom_interiors = Company(company_name='Custom Interiors, LLC', address='1145 West Main Street', address_2='')
+    daring_hardscapes = Company(company_name='Daring Hardscapes', address='1346 Sagittarius Street', address_2='')
+    daylight_flooring = Company(company_name='Daylight Flooring', address='3245 E Road', address_2='')
+    dexterity_works = Company(company_name='Dexterity Works, LLC', address='', address_2='')
+    distinctive_designs = Company(company_name='Distinctive Designs Tile & Stone, LLC', address='P.O. Box 2424', address_2='')
+    diversified_builders = Company(company_name='Diversified Builders', address='8360 W. 48th Ave.', address_2='')
+    elite_painting = Company(company_name='Elite Painting', address='P.O. Box 1679', address_2='')
+    elite_drywallers = Company(company_name='Elite Drywallers, Inc.', address='3762 Highway 82, Suite 1', address_2='')
+
+
+    list_9 = [threeD_corporation, abbey_carpet, able_construction, accurate_acoustics, advanced_seamless_flooring, american_acoustics, american_elite_painting, architectural_windows_doors, aspen_drywall, b_b_carpet_tile_install, binkley_sons_painting, build_llc, c_g_painting, calvin_stucco_stone, capco_tile_stone, carpet_direct, carpetland_usa, carpetime, casias_inc, cedaredge_interiors, clark_drywall_construction, co_wallworks, cp_painting, cpc_painting, cunningham_tile_comp, custom_concrete_prep_polish, custom_dry_wall, custom_interiors, daring_hardscapes, daylight_flooring, dexterity_works, distinctive_designs, diversified_builders, elite_drywallers, elite_painting]
+
+
     db.session.commit()
 
 
