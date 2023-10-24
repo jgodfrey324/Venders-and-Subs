@@ -14,7 +14,7 @@ class Entry(db.Model):
     phone_number = db.Column(db.String(12), nullable=False)
     cell_number = db.Column(db.String(12))
     fax_number = db.Column(db.String(12))
-    email = db.Column(db.String(200), unique=True)
+    email = db.Column(db.String(200))
     note = db.Column(db.String(255))
     company_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('companies.id')))
     city_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('cities.id')))

@@ -36,8 +36,8 @@ def seed_entries_sub_categories():
 # it will reset the primary keys for you as well.
 def undo_seed_entries_sub_categories():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.entries_sub_categories RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.entry_sub_category RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute(text("DELETE FROM entries_sub_categories"))
+        db.session.execute(text("DELETE FROM entry_sub_category"))
 
     db.session.commit()

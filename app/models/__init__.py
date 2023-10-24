@@ -8,4 +8,5 @@ from .sub_category import SubCategory
 from .list import List
 from .category import Category
 from .entry import Entry
+from .entry_sub_category import entry_sub_category
 from .db import environment, SCHEMA
