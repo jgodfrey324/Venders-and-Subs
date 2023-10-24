@@ -4,8 +4,11 @@ import "./SearchPage.css"
 
 export default function SearchPage () {
 	const sessionUser = useSelector(state => state.session.user);
+    const searchResults = useSelector(state => state.entries);
 
     if (!sessionUser) return <Redirect to='/login' />
+
+    console.log(searchResults)
 
     return (
         sessionUser ? <h1>Search boxes...</h1> : <></>
