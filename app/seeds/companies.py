@@ -7,7 +7,7 @@ def seed_companies():
 
     # GENERAL CONDITIONS
     aamold_engineering = Company(company_name='Aamold Engineering', address='579 Elkhart Lane', address_2='')
-    action_design_construction = Company(company_name='Aamold Engineering', address='579 Elkhart Lane', address_2='')
+    action_design_construction = Company(company_name='Action Design & Construction', address='967 - 25 Road', address_2='')
     all_pro_moving = Company(company_name='All Pro Moving', address='559 Sandhill Lane #202', address_2='')
     areas_best_maintenance = Company(company_name='Areas Best Maintenance', address='P.O. Box 40395', address_2='')
     arches_engineering = Company(company_name='Arches Engineering', address='P.O Box 3852', address_2='2283 Ivory Co...?')
@@ -568,7 +568,6 @@ def seed_companies():
     champion_enterprises = Company(company_name='Champion Enterprises, Inc.', address='2037 W. 14th Ave.', address_2='')
     chucks_glass = Company(company_name='Chuck\'s Glass', address='129 W. Main Street', address_2='')
     co_doorways = Company(company_name='Colorado Doorways', address='5151 Bannock Street, #17', address_2='')
-    co_precast_concrete = Company(company_name='Colorado Precast Concrete', address='1820 E. Hwy. 402', address_2='')
     custom_expressions = Company(company_name='Custom Expressions', address='1130 Elm Street', address_2='')
     denver_hardware_comp = Company(company_name='Denver Hardware Company', address='3200 Walnut Street', address_2='')
     devcon_group = Company(company_name='Devcon Group, Inc. (DO NOT USE)', address='2379 Haystack Road', address_2='')
@@ -608,7 +607,7 @@ def seed_companies():
     western_valley_glass = Company(company_name='Western Valley Glass', address='146 Daniel Ave.', address_2='')
 
 
-    list_8 = [a_i_a, alpine_custom_doors, alpine_glass, ambassador_blind_shutter, anderson_windows_doors, b_b_glass_window, black_canyon_window_design, bratton_window_door, budget_blinds, champion_enterprises, chucks_glass, co_doorways, co_precast_concrete, custom_expressions, denver_hardware_comp, devcon_group, dh_pace_door_service, e_e_door_window, elmer_glass_comp, encore_window_converings, glass_brokerage, glass_pros, glass_doctor, golesh_door, high_class_glass_skylight, jb_window_special, lannie_rund, lucas_drapery_install, lu_tek, mckinney_door_hardware, metro_glass, mike_harmeling_construction, montrose_glass, mountain_country_windows_doors, mountain_view_window_door, overhead_door_co_denver, overhead_door_co_gj, pella_windows_doors, pinnacle_glass_co, pinyon_mesa_auto, quality_garage_doors, r_r_windows_doors, royal_textile_products, s_s_auto, solargreen, sutherlands, halgren_comp, west_elk_garage_door, western_dock_door, western_valley_glass]
+    list_8 = [a_i_a, alpine_custom_doors, alpine_glass, ambassador_blind_shutter, anderson_windows_doors, b_b_glass_window, black_canyon_window_design, bratton_window_door, budget_blinds, champion_enterprises, chucks_glass, co_doorways, custom_expressions, denver_hardware_comp, devcon_group, dh_pace_door_service, e_e_door_window, elmer_glass_comp, encore_window_converings, glass_brokerage, glass_pros, glass_doctor, golesh_door, high_class_glass_skylight, jb_window_special, lannie_rund, lucas_drapery_install, lu_tek, mckinney_door_hardware, metro_glass, mike_harmeling_construction, montrose_glass, mountain_country_windows_doors, mountain_view_window_door, overhead_door_co_denver, overhead_door_co_gj, pella_windows_doors, pinnacle_glass_co, pinyon_mesa_auto, quality_garage_doors, r_r_windows_doors, royal_textile_products, s_s_auto, solargreen, sutherlands, halgren_comp, west_elk_garage_door, western_dock_door, western_valley_glass]
 
 
     # FINISHES
@@ -647,10 +646,22 @@ def seed_companies():
     diversified_builders = Company(company_name='Diversified Builders', address='8360 W. 48th Ave.', address_2='')
     elite_painting = Company(company_name='Elite Painting', address='P.O. Box 1679', address_2='')
     elite_drywallers = Company(company_name='Elite Drywallers, Inc.', address='3762 Highway 82, Suite 1', address_2='')
+    elite_epoxy = Company(company_name='Elite Epoxy', address='', address_2='')
+    el_paso_floor = Company(company_name='El Paso Floor, Inc.', address='1850 Hancock Drive', address_2='')
+    fitzgeralds_painting_drywall = Company(company_name='Fitzgerald\'s Painting & Drywall, LLC', address='', address_2='')
 
 
-    list_9 = [threeD_corporation, abbey_carpet, able_construction, accurate_acoustics, advanced_seamless_flooring, american_acoustics, american_elite_painting, architectural_windows_doors, aspen_drywall, b_b_carpet_tile_install, binkley_sons_painting, build_llc, c_g_painting, calvin_stucco_stone, capco_tile_stone, carpet_direct, carpetland_usa, carpetime, casias_inc, cedaredge_interiors, clark_drywall_construction, co_wallworks, cp_painting, cpc_painting, cunningham_tile_comp, custom_concrete_prep_polish, custom_dry_wall, custom_interiors, daring_hardscapes, daylight_flooring, dexterity_works, distinctive_designs, diversified_builders, elite_drywallers, elite_painting]
+    list_9 = [threeD_corporation, abbey_carpet, able_construction, accurate_acoustics, advanced_seamless_flooring, american_acoustics, american_elite_painting, architectural_windows_doors, aspen_drywall, b_b_carpet_tile_install, binkley_sons_painting, build_llc, c_g_painting, calvin_stucco_stone, capco_tile_stone, carpet_direct, carpetland_usa, carpetime, casias_inc, cedaredge_interiors, clark_drywall_construction, co_wallworks, cp_painting, cpc_painting, cunningham_tile_comp, custom_concrete_prep_polish, custom_dry_wall, custom_interiors, daring_hardscapes, daylight_flooring, dexterity_works, distinctive_designs, diversified_builders, elite_drywallers, elite_painting, elite_epoxy, el_paso_floor, fitzgeralds_painting_drywall]
 
+    [db.session.add(item) for item in list_1]
+    [db.session.add(item) for item in list_2]
+    [db.session.add(item) for item in list_3]
+    [db.session.add(item) for item in list_4]
+    [db.session.add(item) for item in list_5]
+    [db.session.add(item) for item in list_6]
+    [db.session.add(item) for item in list_7]
+    [db.session.add(item) for item in list_8]
+    [db.session.add(item) for item in list_9]
 
     db.session.commit()
 
@@ -661,7 +672,7 @@ def seed_companies():
 # incrementing primary key, CASCADE deletes any dependent entities.  With
 # sqlite3 in development you need to instead use DELETE to remove all data and
 # it will reset the primary keys for you as well.
-def undo_companie():
+def undo_companies():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.companies RESTART IDENTITY CASCADE;")
     else:
