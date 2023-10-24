@@ -5,6 +5,8 @@ h1 {
 
 .entry-house {
     border: 2px solid red;
+    cursor: pointer;
+    margin: 25px 10px;
 }
 
 .search-res-house {

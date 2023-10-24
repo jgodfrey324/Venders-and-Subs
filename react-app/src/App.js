@@ -5,6 +5,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import SearchPage from "./components/SearchPage";
+import EntryDetail from "./components/EntryDetail";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <SearchPage />
+          </Route>
+          <Route path="/entries/:entryId">
+            <EntryDetail />
           </Route>
         </Switch>
       )}

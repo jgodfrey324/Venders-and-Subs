@@ -1,11 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Redirect} from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import { getAllEntries } from '../../store/entries';
 import "./SearchPage.css"
 
 export default function SearchPage () {
     const dispatch = useDispatch()
+    const history = useHistory()
 	const sessionUser = useSelector(state => state.session.user);
     const searchResults = Object.values(useSelector(state => state.entries));
 
@@ -19,7 +20,7 @@ export default function SearchPage () {
         <div className='search-res-house'>
             {searchResults.map(item => {
                 return (
-                    <div key={item.id} className='entry-house'>
+                    <div key={item.id} className='entry-house'  onClick={() => history.push(`/entries/${item.id}`)}>
                         <h2>{item.company.company_name}</h2>
                         <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
                         <h3>Contact: </h3>
