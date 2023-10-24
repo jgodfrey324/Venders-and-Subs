@@ -10,17 +10,17 @@ def seed_entries():
 
     entry_3 = Entry(first_name='null', last_name='null', phone_number='970-257-1652', cell_number='', fax_number='970-254-1715', email='', note='', company_id=3, city_id=1, state_id=1, zip_id=2, list_id=1, category_id=1, user_id=4)
 
-    entry_4 = Entry(first_name='Mike', last_name='Lopez', phone_number='970-523-4784', cell_number='970-640-2686', fax_number='', email='areasbestmaint@gmail.com', note='', company_id=4, city_id=1, state_id=1, zip_id=1, list_id=1, category_id=1, user_id=4)
+    entry_4 = Entry(first_name='Mike', last_name='Lopez', phone_number='970-523-4784', cell_number='970-640-2686', fax_number='', email='areasbestmaint@gmail.com', note='Structural engineering', company_id=4, city_id=1, state_id=1, zip_id=1, list_id=1, category_id=1, user_id=4)
 
     entry_5 = Entry(first_name='Ruth', last_name='Miller', phone_number='970-255-6788', cell_number='', fax_number='970-208-3040', email='ruth@archesengineering.com', note='', company_id=5, city_id=1, state_id=1, zip_id=3, list_id=1, category_id=1, user_id=4)
 
     entry_6 = Entry(first_name='Rick', last_name='Stevens', phone_number='970-963-0377', cell_number='', fax_number='', email='rstevens@aspenearthmoving.com', note='', company_id=6, city_id=2, state_id=1, zip_id=8, list_id=1, category_id=1, user_id=4)
 
-    entry_7 = Entry(first_name='Edward M.', last_name='Baltzer', phone_number='970-260-8468', cell_number='', fax_number='', email='ebaltzer@avantenvironmental.com', note='', company_id=7, city_id=1, state_id=1, zip_id=4, list_id=1, category_id=1, user_id=4)
+    entry_7 = Entry(first_name='Edward M.', last_name='Baltzer', phone_number='970-260-8468', cell_number='', fax_number='', email='ebaltzer@avantenvironmental.com', note='Environmental consultants', company_id=7, city_id=1, state_id=1, zip_id=4, list_id=1, category_id=1, user_id=4)
 
-    entry_8 = Entry(first_name='Bill', last_name='Bailey', phone_number='970-434-9763', cell_number='', fax_number='', email='baileymover@gwestoffice.net', note='', company_id=8, city_id=1, state_id=1, zip_id=5, list_id=1, category_id=1, user_id=4)
+    entry_8 = Entry(first_name='Bill', last_name='Bailey', phone_number='970-434-9763', cell_number='', fax_number='', email='baileymover@gwestoffice.net', note='House moving', company_id=8, city_id=1, state_id=1, zip_id=5, list_id=1, category_id=1, user_id=4)
 
-    entry_9 = Entry(first_name='Shawn', last_name='Brill', phone_number='970-241-8709', cell_number='', fax_number='970-241-9514', email='shawn@bighorneng.com', note='', company_id=9, city_id=1, state_id=1, zip_id=2, list_id=1, category_id=1, user_id=4)
+    entry_9 = Entry(first_name='Shawn', last_name='Brill', phone_number='970-241-8709', cell_number='', fax_number='970-241-9514', email='shawn@bighorneng.com', note='Mechanical engineering', company_id=9, city_id=1, state_id=1, zip_id=2, list_id=1, category_id=1, user_id=4)
 
     entry_10 = Entry(first_name='Jeff', last_name='Brady', phone_number='970-778-0645', cell_number='', fax_number='970-858-0647', email='', note='', company_id=10, city_id=3, state_id=1, zip_id=9, list_id=1, category_id=1, user_id=4)
 
