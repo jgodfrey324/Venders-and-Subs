@@ -17,13 +17,13 @@ export default function SearchPage () {
 
     return (
         <div className='search-res-house'>
-            {searchResults.forEach(item => {
+            {searchResults.map(item => {
                 return (
                     <div key={item.id} className='entry-house'>
                         <h2>{item.company.company_name}</h2>
                         <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
                         <h3>Contact: </h3>
-                        <p><span>{item.contact.first_name} {item.contact.last_name}</span> - <span>{item.contact.phone_number}</span></p>
+                        <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
                         <p>Notes: {item.notes}</p>
                     </div>
                 )

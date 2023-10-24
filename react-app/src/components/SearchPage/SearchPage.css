@@ -2,3 +2,11 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+.entry-house {
+    border: 2px solid red;
+}
+
+.search-res-house {
+    border: 3px solid blue;
+}
