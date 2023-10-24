@@ -67,5 +67,6 @@ class Entry(db.Model):
                 'address': self.company.address,
                 'address_2': self.company.address_2
             },
-            'category': self.category.category
+            'category': self.category.category,
+            'notes': self.note
         }

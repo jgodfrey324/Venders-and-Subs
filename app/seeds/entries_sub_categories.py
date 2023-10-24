@@ -5,17 +5,17 @@ from sqlalchemy.sql import text, insert
 # Adds a demo user, you can add other users here if you want
 def seed_entries_sub_categories():
     entries_sub_categories_list = [
-        {'entry_id': 1, 'sub_category_id': 1},
-        {'entry_id': 2, 'sub_category_id': 2},
-        {'entry_id': 3, 'sub_category_id': 6},
-        {'entry_id': 4, 'sub_category_id': 3},
-        {'entry_id': 4, 'sub_category_id': 17},
-        {'entry_id': 5, 'sub_category_id': 1},
-        {'entry_id': 6, 'sub_category_id': 4},
-        {'entry_id': 7, 'sub_category_id': 5},
-        {'entry_id': 8, 'sub_category_id': 6},
-        {'entry_id': 9, 'sub_category_id': 1},
-        {'entry_id': 10, 'sub_category_id': 7},
+        {'entry_id': 1, 'sub_category_id': 98},
+        {'entry_id': 2, 'sub_category_id': 97},
+        {'entry_id': 3, 'sub_category_id': 93},
+        {'entry_id': 4, 'sub_category_id': 96},
+        {'entry_id': 4, 'sub_category_id': 82},
+        {'entry_id': 5, 'sub_category_id': 98},
+        {'entry_id': 6, 'sub_category_id': 95},
+        {'entry_id': 7, 'sub_category_id': 94},
+        {'entry_id': 8, 'sub_category_id': 93},
+        {'entry_id': 9, 'sub_category_id': 98},
+        {'entry_id': 10, 'sub_category_id': 92},
     ]
 
     for entry in entries_sub_categories_list:
@@ -36,8 +36,8 @@ def seed_entries_sub_categories():
 # it will reset the primary keys for you as well.
 def undo_seed_entries_sub_categories():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.entry_sub_category RESTART IDENTITY CASCADE;")
+        db.session.execute(f"TRUNCATE table {SCHEMA}.entries_sub_categories RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute(text("DELETE FROM entry_sub_category"))
+        db.session.execute(text("DELETE FROM entries_sub_categories"))
 
     db.session.commit()

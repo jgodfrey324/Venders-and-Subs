@@ -13,4 +13,9 @@ def entries():
     """
     entries = Entry.query.all()
 
-    return {'entries': [entry.to_dict() for entry in entries]}
+    results = {}
+    for entry in entries:
+        new_entry = entry.to_dict()
+        results[new_entry['id']] = new_entry
+
+    return results
