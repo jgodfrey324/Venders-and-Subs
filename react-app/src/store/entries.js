@@ -2,13 +2,13 @@
 const GET_ENTRIES = 'entries/GET_ENTRIES';
 const ADD_ENTRY = 'entries/ADD_ENTRY';
 
-const getEntries = () => ({
+const getEntries = (entries) => ({
 	type: GET_ENTRIES,
-	entries,
+	payload: entries
 });
 const addEntry = (entry) => ({
     type: ADD_ENTRY,
-    entry
+    payload: entry
 })
 
 // action thunks
@@ -21,7 +21,8 @@ export const getAllEntries = () => async (dispatch) => {
 
 	if (response.ok) {
         const data = await response.json()
-		dispatch(getEntries());
+		dispatch(getEntries(data));
+
         return data
 	} else if (response.status < 500) {
 		const data = await response.json();
@@ -58,15 +59,15 @@ export const postEntry = (entry) => async (dispatch) => {
 }
 
 // reducer
-export default function reducer(state = {}, action) {
+const entriesReducer = (state = {}, action) => {
+	let newState;
 	switch (action.type) {
 		case GET_ENTRIES:
-			return { entries: action.entries };
-        case ADD_ENTRY:
-            const newState = state
-            newState[action.entry.id] = entry
-            return newState
+			newState = { ...action.payload }
+			return newState
 		default:
 			return state;
 	}
 }
+
+export default entriesReducer

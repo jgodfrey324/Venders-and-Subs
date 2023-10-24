@@ -56,16 +56,17 @@ class Entry(db.Model):
                 'email': self.email
             },
             'list': self.list.list,
-            'sub_categories': self.sub_categories,
+            'sub_categories': [item.sub_category for item in self.sub_categories],
             'location': {
                 'city': self.city.city,
                 'state': self.state.state,
-                'zip': self.zip.zip
+                'zip': self.zip.zip_code
             },
             'company': {
                 'company_name': self.company.company_name,
                 'address': self.company.address,
                 'address_2': self.company.address_2
             },
-            'category': self.category.category
+            'category': self.category.category,
+            'notes': self.note
         }
