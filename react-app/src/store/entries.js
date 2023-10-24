@@ -1,6 +1,7 @@
 // constants
 const GET_ENTRIES = 'entries/GET_ENTRIES';
 const ADD_ENTRY = 'entries/ADD_ENTRY';
+const GET_ONE_ENTRY = 'entries/GET_ONE_ENTRY';
 
 const getEntries = (entries) => ({
 	type: GET_ENTRIES,
@@ -9,7 +10,11 @@ const getEntries = (entries) => ({
 const addEntry = (entry) => ({
     type: ADD_ENTRY,
     payload: entry
-})
+});
+const getEntry = (entry) => ({
+	type: GET_ONE_ENTRY,
+	payload: entry
+});
 
 // action thunks
 export const getAllEntries = () => async (dispatch) => {
@@ -22,6 +27,27 @@ export const getAllEntries = () => async (dispatch) => {
 	if (response.ok) {
         const data = await response.json()
 		dispatch(getEntries(data));
+
+        return data
+	} else if (response.status < 500) {
+		const data = await response.json();
+		if (data.errors) {
+			return data.errors;
+		}
+	} else {
+		return ["An error occurred. Please try again."];
+	}
+};
+export const getOneEntry = (entryId) => async (dispatch) => {
+	const response = await fetch(`/api/entries/${entryId}`, {
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
+
+	if (response.ok) {
+        const data = await response.json()
+		dispatch(getEntry(data));
 
         return data
 	} else if (response.status < 500) {
@@ -63,7 +89,10 @@ const entriesReducer = (state = {}, action) => {
 	let newState;
 	switch (action.type) {
 		case GET_ENTRIES:
-			newState = { ...action.payload }
+			newState = action.payload
+			return newState
+		case GET_ONE_ENTRY:
+			newState = action.payload
 			return newState
 		default:
 			return state;
