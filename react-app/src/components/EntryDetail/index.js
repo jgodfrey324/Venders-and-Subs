@@ -23,7 +23,23 @@ export default function EntryDetail () {
     return selectedEntry ? (
         <div className='details-page-house'>
             <div className='entry-detail-house'>
+                <p id='created-by-tag'>Entry created by {selectedEntry.user.first_name}</p>
                 <h1>{selectedEntry.company.company_name}</h1>
+
+                <h3>Location: </h3>
+                <p>{selectedEntry.location.city}, {selectedEntry.location.state} {selectedEntry.location.zip}</p>
+                <p>Primary address: {selectedEntry.company.address}</p>
+                <p>Secondary address: {selectedEntry.company.address_2}</p>
+
+                <h3>Contact: </h3>
+                <p>{selectedEntry.contact.first_name} {selectedEntry.contact.last_name}</p>
+                <p>{selectedEntry.contact.email}</p>
+                <p>Primary phone: {selectedEntry.contact.phone_number}</p>
+                <p>Secondary phone: {selectedEntry.contact.cell_number}</p>
+                <p>Fax Number: {selectedEntry.contact.fax_number}</p>
+
+                <h3>Notes:</h3>
+                <p>{selectedEntry.notes}</p>
             </div>
 
             <p className='navigation-link' onClick={() => history.goBack()}>Go Back</p>
