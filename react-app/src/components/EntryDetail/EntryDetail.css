@@ -28,3 +28,7 @@
 #created-by-tag {
     padding-left: 0px;
 }
+
+.entry-detail-house > p > span {
+    font-style: italic;
+}
