@@ -28,15 +28,15 @@ export default function EntryDetail () {
 
                 <h3>Location: </h3>
                 <p>{selectedEntry.location.city}, {selectedEntry.location.state} {selectedEntry.location.zip}</p>
-                <p>Primary address: {selectedEntry.company.address}</p>
-                <p>Secondary address: {selectedEntry.company.address_2}</p>
+                <p><span>Primary address: </span>{selectedEntry.company.address}</p>
+                <p><span>Secondary address: </span>{selectedEntry.company.address_2}</p>
 
                 <h3>Contact: </h3>
                 <p>{selectedEntry.contact.first_name} {selectedEntry.contact.last_name}</p>
                 <p>{selectedEntry.contact.email}</p>
-                <p>Primary phone: {selectedEntry.contact.phone_number}</p>
-                <p>Secondary phone: {selectedEntry.contact.cell_number}</p>
-                <p>Fax Number: {selectedEntry.contact.fax_number}</p>
+                <p><span>Primary phone: </span>{selectedEntry.contact.phone_number}</p>
+                <p><span>Secondary phone: </span>{selectedEntry.contact.cell_number}</p>
+                <p><span>Fax Number: </span>{selectedEntry.contact.fax_number}</p>
 
                 <h3>Notes:</h3>
                 <p>{selectedEntry.notes}</p>
