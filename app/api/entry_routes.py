@@ -19,16 +19,3 @@ def entries():
         results[new_entry['id']] = new_entry
 
     return results
-
-
-
-
-@entry_routes.route('/<int:entryId>')
-# @login_required
-def one_entry(entryId):
-    """
-    Query for one entry and return the details of entry in dictionary
-    """
-    entry = Entry.query.get(entryId)
-
-    return entry.to_dict()
