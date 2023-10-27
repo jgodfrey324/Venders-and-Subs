@@ -4,7 +4,7 @@ import { Redirect, useHistory } from 'react-router-dom';
 // import { getAllEntries } from '../../store/entries';
 // import "./SearchPage.css"
 
-export default function NewEntryForm () {
+export default function NewEntryFormPage () {
     // const dispatch = useDispatch()
     const history = useHistory()
 	const sessionUser = useSelector(state => state.session.user);
@@ -12,10 +12,11 @@ export default function NewEntryForm () {
 
     if (!sessionUser) return <Redirect to='/login' />
 
+
     return (
         <div className='new-entry-form-house'>
-            <p>This is where you make a new entry...</p>
             <button onClick={() => history.goBack()}>Go back</button>
+            <p>This is where you make a new entry...</p>
         </div>
     )
 }
