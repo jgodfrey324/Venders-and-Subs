@@ -18,6 +18,7 @@ export default function SearchPage () {
 
     return (
         <div className='search-res-house'>
+            <button onClick={() => history.push('/entries/new')}>Make new entry</button>
             {searchResults.map(item => {
                 return (
                     <div key={item.id} className='entry-house'  onClick={() => history.push(`/entries/${item.id}`)}>

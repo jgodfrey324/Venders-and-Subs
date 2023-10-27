@@ -22,6 +22,8 @@ export default function EntryDetail () {
 
     return selectedEntry ? (
         <div className='details-page-house'>
+            <button onClick={() => history.goBack()}>Go Back</button>
+
             <div className='entry-detail-house'>
                 <p id='created-by-tag'>Entry created by {selectedEntry.user.first_name}</p>
                 <h1>{selectedEntry.company.company_name}</h1>
@@ -41,8 +43,6 @@ export default function EntryDetail () {
                 <h3>Notes:</h3>
                 <p>{selectedEntry.notes}</p>
             </div>
-
-            <p className='navigation-link' onClick={() => history.goBack()}>Go Back</p>
         </div>
     ) : null
 }

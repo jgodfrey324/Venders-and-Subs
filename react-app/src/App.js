@@ -6,6 +6,7 @@ import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import SearchPage from "./components/SearchPage";
 import EntryDetail from "./components/EntryDetail";
+import NewEntryFormPage from "./components/NewEntryFormPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,7 +26,10 @@ function App() {
           <Route exact path="/">
             <SearchPage />
           </Route>
-          <Route path="/entries/:entryId">
+          <Route path="/entries/new">
+            <NewEntryFormPage />
+          </Route>
+          <Route exact path="/entries/:entryId">
             <EntryDetail />
           </Route>
         </Switch>

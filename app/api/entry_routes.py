@@ -19,3 +19,14 @@ def entries():
         results[new_entry['id']] = new_entry
 
     return results
+
+
+
+
+@entry_routes.route('/new')
+# @login_required
+def post_entries():
+    """
+    Posting new entry to list of entries and return new entry in dictionary
+    """
+    pass
