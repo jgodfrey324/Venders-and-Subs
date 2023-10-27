@@ -42,7 +42,7 @@ export default function EntryDetail () {
                 <p>{selectedEntry.notes}</p>
             </div>
 
-            <p className='navigation-link' onClick={() => history.goBack()}>Go Back</p>
+            <button onClick={() => history.goBack()}>Go Back</button>
         </div>
     ) : null
 }
