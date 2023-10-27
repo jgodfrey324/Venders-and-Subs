@@ -39,11 +39,11 @@ export default function NewEntryFormPage () {
             <button onClick={() => history.goBack()}>Go back</button>
             <form onSubmit={submitForm} encType="multipart/form-data">
                     <div className='new-entry-form'>
-                        <ul>
+                        {/* <ul>
                             {errors && (
                                 <p style={{ color: "red" }}>{errors}</p>
                             )}
-                        </ul>
+                        </ul> */}
                         {/* {
                             company (id if associated already) - required
                             category (id) - required
