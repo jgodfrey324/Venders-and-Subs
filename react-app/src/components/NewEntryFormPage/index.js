@@ -12,6 +12,16 @@ export default function NewEntryFormPage () {
     const [category, setCategory] = useState('')
     const [subCategory, setSubCategory] = useState('')
     const [contactName, setContactName] = useState('')
+    const [primaryPhone, setPrimaryPhone] = useState('')
+    const [secondaryPhone, setSecondaryPhone] = useState('')
+    const [email, setEmail] = useState('')
+    const [faxNumber, setFaxNumber] = useState('')
+    const [primaryAddress, setPrimaryAddress] = useState('')
+    const [secondaryAddress, setSecondaryAddress] = useState('')
+    const [city, setCity] = useState('')
+    const [state, setState] = useState('')
+    const [zip, setZip] = useState('')
+    const [note, setNote] = useState('')
     const [submitted, setSubmitted] = useState(false);
 
     if (!sessionUser) return <Redirect to='/login' />
@@ -586,13 +596,75 @@ export default function NewEntryFormPage () {
                         </fieldset>
 
                         <div>
+                            <p>*Format phone numbers: xxx-xxx-xxx</p>
+                        </div>
+
+                        <div>
                             Contact:
                             <input
                             value={contactName}
                             placeholder='First and last name'
                             required
                             onChange={(e) => setContactName(e.target.value)}
-                        />
+                            />
+
+                            <input
+                            value={primaryPhone}
+                            placeholder='Primary phone'
+                            required
+                            onChange={(e) => setPrimaryPhone(e.target.value)}
+                            />
+
+                            <input
+                            value={secondaryPhone}
+                            placeholder='Secondary phone'
+                            onChange={(e) => setSecondaryPhone(e.target.value)}
+                            />
+
+                            <input
+                            value={email}
+                            placeholder='Email'
+                            onChange={(e) => setEmail(e.target.value)}
+                            />
+
+                            <input
+                            value={faxNumber}
+                            placeholder='Fax number'
+                            onChange={(e) => setFaxNumber(e.target.value)}
+                            />
+                        </div>
+
+                        <div>
+                            Location:
+                            <input
+                            value={primaryAddress}
+                            placeholder='Primary address'
+                            onChange={(e) => setPrimaryAddress(e.target.value)}
+                            />
+
+                            <input
+                            value={secondaryAddress}
+                            placeholder='Secondary address'
+                            onChange={(e) => setSecondaryAddress(e.target.value)}
+                            />
+
+                            <input
+                            value={city}
+                            placeholder='City'
+                            onChange={(e) => setCity(e.target.value)}
+                            />
+                            ,
+                            <input
+                            value={state}
+                            placeholder='State'
+                            onChange={(e) => setState(e.target.value)}
+                            />
+
+                            <input
+                            value={zip}
+                            placeholder='Zip code'
+                            onChange={(e) => setZip(e.target.value)}
+                            />
                         </div>
                         <button>Add entry</button>
                     </div>

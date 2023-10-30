@@ -32,6 +32,8 @@ class EntryForm(FlaskForm):
     cell_number = StringField('cell_number')
     email = StringField('email', validators=[Email()])
     fax_number = StringField('fax_number')
+    primary_address = StringField('primary_address')
+    secondary_address = StringField('secondary_address')
     city_id = StringField('city_id')
     state_id = StringField('state_id')
     zip_id = StringField('zip_id')
