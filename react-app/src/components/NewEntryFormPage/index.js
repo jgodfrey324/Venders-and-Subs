@@ -312,8 +312,277 @@ export default function NewEntryFormPage () {
                                 <input type="checkbox" id="insulating" name="insulating" />
                                 <label for="insulating">Insulating</label>
                             </div>
+
+                            <div>
+                                <input type="checkbox" id="interior-plaster" name="interior-plaster" />
+                                <label for="interior-plaster">Interior Plaster</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="irrigation" name="irrigation" />
+                                <label for="irrigation">Irrigation</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="ladders" name="ladders" />
+                                <label for="ladders">Ladders</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="landscaping" name="landscaping" />
+                                <label for="landscaping">Landscaping</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="lumber" name="lumber" />
+                                <label for="lumber">Lumber</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="maintenance" name="maintenance" />
+                                <label for="maintenance">Maintenance</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="marble" name="marble" />
+                                <label for="marble">Marble</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="masonry" name="masonry" />
+                                <label for="masonry">Masonry</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="metal" name="metal" />
+                                <label for="metal">Metal</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="millwork" name="millwork" />
+                                <label for="millwork">Millwork</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="moving" name="moving" />
+                                <label for="moving">Moving</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="painting" name="painting" />
+                                <label for="painting">Painting</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="parrapet" name="parrapet" />
+                                <label for="parrapet">Parrapet</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="piers" name="piers" />
+                                <label for="piers">Piers</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="piles" name="piles" />
+                                <label for="piles">Piles</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="plastics" name="plastics" />
+                                <label for="plastics">Plastics</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="plumbing" name="plumbing" />
+                                <label for="plumbing">Plumbing</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="proofing" name="proofing" />
+                                <label for="proofing">Proofing</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="propane" name="propane" />
+                                <label for="propane">Propane</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="quality-control" name="quality-control" />
+                                <label for="quality-control">Quality Control</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="quartz" name="quartz" />
+                                <label for="quartz">Quartz</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="remodeling" name="remodeling" />
+                                <label for="remodeling">Remodeling</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="rentals" name="rentals" />
+                                <label for="rentals">Rentals</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="rock" name="rock" />
+                                <label for="rock">Rock</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="roofing" name="roofing" />
+                                <label for="roofing">Roofing</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="safety" name="safety" />
+                                <label for="safety">Safety</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="scaffolding" name="scaffolding" />
+                                <label for="scaffolding">Scaffolding</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="security" name="security" />
+                                <label for="security">Security</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="septic-services" name="septic-services" />
+                                <label for="septic-services">Septic Services</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="showers" name="showers" />
+                                <label for="showers">Showers</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="siding" name="siding" />
+                                <label for="siding">Siding</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="soffit" name="soffit" />
+                                <label for="soffit">Soffit</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="specialties" name="specialties" />
+                                <label for="specialties">Specialties</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="specs-reproduction" name="specs-reproduction" />
+                                <label for="specs-reproduction">Specs Reproduction</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="stabilization" name="stabilization" />
+                                <label for="stabilization">Stabilization</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="staffing" name="staffing" />
+                                <label for="staffing">Staffing</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="stairs" name="stairs" />
+                                <label for="stairs">Stairs</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="steel" name="steel" />
+                                <label for="steel">Steel</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="stone" name="stone" />
+                                <label for="stone">Stone</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="storage" name="storage" />
+                                <label for="storage">Storage</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="stormwater" name="stormwater" />
+                                <label for="stormwater">Stormwater</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="stucco" name="stucco" />
+                                <label for="stucco">Stucco</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="surveying" name="surveying" />
+                                <label for="surveying">Surveying</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="tile" name="tile" />
+                                <label for="tile">Tile</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="traffic-control" name="traffic-control" />
+                                <label for="traffic-control">Traffic Control</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="trench" name="trench" />
+                                <label for="trench">Trench</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="trim" name="trim" />
+                                <label for="trim">Trim</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="trucking" name="trucking" />
+                                <label for="trucking">Trucking</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="trusses" name="trusses" />
+                                <label for="trusses">Trusses</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="utilities" name="utilities" />
+                                <label for="utilities">Utilities</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="walls" name="walls" />
+                                <label for="walls">Walls</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="water-treatment" name="water-treatment" />
+                                <label for="water-treatment">Water Treatment Systems</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="welding" name="welding" />
+                                <label for="welding">Welding</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="windows" name="windows" />
+                                <label for="windows">Windows</label>
+                            </div>
                         </fieldset>
-                            {/* appliances,asphalt,billing,brick,cabinetry,caisson,carpentry,ceilings,chinking,cleaning,communications,compaction,composites,concrete,construction_management,consulting,countertops,demolition,design,doors,drilling,earthwork,electrical,elevators,engineering,equipment,erosion_control,estimation,excavation,fabrication,fascial,fencing,fire_protection,flooring,foundations,framing,garbage,glass,granite,gravel,gutters,hardware,hvac,insulating,interior_plaster,irrigation,ladders,landscaping,lumber,maintenance,marble,masonry,metal,millwork,moving,painting,parrapet,piers,piles,plastics,plumbing,proofing,propane,quality_control,quartz,remodeling,rentals,rock,roofing,safety,scaffolding,security,septic_services,showers,siding,soffit,specialties,specs_reproduction,stabilization,staffing,stairs,steel,stone,storage,stormwater,stucco,surveying,tile,traffic_control,trench,trim,trucking,trusses,utilities,walls,water_treatment_systems,welding,windows */}
 
                         <button>Add entry</button>
                     </div>
