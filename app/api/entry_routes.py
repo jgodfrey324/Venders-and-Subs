@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from flask_login import login_required, current_user
 from app.models import db, Entry, User, Category, SubCategory, Company, City, State, Zip
-from forms.entry_form import EntryForm
+from ..forms.entry_form import EntryForm
 
 entry_routes = Blueprint('entries', __name__)
 
@@ -10,6 +10,9 @@ def validation_errors_to_error_messages(validation_errors):
     Simple function that turns the WTForms validation errors into a simple list
     """
     errorMessages = []
+
+    print('error messages 💖', errorMessages)
+
     for field in validation_errors:
         for error in validation_errors[field]:
             errorMessages.append(f'{error}')
@@ -45,7 +48,9 @@ def post_entries():
     form["csrf_token"].data = request.cookies["csrf_token"]
 
     if form.validate_on_submit():
-        contact_name = form.data['contact_name'].split(' ')
+        contact_name = form.data['contact_name']
+
+        print('contact name 💖', contact_name)
 
         company = Company.query.filter_by(company_name=form.data['company'])
         newCompany = False
@@ -91,8 +96,8 @@ def post_entries():
         result = Entry(
             first_name = contact_name[0],
             last_name = contact_name[1],
-            phone_number = form.data['primary_phone'],
-            cell_number = form.data['secondary_phone'],
+            phone_number = form.data['primary_number'],
+            cell_number = form.data['secondary_number'],
             fax_number = form.data['fax_number'],
             email = form.data['email'],
             note = form.data['note'],
@@ -113,4 +118,5 @@ def post_entries():
         return result.to_dict()
 
     if form.errors:
+        print('form.errors -------> 💖', form.errors)
         return {'errors': validation_errors_to_error_messages(form.errors)}, 400
