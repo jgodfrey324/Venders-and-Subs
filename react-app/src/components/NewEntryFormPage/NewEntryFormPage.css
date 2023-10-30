@@ -1,0 +1,32 @@
+.new-entry-form-house {
+    border: 3px solid green;
+}
+
+.new-entry-form {
+    border: 2px solid pink;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 75%;
+}
+
+.new-entry-form > button {
+    margin-top: 30px;
+    width: 15%;
+    cursor: pointer;
+}
+
+.new-entry-form > input {
+    margin: 15px;
+    width: 50%;
+    font-size: 16px;
+    height: 30px;
+}
+
+.new-entry-form > select {
+    width: 25%;
+    margin-left: 15px;
+    /* margin-bottom: 15px; */
+    height: 30px;
+    font-size: 16px;
+}
