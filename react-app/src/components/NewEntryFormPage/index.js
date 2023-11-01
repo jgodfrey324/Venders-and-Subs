@@ -28,10 +28,6 @@ export default function NewEntryFormPage () {
     const [errors, setErrors] = useState('')
     const [submitted, setSubmitted] = useState(false);
 
-    const subCatArray = []
-
-    console.log('subCatArray...', subCatArray)
-    console.log('sub categories', subCategory)
 
     if (!sessionUser) return <Redirect to='/login' />
 
@@ -40,21 +36,44 @@ export default function NewEntryFormPage () {
         e.preventDefault();
         setSubmitted(true);
 
-        const formData = new FormData();
-        formData.append("company", company);
-        formData.append("category", category);
-        formData.append("sub_category", subCategory);
-        formData.append("contact_name", contactName);
-        formData.append("primary_phone", primaryPhone);
-        formData.append("secondary_phone", secondaryPhone);
-        formData.append("email", email);
-        formData.append("fax_number", faxNumber);
-        formData.append("primary_address", primaryAddress);
-        formData.append("secondary_address", secondaryAddress);
-        formData.append("city", city);
-        formData.append("state", state);
-        formData.append("zip", zip);
-        formData.append("note", note);
+        const formData = {
+            category,
+            company,
+            subCategory,
+            contactName,
+            primaryPhone,
+            secondaryPhone,
+            email,
+            faxNumber,
+            primaryAddress,
+            secondaryAddress,
+            city,
+            state,
+            zip,
+            note
+        };
+
+
+        // formData.append("category", category);
+        // formData.append("company", company);
+        // formData.append("sub_category", subCategory);
+        // formData.append("contact_name", contactName);
+        // formData.append("primary_phone", primaryPhone);
+        // formData.append("secondary_phone", secondaryPhone);
+        // formData.append("email", email);
+        // formData.append("fax_number", faxNumber);
+        // formData.append("primary_address", primaryAddress);
+        // formData.append("secondary_address", secondaryAddress);
+        // formData.append("city", city);
+        // formData.append("state", state);
+        // formData.append("zip", zip);
+        // formData.append("note", note);
+
+
+        //
+        console.log('form data 💖', formData)
+        //
+
 
         const data = await dispatch(postEntry(formData));
         // if data is sent back set errors to the data

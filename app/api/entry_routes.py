@@ -44,79 +44,88 @@ def post_entries():
     Posting new entry to list of entries and return new entry in dictionary
     """
 
-    form = EntryForm()
-    form["csrf_token"].data = request.cookies["csrf_token"]
+    ###
+    print('what is request looking like? 💖', request.get_json()['entry'])
+    ###
 
-    if form.validate_on_submit():
-        contact_name = form.data['contact_name']
+    request_body = request.get_json()['entry']
 
-        print('contact name 💖', contact_name)
 
-        company = Company.query.filter_by(company_name=form.data['company'])
-        newCompany = False
-        if not company:
-            newCompany = Company(
-                company_name = form.data['company'],
-                address = form.data['primary_address'],
-                address_2 = form.data['secondary_address']
-            )
-            db.session.add(newCompany)
-            db.session.commit()
+    contact_name = request_body['contactName']
 
-        city = City.query.filter_by(city=form.data['city'])
-        newCity = False
-        if not city:
-            newCity = City(
-                city = form.data['city']
-            )
-
-            db.session.add(newCity)
-            db.session.commit()
-
-        state = State.query.filter_by(state=form.data['state'])
-        newState = False
-        if not state:
-            newState = State(
-                state = form.data['state']
-            )
-            db.session.add(newState)
-            db.session.commit()
-
-        old_zip = Zip.query.filter_by(zip_code=form.data['zip'])
-        newZip = False
-        if not zip:
-            newZip = Zip(
-                zip_code = form.data['zip']
-            )
-            db.session.add(newZip)
-            db.session.commit()
-
-        category = Category.query.filter_by(category=form.data['category'])
-
-        result = Entry(
-            first_name = contact_name[0],
-            last_name = contact_name[1],
-            phone_number = form.data['primary_number'],
-            cell_number = form.data['secondary_number'],
-            fax_number = form.data['fax_number'],
-            email = form.data['email'],
-            note = form.data['note'],
-            company_id = (company.id if company else newCompany.id),
-            city_id = (city.id if city else newCity.id),
-            state_id = (state.id if state else newState.id),
-            zip_id = (old_zip.id if old_zip else newZip.id),
-            list_id = 1,
-            category_id = category.id,
-            user_id = current_user.id
+    company = Company.query.filter_by(company_name=request_body['company'])
+    new_company = False
+    if not company:
+        new_company = Company(
+            company_name = request_body['company'],
+            address = request_body['primaryAddress'],
+            address_2 = request_body['secondaryAddress']
         )
-
-        db.session.add(result)
+        db.session.add(new_company)
         db.session.commit()
 
-        print("💖 💖", result.to_dict())
 
-        return result.to_dict()
 
-    if form.errors:
-        print('form.errors -------> 💖', form.errors)
-        return {'errors': validation_errors_to_error_messages(form.errors)}, 400
+    city = City.query.filter_by(city=request_body['city'])
+    new_city = False
+    if not city:
+        new_city = City(
+            city = request_body['city']
+        )
+
+        db.session.add(new_city)
+        db.session.commit()
+
+
+
+    state = State.query.filter_by(state=request_body['state'])
+    new_state = False
+    if not state:
+        new_state = State(
+            state = request_body['state']
+        )
+        db.session.add(new_state)
+        db.session.commit()
+
+
+
+    old_zip = Zip.query.filter_by(zip_code=request_body['zip'])
+    new_zip = False
+    if not zip:
+        new_zip = Zip(
+            zip_code = request_body['zip']
+        )
+        db.session.add(new_zip)
+        db.session.commit()
+
+
+
+    category = Category.query.filter_by(category=request_body['category'])
+
+
+
+    result = Entry(
+        first_name = contact_name[0],
+        last_name = contact_name[1],
+        phone_number = request_body['primaryPhone'],
+        cell_number = request_body['secondaryPhone'],
+        fax_number = request_body['faxNumber'],
+        email = request_body['email'],
+        note = request_body['note'],
+        company_id = (new_company.id if new_company else company.id),
+        city_id = (new_city.id if new_city else city.id),
+        state_id = (new_state.id if new_state else state.id),
+        zip_id = (new_zip.id if new_zip else old_zip.id),
+        list_id = 1,
+        category_id = category.id,
+        user_id = current_user.id
+    )
+
+    db.session.add(result)
+    db.session.commit()
+
+    ###
+    print("💖 💖", result.to_dict())
+    ###
+
+    return result.to_dict()
