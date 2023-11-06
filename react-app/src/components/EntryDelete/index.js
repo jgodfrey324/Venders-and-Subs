@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 import { Redirect, useHistory, useParams } from 'react-router-dom';
-import { getAllEntries } from '../../store/entries';
+import { deleteEntry } from '../../store/entries';
 // import "./SearchPage.css"
 
 export default function EntryDelete () {
@@ -9,20 +8,19 @@ export default function EntryDelete () {
     const dispatch = useDispatch()
     const history = useHistory()
 	const sessionUser = useSelector(state => state.session.user);
-    const searchResults = Object.values(useSelector(state => state.entries));
 
     const entryId = parseInt(urlParam['entryId'])
-
-    useEffect(() => {
-        dispatch(getAllEntries())
-    }, [])
 
     if (!sessionUser) return <Redirect to='/login' />
 
     return (
         <div className='entry-update-house'>
-            <button onClick={() => history.goBack()}>Go back</button>
-            {`This is where entry ${entryId} will be deleted`}
+            <p>Do you wish to delete this entry?</p>
+            <button onClick={() => {
+                dispatch(deleteEntry(entryId))
+                history.goBack()
+            }}>Yes, delete</button>
+            <button onClick={() => history.goBack()}>No, go back</button>
         </div>
     )
 }

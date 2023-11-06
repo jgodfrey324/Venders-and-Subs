@@ -138,3 +138,19 @@ def post_entries():
     db.session.commit()
 
     return result.to_dict()
+
+
+
+
+@entry_routes.route('/<int:id>/delete', methods=['DELETE'])
+# @login_required
+def remove_entry(id):
+    """
+    Query for entry then removes entry from database
+    """
+    entry_to_delete = Entry.query.get(id)
+
+    db.session.delete(entry_to_delete)
+    db.session.commit()
+
+    return {'message': 'Successfully deleted entry!'}
