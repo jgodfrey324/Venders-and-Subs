@@ -7,6 +7,8 @@ import Navigation from "./components/Navigation";
 import SearchPage from "./components/SearchPage";
 import EntryDetail from "./components/EntryDetail";
 import NewEntryFormPage from "./components/NewEntryFormPage";
+import EntryUpdate from "./components/EntryUpdate";
+import EntryDelete from "./components/EntryDelete";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,17 +22,23 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
-          <Route path="/login" >
-            <LoginFormPage />
-          </Route>
           <Route exact path="/">
             <SearchPage />
           </Route>
-          <Route path="/entries/new">
+          <Route path="/login" >
+            <LoginFormPage />
+          </Route>
+          <Route exact path="/entries/new/">
             <NewEntryFormPage />
           </Route>
-          <Route exact path="/entries/:entryId">
+          <Route exact path="/entries/:entryId/">
             <EntryDetail />
+          </Route>
+          <Route exact path="/entries/:entryId/update">
+            <EntryUpdate />
+          </Route>
+          <Route exact path="/entries/:entryId/delete">
+            <EntryDelete />
           </Route>
         </Switch>
       )}

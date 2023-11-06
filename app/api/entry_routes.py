@@ -49,7 +49,7 @@ def post_entries():
 
     contact_name = request_body['contactName'].split(' ')
 
-    company = Company.query.filter_by(company_name=request_body['company']).first()
+    company = Company.query.filter(Company.company_name.ilike(f'{request_body["company"]}')).first()
     new_company = False
     ###
     if company:
@@ -69,7 +69,7 @@ def post_entries():
     ###
 
 
-    city = City.query.filter_by(city=request_body['city']).first()
+    city = City.query.filter(City.city.ilike(f'{request_body["city"]}')).first()
     new_city = False
     if city:
         city = city.to_dict()
@@ -84,7 +84,7 @@ def post_entries():
 
 
 
-    state = State.query.filter_by(state=request_body['state']).first()
+    state = State.query.filter(State.state.ilike(f'{request_body["state"]}')).first()
     new_state = False
     if state:
         state = state.to_dict()
@@ -136,9 +136,5 @@ def post_entries():
 
     db.session.add(result)
     db.session.commit()
-
-    ###
-    print("💖 💖", result.to_dict())
-    ###
 
     return result.to_dict()
