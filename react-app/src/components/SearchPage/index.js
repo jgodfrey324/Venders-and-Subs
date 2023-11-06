@@ -21,12 +21,17 @@ export default function SearchPage () {
             <button onClick={() => history.push('/entries/new')}>Make new entry</button>
             {searchResults.map(item => {
                 return (
-                    <div key={item.id} className='entry-house'  onClick={() => history.push(`/entries/${item.id}`)}>
+                    <div key={item.id} className='entry-house'>
+                        <div className='entry-house-buttons'>
+                            <button onClick={() => history.push(`/entries/${item.id}/update`)}>Update</button>
+                            <button onClick={() => history.push(`/entries/${item.id}/delete`)}>Delete</button>
+                        </div>
                         <h2>{item.company.company_name}</h2>
                         <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
                         <h3>Contact: </h3>
                         <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
                         <p>Notes: {item.notes}</p>
+                        <a onClick={() => history.push(`/entries/${item.id}`)}>Details</a>
                     </div>
                 )
             })}

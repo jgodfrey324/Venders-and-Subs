@@ -5,10 +5,21 @@ h1 {
 
 .entry-house {
     border: 2px solid red;
-    cursor: pointer;
     margin: 25px 10px;
 }
 
 .search-res-house {
     border: 3px solid blue;
+}
+
+.entry-house-buttons > button {
+    cursor: pointer;
+}
+
+.entry-house > a {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+    color: purple;
 }
