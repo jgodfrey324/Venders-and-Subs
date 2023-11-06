@@ -54,27 +54,6 @@ export default function NewEntryFormPage () {
         };
 
 
-        // formData.append("category", category);
-        // formData.append("company", company);
-        // formData.append("sub_category", subCategory);
-        // formData.append("contact_name", contactName);
-        // formData.append("primary_phone", primaryPhone);
-        // formData.append("secondary_phone", secondaryPhone);
-        // formData.append("email", email);
-        // formData.append("fax_number", faxNumber);
-        // formData.append("primary_address", primaryAddress);
-        // formData.append("secondary_address", secondaryAddress);
-        // formData.append("city", city);
-        // formData.append("state", state);
-        // formData.append("zip", zip);
-        // formData.append("note", note);
-
-
-        //
-        console.log('form data 💖', formData)
-        //
-
-
         const data = await dispatch(postEntry(formData));
         // if data is sent back set errors to the data
         if (data.errors) {
@@ -100,6 +79,8 @@ export default function NewEntryFormPage () {
         setZip('')
         setNote('')
         setSubmitted(false)
+
+        history.push('/')
     }
 
 
@@ -126,22 +107,22 @@ export default function NewEntryFormPage () {
                             onChange={(e) => setCategory(e.target.value)}
                         >
                             <option value="">Select a category</option>
-                            <option value="concrete">Concrete</option>
-                            <option value="conveying-systems">Conveying Systems</option>
-                            <option value="doors-windows">Doors & Windows</option>
-                            <option value="electrical">Electrical</option>
-                            <option value="equipment">Equipment</option>
-                            <option value="finishes">Finishes</option>
-                            <option value="furnishings">Furnishings</option>
-                            <option value="general-conditions">General Conditions</option>
-                            <option value="masonry">Masonry</option>
-                            <option value="mechanical">Mechanical</option>
-                            <option value="site-construction">Site Construction</option>
-                            <option value="specialties">Specialties</option>
-                            <option value="special-construction">Special Construction</option>
-                            <option value="steel">Steel</option>
-                            <option value="thermal-moisture">Thermal & Moisture Protection</option>
-                            <option value="wood-plastics">Wood & Plastics</option>
+                            <option value="Concrete">Concrete</option>
+                            <option value="Conveying Systems">Conveying Systems</option>
+                            <option value="Doors & Windows">Doors & Windows</option>
+                            <option value="Electrical">Electrical</option>
+                            <option value="Equipment">Equipment</option>
+                            <option value="Finishes">Finishes</option>
+                            <option value="Furnishings">Furnishings</option>
+                            <option value="General Conditions">General Conditions</option>
+                            <option value="Masonry">Masonry</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Site Construction">Site Construction</option>
+                            <option value="Specialties">Specialties</option>
+                            <option value="Special Construction">Special Construction</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Thermal & Moisture Protection">Thermal & Moisture Protection</option>
+                            <option value="Wood & Plastics">Wood & Plastics</option>
                         </select>
 
                         <fieldset>
