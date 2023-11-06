@@ -44,18 +44,18 @@ def post_entries():
     Posting new entry to list of entries and return new entry in dictionary
     """
 
-    ###
-    print('what is request looking like? 💖', request.get_json()['entry'])
-    ###
-
     request_body = request.get_json()['entry']
 
 
-    contact_name = request_body['contactName']
+    contact_name = request_body['contactName'].split(' ')
 
-    company = Company.query.filter_by(company_name=request_body['company'])
+    company = Company.query.filter_by(company_name=request_body['company']).first()
     new_company = False
-    if not company:
+    ###
+    if company:
+        company = company.to_dict()
+    ###
+    else:
         new_company = Company(
             company_name = request_body['company'],
             address = request_body['primaryAddress'],
@@ -63,46 +63,59 @@ def post_entries():
         )
         db.session.add(new_company)
         db.session.commit()
+    ###
+    if new_company:
+        new_company = Company.query.filter_by(company_name=request_body['company']).first().to_dict()
+    ###
 
 
-
-    city = City.query.filter_by(city=request_body['city'])
+    city = City.query.filter_by(city=request_body['city']).first()
     new_city = False
-    if not city:
+    if city:
+        city = city.to_dict()
+    else:
         new_city = City(
             city = request_body['city']
         )
-
         db.session.add(new_city)
         db.session.commit()
+    if new_city:
+        new_city = City.query.filter_by(city=request_body['city']).first().to_dict()
 
 
 
-    state = State.query.filter_by(state=request_body['state'])
+    state = State.query.filter_by(state=request_body['state']).first()
     new_state = False
-    if not state:
+    if state:
+        state = state.to_dict()
+    else:
         new_state = State(
             state = request_body['state']
         )
         db.session.add(new_state)
         db.session.commit()
+    if new_state:
+        new_state = State.query.filter_by(state=request_body['state']).first().to_dict()
 
 
 
-    old_zip = Zip.query.filter_by(zip_code=request_body['zip'])
+    old_zip = Zip.query.filter_by(zip_code=request_body['zip']).first()
     new_zip = False
-    if not zip:
+    if old_zip:
+        old_zip = old_zip.to_dict()
+    else:
         new_zip = Zip(
             zip_code = request_body['zip']
         )
         db.session.add(new_zip)
         db.session.commit()
+    if new_zip:
+        new_zip = Zip.query.filter_by(zip_code=request_body['zip']).first().to_dict()
 
 
+    category = Category.query.filter_by(category=request_body['category']).first().to_dict()
 
-    category = Category.query.filter_by(category=request_body['category'])
-
-
+    user = current_user.to_dict()
 
     result = Entry(
         first_name = contact_name[0],
@@ -112,13 +125,13 @@ def post_entries():
         fax_number = request_body['faxNumber'],
         email = request_body['email'],
         note = request_body['note'],
-        company_id = (new_company.id if new_company else company.id),
-        city_id = (new_city.id if new_city else city.id),
-        state_id = (new_state.id if new_state else state.id),
-        zip_id = (new_zip.id if new_zip else old_zip.id),
+        company_id = (new_company['id'] if new_company else company['id']),
+        city_id = (new_city['id'] if new_city else city['id']),
+        state_id = (new_state['id'] if new_state else state['id']),
+        zip_id = (new_zip['id'] if new_zip else old_zip['id']),
         list_id = 1,
-        category_id = category.id,
-        user_id = current_user.id
+        category_id = category['id'],
+        user_id = user['id']
     )
 
     db.session.add(result)
