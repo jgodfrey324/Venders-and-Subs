@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Redirect, useHistory, useParams } from 'react-router-dom';
-import { getAllEntries } from '../../store/entries';
+import { getOneEntry } from '../../store/entries';
 // import "./SearchPage.css"
 
 export default function EntryUpdate () {
@@ -9,21 +9,16 @@ export default function EntryUpdate () {
     const dispatch = useDispatch()
     const history = useHistory()
 	const sessionUser = useSelector(state => state.session.user);
-    const searchResults = Object.values(useSelector(state => state.entries));
+    const entryToUpdate = useSelector(state => state.entries);
 
     const entryId = parseInt(urlParam['entryId'])
 
-    useEffect(() => {
-        dispatch(getAllEntries())
-    }, [])
-
-    const entryToUpdate = searchResults[entryId]
 
     console.log('entry to update ------> ', entryToUpdate)
 
-    const [company, setCompany] = useState(entryToUpdate?.company?.company_name)
-    const [category, setCategory] = useState(entryToUpdate?.category)
-    const [subCategory, setSubCategory] = useState(entryToUpdate?.sub_categories)
+    const [company, setCompany] = useState('')
+    const [category, setCategory] = useState('')
+    const [subCategory, setSubCategory] = useState('')
     const [contactName, setContactName] = useState('')
     const [primaryPhone, setPrimaryPhone] = useState('')
     const [secondaryPhone, setSecondaryPhone] = useState('')
@@ -37,6 +32,19 @@ export default function EntryUpdate () {
     const [note, setNote] = useState('')
     const [errors, setErrors] = useState('')
     const [submitted, setSubmitted] = useState(false);
+
+
+
+    useEffect(() => {
+        dispatch(getOneEntry(entryId))
+
+        if (entryToUpdate.user) {
+            setCompany(entryToUpdate.company.company_name)
+        }
+    }, [entryId])
+
+
+
 
     if (!sessionUser) return <Redirect to='/login' />
 

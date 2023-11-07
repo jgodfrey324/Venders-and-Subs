@@ -37,6 +37,19 @@ def entries():
 
 
 
+@entry_routes.route('/<int:id>')
+def get_one_entry(id):
+    """
+    Query for one entry and returns entry in dictionary
+    """
+    single_entry = Entry.query.get(id)
+
+    return single_entry.to_dict()
+
+
+
+
+
 @entry_routes.route('/new', methods=["POST"])
 # @login_required
 def post_entries():
