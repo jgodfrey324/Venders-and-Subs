@@ -5,26 +5,26 @@ import { Redirect, useHistory } from 'react-router-dom';
 import "./NewEntryFormPage.css"
 import { postEntry } from '../../store/entries';
 
-export default function NewEntryFormPage () {
+export default function NewEntryFormPage ({ entry }) {
     // const dispatch = useDispatch()
     const history = useHistory()
     const dispatch = useDispatch()
 	const sessionUser = useSelector(state => state.session.user);
 
-    const [company, setCompany] = useState('')
-    const [category, setCategory] = useState('')
+    const [company, setCompany] = useState(entry ? entry.company.company_name : '')
+    const [category, setCategory] = useState(entry ? entry.category : '')
     const [subCategory, setSubCategory] = useState([])
-    const [contactName, setContactName] = useState('')
-    const [primaryPhone, setPrimaryPhone] = useState('')
-    const [secondaryPhone, setSecondaryPhone] = useState('')
-    const [email, setEmail] = useState('')
-    const [faxNumber, setFaxNumber] = useState('')
-    const [primaryAddress, setPrimaryAddress] = useState('')
-    const [secondaryAddress, setSecondaryAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState('')
-    const [note, setNote] = useState('')
+    const [contactName, setContactName] = useState(entry ? `${entry.contact.first_name} ${entry.contact.last_name}` : '')
+    const [primaryPhone, setPrimaryPhone] = useState(entry ? entry.contact.phone_number : '')
+    const [secondaryPhone, setSecondaryPhone] = useState(entry ? entry.contact.cell_number : '')
+    const [email, setEmail] = useState(entry ? entry.contact.email : '')
+    const [faxNumber, setFaxNumber] = useState(entry ? entry.contact.fax_number : '')
+    const [primaryAddress, setPrimaryAddress] = useState(entry ? entry.location.address : '')
+    const [secondaryAddress, setSecondaryAddress] = useState(entry ? entry.location.address_2 : '')
+    const [city, setCity] = useState(entry ? entry.location.city : '')
+    const [state, setState] = useState(entry ? entry.location.state : '')
+    const [zip, setZip] = useState(entry ? entry.location.zip : '')
+    const [note, setNote] = useState(entry ? entry.note : '')
     const [errors, setErrors] = useState('')
     const [submitted, setSubmitted] = useState(false);
 
