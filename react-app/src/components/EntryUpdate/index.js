@@ -16,7 +16,7 @@ export default function EntryUpdate () {
 
     console.log('entry to update ------> ', entryToUpdate)
 
-    const [company, setCompany] = useState('')
+    const [company, setCompany] = useState(entryToUpdate.user ? entryToUpdate.company.company_name : '')
     const [category, setCategory] = useState('')
     const [subCategory, setSubCategory] = useState('')
     const [contactName, setContactName] = useState('')
@@ -31,23 +31,26 @@ export default function EntryUpdate () {
     const [zip, setZip] = useState('')
     const [note, setNote] = useState('')
     const [errors, setErrors] = useState('')
+    const [loaded, setLoaded] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-
 
 
     useEffect(() => {
         dispatch(getOneEntry(entryId))
 
         if (entryToUpdate.user) {
+            console.log('i am setting laoded to true')
+            setLoaded(true)
+        }
+        if (loaded) {
+            console.log('i see loaded is true and i\'m setting')
             setCompany(entryToUpdate.company.company_name)
         }
-    }, [entryId])
-
+    }, [entryId, loaded, dispatch])
 
 
 
     if (!sessionUser) return <Redirect to='/login' />
-
 
 
 
