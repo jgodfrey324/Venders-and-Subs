@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, insert, execute
 from flask_login import login_required, current_user
-from app.models import db, Entry, User, Category, SubCategory, Company, City, State, Zip
+from app.models import db, Entry, User, Category, SubCategory, Company, City, State, Zip, entry_sub_category
 from ..forms.entry_form import EntryForm
 
 entry_routes = Blueprint('entries', __name__)
@@ -130,6 +130,13 @@ def post_entries():
 
     user = current_user.to_dict()
 
+    # querying to get ids of the selected sub categories
+    sub_categories = request_body['subCategory']
+    sub_category_ids = None
+    if len(sub_categories) > 0:
+        sub_category_rows = [SubCategory.query.filter_by(sub_category=sub_category).first().to_dict() for sub_category in sub_categories]
+        sub_category_ids = [sub_category.id for sub_category in sub_category_rows]
+
     result = Entry(
         first_name = contact_name[0],
         last_name = contact_name[1],
@@ -149,6 +156,15 @@ def post_entries():
 
     db.session.add(result)
     db.session.commit()
+
+    new_entry = Entry.query.filter_by(company_id=(new_company['id'] if new_company else company['id']), category_id=(category['id']), first_name=contact_name[0], last_name=contact_name[1]).first()
+    new_entry = new_entry.to_dict()
+
+    # creating relationship between new entry and sub categories selected
+    if len(sub_category_ids) > 0:
+        relationships = [insert(entry_sub_category).values(entry_id=new_entry.id, sub_category_id=id) for id in sub_category_ids]
+        [db.session.execute(relationship) for relationship in relationships]
+        db.session.commit()
 
     return result.to_dict()
 
