@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 // import { getAllEntries } from '../../store/entries';
 import "./NewEntryFormPage.css"
-import { postEntry } from '../../store/entries';
+import { postEntry, updateEntry } from '../../store/entries';
 
-export default function NewEntryFormPage ({ entry }) {
+export default function NewEntryFormPage ({ entry, entryId }) {
     // const dispatch = useDispatch()
     const history = useHistory()
     const dispatch = useDispatch()
@@ -54,7 +54,12 @@ export default function NewEntryFormPage ({ entry }) {
         };
 
 
-        const data = await dispatch(postEntry(formData));
+        let data = null;
+        if (entry) {
+            data = await dispatch(updateEntry(formData, entryId));
+        } else {
+            data = await dispatch(postEntry(formData));
+        }
         // if data is sent back set errors to the data
         if (data.errors) {
             return setErrors(data.errors[0]);

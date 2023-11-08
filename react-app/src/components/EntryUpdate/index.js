@@ -20,6 +20,6 @@ export default function EntryUpdate () {
     if (!sessionUser) return <Redirect to='/login' />
 
     return entryToUpdate.user ? (
-        <NewEntryFormPage entry={entryToUpdate} />
+        <NewEntryFormPage entry={entryToUpdate} entryId={entryId} />
     ) : null
 }

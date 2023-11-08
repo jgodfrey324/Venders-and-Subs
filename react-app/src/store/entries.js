@@ -114,8 +114,8 @@ export const deleteEntry = (entryId) => async (dispatch) => {
 		return ["An error occurred. Please try again."];
 	}
 };
-export const updateEntry = (entry) => async (dispatch) => {
-	const response = await fetch(`/api/entries/${entry.id}/update`, {
+export const updateEntry = (entry, entryId) => async (dispatch) => {
+	const response = await fetch(`/api/entries/${entryId}/update`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
