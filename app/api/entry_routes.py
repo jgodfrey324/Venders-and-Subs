@@ -268,7 +268,7 @@ def update_entry(id):
     new_sub_categories = request_body['subCategory']
 
     # removing old sub-category selections
-    relationships = [delete(entry_sub_category).values(entry_id=entry_to_update.id, sub_category_id=id) for id in old_sub_categories_ids]
+    relationships = [delete(entry_sub_category).where(entry_sub_category.c.entry_id == entry_to_update.id, entry_sub_category.c.sub_category_id == id) for id in old_sub_categories_ids]
     [db.session.execute(relationship) for relationship in relationships]
 
      # if there are any new sub-cats selected, then get those ids

@@ -358,7 +358,7 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                             </div>
 
                             <div>
-                                <input checked={subCategory.includes("Construction Management") ? true : false} type="Checkbox" value="construction-management" onChange={(e) => {
+                                <input checked={subCategory.includes("Construction Management") ? true : false} type="checkbox" value="Construction Management" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
