@@ -16,7 +16,7 @@ export default function SearchPage () {
 
     if (!sessionUser) return <Redirect to='/login' />
 
-    return (
+    return searchResults.length ? (
         <div className='search-res-house'>
             <button onClick={() => history.push('/entries/new')}>Make new entry</button>
             {searchResults.map(item => {
@@ -36,5 +36,5 @@ export default function SearchPage () {
                 )
             })}
         </div>
-    )
+    ) : null
 }

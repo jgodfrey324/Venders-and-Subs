@@ -1,11 +1,16 @@
 // constants
 const GET_ENTRIES = 'entries/GET_ENTRIES';
+const GET_ENTRY = 'entries/GET_ENTRY';
 const ADD_ENTRY = 'entries/ADD_ENTRY';
 const REMOVE_ENTRY = 'entries/REMOVE_ENTRY';
 
 const getEntries = (entries) => ({
 	type: GET_ENTRIES,
 	payload: entries
+});
+const getEntry = (entry) => ({
+	type: GET_ENTRY,
+	payload: entry
 });
 const addEntry = (entry) => ({
     type: ADD_ENTRY,
@@ -27,6 +32,27 @@ export const getAllEntries = () => async (dispatch) => {
 	if (response.ok) {
         const data = await response.json()
 		dispatch(getEntries(data));
+
+        return data
+	} else if (response.status < 500) {
+		const data = await response.json();
+		if (data.errors) {
+			return data.errors;
+		}
+	} else {
+		return ["An error occurred. Please try again."];
+	}
+};
+export const getOneEntry = (entryId) => async (dispatch) => {
+	const response = await fetch(`/api/entries/${entryId}`, {
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
+
+	if (response.ok) {
+        const data = await response.json()
+		dispatch(getEntry(data));
 
         return data
 	} else if (response.status < 500) {
@@ -84,19 +110,23 @@ export const deleteEntry = (entryId) => async (dispatch) => {
 	}
 }
 
+const initialState = {};
 // reducer
-const entriesReducer = (state = {}, action) => {
+const entriesReducer = (state = initialState, action) => {
 	let newState;
 	switch (action.type) {
 		case GET_ENTRIES:
-			newState = action.payload
+			newState = { ...action.payload }
+			return newState
+		case GET_ENTRY:
+			newState = { ...action.payload }
 			return newState
 		case ADD_ENTRY:
-			newState = state
+			newState = { ...state }
 			newState[action.payload.id] = action.payload
 			return newState
 		case REMOVE_ENTRY:
-			newState = state
+			newState = { ...state }
 			delete newState[action.payload]
 			return newState
 		default:

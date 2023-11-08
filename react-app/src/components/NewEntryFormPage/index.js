@@ -5,27 +5,28 @@ import { Redirect, useHistory } from 'react-router-dom';
 import "./NewEntryFormPage.css"
 import { postEntry } from '../../store/entries';
 
-export default function NewEntryFormPage () {
+export default function NewEntryFormPage ({ entry }) {
     // const dispatch = useDispatch()
     const history = useHistory()
     const dispatch = useDispatch()
 	const sessionUser = useSelector(state => state.session.user);
 
-    const [company, setCompany] = useState('')
-    const [category, setCategory] = useState('')
-    const [subCategory, setSubCategory] = useState([])
-    const [contactName, setContactName] = useState('')
-    const [primaryPhone, setPrimaryPhone] = useState('')
-    const [secondaryPhone, setSecondaryPhone] = useState('')
-    const [email, setEmail] = useState('')
-    const [faxNumber, setFaxNumber] = useState('')
-    const [primaryAddress, setPrimaryAddress] = useState('')
-    const [secondaryAddress, setSecondaryAddress] = useState('')
-    const [city, setCity] = useState('')
-    const [state, setState] = useState('')
-    const [zip, setZip] = useState('')
-    const [note, setNote] = useState('')
+    const [company, setCompany] = useState(entry ? entry.company.company_name : '')
+    const [category, setCategory] = useState(entry ? entry.category : '')
+    const [subCategory, setSubCategory] = useState(entry ? entry.sub_categories : [])
+    const [contactName, setContactName] = useState(entry ? `${entry.contact.first_name} ${entry.contact.last_name}` : '')
+    const [primaryPhone, setPrimaryPhone] = useState(entry ? entry.contact.phone_number : '')
+    const [secondaryPhone, setSecondaryPhone] = useState(entry ? entry.contact.cell_number : '')
+    const [email, setEmail] = useState(entry ? entry.contact.email : '')
+    const [faxNumber, setFaxNumber] = useState(entry ? entry.contact.fax_number : '')
+    const [primaryAddress, setPrimaryAddress] = useState(entry ? entry.location.address : '')
+    const [secondaryAddress, setSecondaryAddress] = useState(entry ? entry.location.address_2 : '')
+    const [city, setCity] = useState(entry ? entry.location.city : '')
+    const [state, setState] = useState(entry ? entry.location.state : '')
+    const [zip, setZip] = useState(entry ? entry.location.zip : '')
+    const [note, setNote] = useState(entry ? entry.note : '')
     const [errors, setErrors] = useState('')
+    const [checked, setChecked] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
 
@@ -84,6 +85,8 @@ export default function NewEntryFormPage () {
     }
 
 
+    console.log('sub categories ----> ', subCategory)
+
     return (
         <div className='new-entry-form-house'>
             <button onClick={() => history.goBack()}>Go back</button>
@@ -129,7 +132,7 @@ export default function NewEntryFormPage () {
                             <legend>Select subcategories:</legend>
 
                             <div>
-                                <input type="checkbox" value="appliances" onChange={(e) => {
+                                <input checked={subCategory.includes("Appliances") ? true : false} type="checkbox" value="Appliances" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -145,7 +148,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="asphalt" onChange={(e) => {
+                                <input checked={subCategory.includes("Asphalt") ? true : false} type="checkbox" value="Asphalt" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -161,7 +164,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="billing" onChange={(e) => {
+                                <input checked={subCategory.includes("Billing") ? true : false} type="checkbox" value="Billing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -177,7 +180,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="brick" onChange={(e) => {
+                                <input checked={subCategory.includes("Brick") ? true : false} type="checkbox" value="Brick" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -193,7 +196,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="cabinetry" onChange={(e) => {
+                                <input checked={subCategory.includes("Cabinetry") ? true : false} type="checkbox" value="Cabinetry" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -209,7 +212,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="caisson" onChange={(e) => {
+                                <input checked={subCategory.includes("Caisson") ? true : false} type="checkbox" value="Caisson" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -225,7 +228,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="carpentry" onChange={(e) => {
+                                <input checked={subCategory.includes("Carpentry") ? true : false} type="checkbox" value="Carpentry" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -241,7 +244,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="ceilings" onChange={(e) => {
+                                <input checked={subCategory.includes("Ceilings") ? true : false} type="checkbox" value="Ceilings" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -257,7 +260,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="chinking" onChange={(e) => {
+                                <input checked={subCategory.includes("Chinking") ? true : false} type="checkbox" value="Chinking" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -273,7 +276,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="cleaning" onChange={(e) => {
+                                <input checked={subCategory.includes("Cleaning") ? true : false} type="checkbox" value="Cleaning" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -289,7 +292,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="communication" onChange={(e) => {
+                                <input checked={subCategory.includes("Communication") ? true : false} type="checkbox" value="Communication" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -305,7 +308,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="compaction" onChange={(e) => {
+                                <input checked={subCategory.includes("Compaction") ? true : false} type="checkbox" value="Compaction" onChange={(e) => {
                                    if (subCategory.includes(e.target.value)) {
                                     const removeElement = subCategory
                                     const eleIndex = subCategory.indexOf(e.target.value)
@@ -321,7 +324,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="composites" onChange={(e) => {
+                                <input checked={subCategory.includes("Composites") ? true : false} type="checkbox" value="Composites" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -337,7 +340,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="concrete" onChange={(e) => {
+                                <input checked={subCategory.includes("Concrete") ? true : false} type="checkbox" value="Concrete" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -353,7 +356,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="construction-management" onChange={(e) => {
+                                <input checked={subCategory.includes("Construction Management") ? true : false} type="Checkbox" value="construction-management" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -369,7 +372,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="consulting" onChange={(e) => {
+                                <input checked={subCategory.includes("Consulting") ? true : false} type="checkbox" value="Consulting" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -385,7 +388,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="countertops" onChange={(e) => {
+                                <input checked={subCategory.includes("Countertops") ? true : false} type="checkbox" value="Countertops" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -401,7 +404,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="demolition" onChange={(e) => {
+                                <input checked={subCategory.includes("Demolition") ? true : false} type="checkbox" value="Demolition" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -417,7 +420,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="design" onChange={(e) => {
+                                <input checked={subCategory.includes("Design") ? true : false} type="checkbox" value="Design" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -433,7 +436,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="doors" onChange={(e) => {
+                                <input checked={subCategory.includes("Doors") ? true : false} type="checkbox" value="Doors" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -449,7 +452,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="drilling" onChange={(e) => {
+                                <input checked={subCategory.includes("Drilling") ? true : false} type="checkbox" value="Drilling" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -465,7 +468,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="earthwork" onChange={(e) => {
+                                <input checked={subCategory.includes("Earthwork") ? true : false} type="checkbox" value="Earthwork" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -481,7 +484,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="electrical" onChange={(e) => {
+                                <input checked={subCategory.includes("Electrical") ? true : false} type="checkbox" value="Electrical" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -497,7 +500,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="elevators" onChange={(e) => {
+                                <input checked={subCategory.includes("Elevators") ? true : false} type="checkbox" value="Elevators" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -513,7 +516,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="engineering" onChange={(e) => {
+                                <input checked={subCategory.includes("Engineering") ? true : false} type="checkbox" value="Engineering" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -529,7 +532,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="equipment" onChange={(e) => {
+                                <input checked={subCategory.includes("Equipment") ? true : false} type="checkbox" value="Equipment" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -545,7 +548,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="erosion-control" onChange={(e) => {
+                                <input checked={subCategory.includes("Erosion Control") ? true : false} type="checkbox" value="Erosion-control" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -561,7 +564,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="estimation" onChange={(e) => {
+                                <input checked={subCategory.includes("Estimation") ? true : false} type="checkbox" value="Estimation" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -577,7 +580,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="excavation" onChange={(e) => {
+                                <input checked={subCategory.includes("Excavation") ? true : false} type="checkbox" value="Excavation" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -593,7 +596,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="fabrication" onChange={(e) => {
+                                <input checked={subCategory.includes("Fabrication") ? true : false} type="checkbox" value="Fabrication" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -609,7 +612,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="fascial" onChange={(e) => {
+                                <input checked={subCategory.includes("Fascial") ? true : false} type="checkbox" value="Fascial" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -625,7 +628,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="fencing" onChange={(e) => {
+                                <input checked={subCategory.includes("Fencing") ? true : false} type="checkbox" value="Fencing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -641,7 +644,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="fire-protection" onChange={(e) => {
+                                <input checked={subCategory.includes("Fire Protection") ? true : false} type="checkbox" value="Fire Protection" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -657,7 +660,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="flooring" onChange={(e) => {
+                                <input checked={subCategory.includes("Flooring") ? true : false} type="checkbox" value="Flooring" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -673,7 +676,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="foundations" onChange={(e) => {
+                                <input checked={subCategory.includes("Foundations") ? true : false} type="checkbox" value="Foundations" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -689,7 +692,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="framing" onChange={(e) => {
+                                <input checked={subCategory.includes("Framing") ? true : false} type="checkbox" value="Framing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -705,7 +708,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="garbage" onChange={(e) => {
+                                <input checked={subCategory.includes("Garbage") ? true : false} type="checkbox" value="Garbage" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -721,7 +724,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="glass" onChange={(e) => {
+                                <input checked={subCategory.includes("Glass") ? true : false} type="checkbox" value="Glass" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -737,7 +740,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="granite" onChange={(e) => {
+                                <input checked={subCategory.includes("Granite") ? true : false} type="checkbox" value="Granite" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -753,7 +756,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="gravel" onChange={(e) => {
+                                <input checked={subCategory.includes("Gravel") ? true : false} type="checkbox" value="Gravel" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -769,7 +772,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="gutters" onChange={(e) => {
+                                <input checked={subCategory.includes("Gutters") ? true : false} type="checkbox" value="Gutters" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -785,7 +788,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="hardware" onChange={(e) => {
+                                <input checked={subCategory.includes("Hardware") ? true : false} type="checkbox" value="Hardware" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -801,7 +804,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="hvac" onChange={(e) => {
+                                <input checked={subCategory.includes("HVAC") ? true : false} type="checkbox" value="HVAC" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -817,7 +820,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="insulating" onChange={(e) => {
+                                <input checked={subCategory.includes("Insulating") ? true : false} type="checkbox" value="Insulating" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -833,7 +836,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="interior-plasters" onChange={(e) => {
+                                <input checked={subCategory.includes("Interior Plasters") ? true : false} type="checkbox" value="Interior Plasters" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -849,7 +852,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="irrigation" onChange={(e) => {
+                                <input checked={subCategory.includes("Irrigation") ? true : false} type="checkbox" value="Irrigation" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -865,7 +868,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="ladders" onChange={(e) => {
+                                <input checked={subCategory.includes("Ladders") ? true : false} type="checkbox" value="Ladders" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -881,7 +884,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="landscaping" onChange={(e) => {
+                                <input checked={subCategory.includes("Landscaping") ? true : false} type="checkbox" value="Landscaping" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -897,7 +900,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="lumber" onChange={(e) => {
+                                <input checked={subCategory.includes("Lumber") ? true : false} type="checkbox" value="Lumber" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -913,7 +916,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="maintenance" onChange={(e) => {
+                                <input checked={subCategory.includes("Maintenance") ? true : false} type="checkbox" value="Maintenance" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -929,7 +932,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="marble" onChange={(e) => {
+                                <input checked={subCategory.includes("Marble") ? true : false} type="checkbox" value="Marble" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -945,7 +948,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="masonry" onChange={(e) => {
+                                <input checked={subCategory.includes("Masonry") ? true : false} type="checkbox" value="Masonry" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -961,7 +964,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="metal" onChange={(e) => {
+                                <input checked={subCategory.includes("Metal") ? true : false} type="checkbox" value="Metal" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -977,7 +980,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="millwork" onChange={(e) => {
+                                <input checked={subCategory.includes("Millwork") ? true : false} type="checkbox" value="Millwork" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -993,7 +996,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="moving" onChange={(e) => {
+                                <input checked={subCategory.includes("Moving") ? true : false} type="checkbox" value="Moving" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1009,7 +1012,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="painting" onChange={(e) => {
+                                <input checked={subCategory.includes("Painting") ? true : false} type="checkbox" value="Painting" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1025,7 +1028,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="parrapet" onChange={(e) => {
+                                <input checked={subCategory.includes("Parrapet") ? true : false} type="checkbox" value="Parrapet" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1041,7 +1044,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="piers" onChange={(e) => {
+                                <input checked={subCategory.includes("Piers") ? true : false} type="checkbox" value="Piers" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1057,7 +1060,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="piles" onChange={(e) => {
+                                <input checked={subCategory.includes("Piles") ? true : false} type="checkbox" value="Piles" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1073,7 +1076,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="plastics" onChange={(e) => {
+                                <input checked={subCategory.includes("Plastics") ? true : false} type="checkbox" value="Plastics" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1089,7 +1092,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="plumbing" onChange={(e) => {
+                                <input checked={subCategory.includes("Plumbing") ? true : false} type="checkbox" value="Plumbing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1105,7 +1108,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="proofing" onChange={(e) => {
+                                <input checked={subCategory.includes("Proofing") ? true : false} type="checkbox" value="Proofing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1121,7 +1124,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="propane" onChange={(e) => {
+                                <input checked={subCategory.includes("Propane") ? true : false} type="checkbox" value="Propane" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1137,7 +1140,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="quality-control" onChange={(e) => {
+                                <input checked={subCategory.includes("Quality Control") ? true : false} type="checkbox" value="Quality Control" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1153,7 +1156,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="quartz" onChange={(e) => {
+                                <input checked={subCategory.includes("Quartz") ? true : false} type="checkbox" value="Quartz" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1169,7 +1172,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="remodeling" onChange={(e) => {
+                                <input checked={subCategory.includes("Remodeling") ? true : false} type="checkbox" value="Remodeling" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1185,7 +1188,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="rentals" onChange={(e) => {
+                                <input checked={subCategory.includes("Rentals") ? true : false} type="checkbox" value="Rentals" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1201,7 +1204,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="rock" onChange={(e) => {
+                                <input checked={subCategory.includes("Rock") ? true : false} type="checkbox" value="Rock" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1217,7 +1220,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="roofing" onChange={(e) => {
+                                <input checked={subCategory.includes("Roofing") ? true : false} type="checkbox" value="Roofing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1233,7 +1236,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="safety" onChange={(e) => {
+                                <input checked={subCategory.includes("Safety") ? true : false} type="checkbox" value="Safety" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1249,7 +1252,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="scaffolding" onChange={(e) => {
+                                <input checked={subCategory.includes("Scaffolding") ? true : false} type="checkbox" value="Scaffolding" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1265,7 +1268,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="security" onChange={(e) => {
+                                <input checked={subCategory.includes("Security") ? true : false} type="checkbox" value="Security" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1281,7 +1284,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="spetic-services" onChange={(e) => {
+                                <input checked={subCategory.includes("Septic Services") ? true : false} type="checkbox" value="Septic Services" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1297,7 +1300,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="showers" onChange={(e) => {
+                                <input checked={subCategory.includes("Showers") ? true : false} type="checkbox" value="Showers" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1313,7 +1316,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="siding" onChange={(e) => {
+                                <input checked={subCategory.includes("Siding") ? true : false} type="checkbox" value="Siding" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1329,7 +1332,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="soffit" onChange={(e) => {
+                                <input checked={subCategory.includes("Soffit") ? true : false} type="checkbox" value="Soffit" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1345,7 +1348,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="specialties" onChange={(e) => {
+                                <input checked={subCategory.includes("Specialties") ? true : false} type="checkbox" value="Specialties" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1361,7 +1364,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="specs-reproduction" onChange={(e) => {
+                                <input checked={subCategory.includes("Specs Reproduction") ? true : false} type="checkbox" value="Specs Reproduction" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1377,7 +1380,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="stabilization" onChange={(e) => {
+                                <input checked={subCategory.includes("Stabilization") ? true : false} type="checkbox" value="Stabilization" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1393,7 +1396,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="staffing" onChange={(e) => {
+                                <input checked={subCategory.includes("Staffing") ? true : false} type="checkbox" value="Staffing" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1409,7 +1412,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="stairs" onChange={(e) => {
+                                <input checked={subCategory.includes("Stairs") ? true : false} type="checkbox" value="Stairs" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1425,7 +1428,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="steel" onChange={(e) => {
+                                <input checked={subCategory.includes("Steel") ? true : false} type="checkbox" value="Steel" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1441,7 +1444,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="stone" onChange={(e) => {
+                                <input checked={subCategory.includes("Stone") ? true : false} type="checkbox" value="Stone" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1457,7 +1460,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="storage" onChange={(e) => {
+                                <input checked={subCategory.includes("Storage") ? true : false} type="checkbox" value="Storage" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1473,7 +1476,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="stormwater" onChange={(e) => {
+                                <input checked={subCategory.includes("Stormwater") ? true : false} type="checkbox" value="Stormwater" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1489,7 +1492,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="stucco" onChange={(e) => {
+                                <input checked={subCategory.includes("Stucco") ? true : false} type="checkbox" value="Stucco" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1505,7 +1508,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="surveying" onChange={(e) => {
+                                <input checked={subCategory.includes("Surveying") ? true : false} type="checkbox" value="Surveying" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1521,7 +1524,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="tile" onChange={(e) => {
+                                <input checked={subCategory.includes("Tile") ? true : false} type="checkbox" value="Tile" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1537,7 +1540,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="traffic-control" onChange={(e) => {
+                                <input checked={subCategory.includes("Traffic Control") ? true : false} type="checkbox" value="Traffic Control" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1553,7 +1556,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="trench" onChange={(e) => {
+                                <input checked={subCategory.includes("Trench") ? true : false} type="checkbox" value="Trench" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1569,7 +1572,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="trim" onChange={(e) => {
+                                <input checked={subCategory.includes("Trim") ? true : false} type="checkbox" value="Trim" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1585,7 +1588,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="trucking" onChange={(e) => {
+                                <input checked={subCategory.includes("Trucking") ? true : false} type="checkbox" value="Trucking" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1601,7 +1604,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="trusses" onChange={(e) => {
+                                <input checked={subCategory.includes("Trusses") ? true : false} type="checkbox" value="Trusses" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1617,7 +1620,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="utilities" onChange={(e) => {
+                                <input checked={subCategory.includes("Utilities") ? true : false} type="checkbox" value="Utilities" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1633,7 +1636,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="walls" onChange={(e) => {
+                                <input checked={subCategory.includes("Walls") ? true : false} type="checkbox" value="Walls" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1649,7 +1652,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="water-treatment-systems" onChange={(e) => {
+                                <input checked={subCategory.includes("Water Treatment Systems") ? true : false} type="checkbox" value="Water Treatment Systems" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1665,7 +1668,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="welding" onChange={(e) => {
+                                <input checked={subCategory.includes("Welding") ? true : false} type="checkbox" value="Welding" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1681,7 +1684,7 @@ export default function NewEntryFormPage () {
                             </div>
 
                             <div>
-                                <input type="checkbox" value="windows" onChange={(e) => {
+                                <input checked={subCategory.includes("Windows") ? true : false} type="checkbox" value="Windows" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
