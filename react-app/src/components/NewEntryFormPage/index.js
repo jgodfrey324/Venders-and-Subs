@@ -1703,10 +1703,10 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                         </fieldset>
 
                         <div>
-                            <p>*Format phone numbers: xxx-xxx-xxx</p>
+                            <p>*Format phone numbers: xxx-xxx-xxxx</p>
                         </div>
 
-                        <div>
+                        <div className='contact-house'>
                             <p>Contact:</p>
                             <input
                             value={contactName}
