@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 // import { getAllEntries } from '../../store/entries';
 import "./NewEntryFormPage.css"
-import { postEntry } from '../../store/entries';
+import { postEntry, updateEntry } from '../../store/entries';
 
-export default function NewEntryFormPage ({ entry }) {
+export default function NewEntryFormPage ({ entry, entryId }) {
     // const dispatch = useDispatch()
     const history = useHistory()
     const dispatch = useDispatch()
@@ -19,14 +19,13 @@ export default function NewEntryFormPage ({ entry }) {
     const [secondaryPhone, setSecondaryPhone] = useState(entry ? entry.contact.cell_number : '')
     const [email, setEmail] = useState(entry ? entry.contact.email : '')
     const [faxNumber, setFaxNumber] = useState(entry ? entry.contact.fax_number : '')
-    const [primaryAddress, setPrimaryAddress] = useState(entry ? entry.location.address : '')
-    const [secondaryAddress, setSecondaryAddress] = useState(entry ? entry.location.address_2 : '')
+    const [primaryAddress, setPrimaryAddress] = useState(entry ? entry.company.address : '')
+    const [secondaryAddress, setSecondaryAddress] = useState(entry ? entry.company.address_2 : '')
     const [city, setCity] = useState(entry ? entry.location.city : '')
     const [state, setState] = useState(entry ? entry.location.state : '')
     const [zip, setZip] = useState(entry ? entry.location.zip : '')
-    const [note, setNote] = useState(entry ? entry.note : '')
+    const [note, setNote] = useState(entry ? entry.notes : '')
     const [errors, setErrors] = useState('')
-    const [checked, setChecked] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
 
@@ -55,7 +54,12 @@ export default function NewEntryFormPage ({ entry }) {
         };
 
 
-        const data = await dispatch(postEntry(formData));
+        let data = null;
+        if (entry) {
+            data = await dispatch(updateEntry(formData, entryId));
+        } else {
+            data = await dispatch(postEntry(formData));
+        }
         // if data is sent back set errors to the data
         if (data.errors) {
             return setErrors(data.errors[0]);
@@ -84,8 +88,6 @@ export default function NewEntryFormPage ({ entry }) {
         history.push('/')
     }
 
-
-    console.log('sub categories ----> ', subCategory)
 
     return (
         <div className='new-entry-form-house'>
@@ -356,7 +358,7 @@ export default function NewEntryFormPage ({ entry }) {
                             </div>
 
                             <div>
-                                <input checked={subCategory.includes("Construction Management") ? true : false} type="Checkbox" value="construction-management" onChange={(e) => {
+                                <input checked={subCategory.includes("Construction Management") ? true : false} type="checkbox" value="Construction Management" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
                                         const removeElement = subCategory
                                         const eleIndex = subCategory.indexOf(e.target.value)
@@ -1780,7 +1782,7 @@ export default function NewEntryFormPage ({ entry }) {
                             />
                         </div>
 
-                        <button>Add entry</button>
+                        <button>{entry ? 'Update entry' : 'Add entry'}</button>
                     </div>
             </form >
         </div>

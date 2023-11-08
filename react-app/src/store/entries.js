@@ -3,6 +3,7 @@ const GET_ENTRIES = 'entries/GET_ENTRIES';
 const GET_ENTRY = 'entries/GET_ENTRY';
 const ADD_ENTRY = 'entries/ADD_ENTRY';
 const REMOVE_ENTRY = 'entries/REMOVE_ENTRY';
+const PUT_ENTRY = 'entries/PUT_ENTRY';
 
 const getEntries = (entries) => ({
 	type: GET_ENTRIES,
@@ -19,6 +20,10 @@ const addEntry = (entry) => ({
 const removeEntry = (entryId) => ({
 	type: REMOVE_ENTRY,
 	payload: entryId
+});
+const putEntry = (entry) => ({
+	type: PUT_ENTRY,
+	payload: entry
 });
 
 // action thunks
@@ -108,7 +113,31 @@ export const deleteEntry = (entryId) => async (dispatch) => {
 	} else {
 		return ["An error occurred. Please try again."];
 	}
-}
+};
+export const updateEntry = (entry, entryId) => async (dispatch) => {
+	const response = await fetch(`/api/entries/${entryId}/update`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+			entry
+		}),
+    })
+
+    if (response.ok) {
+        const data = await response.json()
+        dispatch(putEntry(data))
+        return data
+    } else if (response.status < 500) {
+		const data = await response.json();
+		if (data.errors) {
+			return data.errors;
+		}
+	} else {
+		return ["An error occurred. Please try again."];
+	}
+};
 
 const initialState = {};
 // reducer
@@ -128,6 +157,10 @@ const entriesReducer = (state = initialState, action) => {
 		case REMOVE_ENTRY:
 			newState = { ...state }
 			delete newState[action.payload]
+			return newState
+		case PUT_ENTRY:
+			newState = { ...state }
+			newState[action.payload.id] = action.payload
 			return newState
 		default:
 			return state;
