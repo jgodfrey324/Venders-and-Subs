@@ -26,7 +26,6 @@ export default function NewEntryFormPage ({ entry }) {
     const [zip, setZip] = useState(entry ? entry.location.zip : '')
     const [note, setNote] = useState(entry ? entry.note : '')
     const [errors, setErrors] = useState('')
-    const [checked, setChecked] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
 
@@ -84,8 +83,6 @@ export default function NewEntryFormPage ({ entry }) {
         history.push('/')
     }
 
-
-    console.log('sub categories ----> ', subCategory)
 
     return (
         <div className='new-entry-form-house'>
@@ -1780,7 +1777,7 @@ export default function NewEntryFormPage ({ entry }) {
                             />
                         </div>
 
-                        <button>Add entry</button>
+                        <button>{entry ? 'Update entry' : 'Add entry'}</button>
                     </div>
             </form >
         </div>

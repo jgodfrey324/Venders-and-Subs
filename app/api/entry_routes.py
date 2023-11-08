@@ -136,7 +136,7 @@ def post_entries():
     sub_category_ids = None
     if len(sub_categories) > 0:
         sub_category_rows = [SubCategory.query.filter_by(sub_category=sub_category).first().to_dict() for sub_category in sub_categories]
-        sub_category_ids = [sub_category.id for sub_category in sub_category_rows]
+        sub_category_ids = [sub_category['id'] for sub_category in sub_category_rows]
 
     result = Entry(
         first_name = contact_name[0],
@@ -163,11 +163,27 @@ def post_entries():
 
     # creating relationship between new entry and sub categories selected
     if len(sub_category_ids) > 0:
-        relationships = [insert(entry_sub_category).values(entry_id=new_entry.id, sub_category_id=id) for id in sub_category_ids]
+        relationships = [insert(entry_sub_category).values(entry_id=new_entry['id'], sub_category_id=id) for id in sub_category_ids]
         [db.session.execute(relationship) for relationship in relationships]
         db.session.commit()
 
     return result.to_dict()
+
+
+
+
+
+@entry_routes.route('/<int:id>/update', methods=['PUT'])
+def update_entry(id):
+    """
+    Query for the selected entry, then updates entry with request body and returns new entry in dictionary
+    """
+
+    entry_to_update = Entry.query.get(id).to_dict()
+
+    print('entry to update 💖', entry_to_update)
+
+
 
 
 
