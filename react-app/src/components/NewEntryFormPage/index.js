@@ -19,12 +19,12 @@ export default function NewEntryFormPage ({ entry, entryId }) {
     const [secondaryPhone, setSecondaryPhone] = useState(entry ? entry.contact.cell_number : '')
     const [email, setEmail] = useState(entry ? entry.contact.email : '')
     const [faxNumber, setFaxNumber] = useState(entry ? entry.contact.fax_number : '')
-    const [primaryAddress, setPrimaryAddress] = useState(entry ? entry.location.address : '')
-    const [secondaryAddress, setSecondaryAddress] = useState(entry ? entry.location.address_2 : '')
+    const [primaryAddress, setPrimaryAddress] = useState(entry ? entry.company.address : '')
+    const [secondaryAddress, setSecondaryAddress] = useState(entry ? entry.company.address_2 : '')
     const [city, setCity] = useState(entry ? entry.location.city : '')
     const [state, setState] = useState(entry ? entry.location.state : '')
     const [zip, setZip] = useState(entry ? entry.location.zip : '')
-    const [note, setNote] = useState(entry ? entry.note : '')
+    const [note, setNote] = useState(entry ? entry.notes : '')
     const [errors, setErrors] = useState('')
     const [submitted, setSubmitted] = useState(false);
 
