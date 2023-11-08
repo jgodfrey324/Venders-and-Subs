@@ -1,4 +1,5 @@
-from flask import Blueprint, jsonify, request, insert, execute
+from flask import Blueprint, jsonify, request
+from sqlalchemy import insert
 from flask_login import login_required, current_user
 from app.models import db, Entry, User, Category, SubCategory, Company, City, State, Zip, entry_sub_category
 from ..forms.entry_form import EntryForm
