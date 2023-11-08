@@ -45,7 +45,6 @@ function ProfileButton({ user }) {
         {user ? (
           <>
             <li>Hello, {user.first_name}!</li>
-            <li>{user.username}</li>
             <li>{user.email}</li>
             <li>
               <button onClick={handleLogout}>Log Out</button>

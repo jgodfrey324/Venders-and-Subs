@@ -36,7 +36,7 @@ export default function EntryDetail () {
 
                 <h3>Contact: </h3>
                 <p>{entry.contact.first_name} {entry.contact.last_name}</p>
-                <p>{entry.contact.email}</p>
+                <p>Email: {entry.contact.email}</p>
                 <p><span>Primary phone: </span>{entry.contact.phone_number}</p>
                 <p><span>Secondary phone: </span>{entry.contact.cell_number}</p>
                 <p><span>Fax Number: </span>{entry.contact.fax_number}</p>
