@@ -11,6 +11,8 @@ export default function EntryDetail () {
 	const sessionUser = useSelector(state => state.session.user);
     const entry = useSelector(state => state.entries)
 
+    console.log('entry from store --> ', entry)
+
     const entryId = parseInt(urlParam['entryId'])
     // const selectedEntry = entries ? entries[entryId] : null
 
@@ -34,6 +36,18 @@ export default function EntryDetail () {
                 </div>
                 <p id='created-by-tag'>Entry created by {entry.user.first_name}</p>
                 <h1>{entry.company.company_name}</h1>
+                <div className='categories-house'>
+                    <h3>Category:</h3>
+                    <p>{entry.category}</p>
+                </div>
+                <div className='sub-cat-house'>
+                    <h3>Sub-categories:</h3>
+                    {entry.sub_categories.map(cat => {
+                        return (
+                            <p key={cat}>{cat}</p>
+                        )
+                    })}
+                </div>
 
                 <h3>Location: </h3>
                 <p>{entry.location.city}, {entry.location.state} {entry.location.zip}</p>

@@ -18,7 +18,7 @@ export default function EntryDelete () {
             <p>Do you wish to delete this entry?</p>
             <button onClick={() => {
                 dispatch(deleteEntry(entryId))
-                history.goBack()
+                history.push('/')
             }}>Yes, delete</button>
             <button onClick={() => history.goBack()}>No, go back</button>
         </div>
