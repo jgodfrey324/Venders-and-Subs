@@ -16,10 +16,6 @@ h1 {
     cursor: pointer;
 }
 
-.entry-house > a {
-    font-weight: bold;
+.entry-house-details {
     cursor: pointer;
-    font-size: 16px;
-    text-decoration: underline;
-    color: purple;
 }
