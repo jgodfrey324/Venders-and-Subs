@@ -1774,7 +1774,8 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                             />
                         </div>
 
-                        <div>
+                        <div className='notes-textarea-house'>
+                            <p>Notes:</p>
                             <textarea
                             value={note}
                             placeholder='Additional information...'
