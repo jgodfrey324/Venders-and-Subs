@@ -8,11 +8,15 @@ const getResults = (results) => ({
 });
 
 // action thunks
-export const getSearchResults = () => async (dispatch) => {
+export const getSearchResults = (search) => async (dispatch) => {
     const response = await fetch("/api/search", {
+        method: "POST",
 		headers: {
 			"Content-Type": "application/json",
 		},
+        body: JSON.stringify({
+            search
+        }),
 	});
 
 	if (response.ok) {
