@@ -27,6 +27,7 @@ export default function NewEntryFormPage ({ entry, entryId }) {
     const [note, setNote] = useState(entry ? entry.notes : '')
     const [errors, setErrors] = useState('')
     const [submitted, setSubmitted] = useState(false);
+    const [menu, setMenu] = useState(true)
 
 
     if (!sessionUser) return <Redirect to='/login' />
@@ -130,9 +131,11 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                             <option value="Wood & Plastics">Wood & Plastics</option>
                         </select>
 
-                        <fieldset>
-                            <legend>Select subcategories:</legend>
-
+                        <div className='sub-cat-house'>
+                            <div className='sub-cat-selection-box'>
+                                <span id='sub-cat-text'>Select sub-categories:</span> <span id='caret' onClick={() => setMenu(!menu)}>{ menu ? '⌄' : '^' }</span>
+                            </div>
+                        <fieldset hidden={menu}>
                             <div>
                                 <input checked={subCategory.includes("Appliances") ? true : false} type="checkbox" value="Appliances" onChange={(e) => {
                                     if (subCategory.includes(e.target.value)) {
@@ -1701,7 +1704,7 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                                 <label htmlFor="windows">Windows</label>
                             </div>
                         </fieldset>
-
+                        </div>
                         <div>
                             <p>*Format phone numbers: xxx-xxx-xxxx</p>
                         </div>
