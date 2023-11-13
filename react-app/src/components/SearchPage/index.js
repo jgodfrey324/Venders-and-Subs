@@ -16,9 +16,10 @@ export default function SearchPage () {
     const [submitted, setSubmitted] = useState(false);
     const [menu, setMenu] = useState(true)
 
-    // useEffect(() => {
-    //     dispatch(getSearchResults())
-    // }, [])
+
+    useEffect(() => {
+        dispatch(getSearchResults({}))
+    }, [])
 
     const submitForm = async (e) => {
         e.preventDefault();
@@ -46,6 +47,9 @@ export default function SearchPage () {
 
         <div className='search-res-house'>
             <button onClick={() => history.push('/entries/new')}>Make new entry</button>
+
+            <h3>Filter results:</h3>
+
             <form onSubmit={submitForm}>
                 <div className='new-entry-form'>
                     <input
@@ -62,7 +66,6 @@ export default function SearchPage () {
 
                     <select
                         value={category}
-                        required
                         onChange={(e) => setCategory(e.target.value)}
                     >
                         <option value="">Select a category</option>
@@ -1658,6 +1661,8 @@ export default function SearchPage () {
                             </div>
                         </fieldset>
                     </div>
+
+                    <button>Search</button>
 
                 </div>
 
