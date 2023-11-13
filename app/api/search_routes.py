@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from flask_login import login_required
-from app.models import Entry, Company
+from app.models import Entry, Company, Category
 
 
 search_routes = Blueprint('search', __name__)
@@ -28,16 +28,24 @@ def search_results():
 
         sub_cat = request_body['subCategory']
 
-        category = request_body['category'].lower()
+        category = request_body['category']
 
         # grabbing all entries
         # entries = Entry.query.all()
-        entries = Entry.query.join(Entry.company).filter(Company.company_name.ilike(f'%{company}%'))
+        entries = []
+        if company:
+            entries = Entry.query.join(Entry.company).filter(Company.company_name.ilike(f'{company}%'))
 
-        print('entries 💖 -> ', entries)
+        # if len(contact_name) > 0:
+        #     entries = Entry.query.filter(Entry.first_name.ilike(f'{first_name}') | Entry.last_name.ilike(f'{first_name}') | Entry.first_name.ilike(f'{last_name}') | Entry.last_name.ilike(f'{first_name}'))
 
-        # if company:
-        #     entries =
+        if category:
+            entries = Entry.query.join(Entry.category).filter(Category.category == category)
+
+        # print('entries 💖 -> ', entries)
+
+        # if len(sub_cat) > 0:
+        #     entries = filter(entries.sub_categories, sub_cat)
         # entries = Entry.query.get(1)
 
         # print('entry company 💖 --> ', entries.company.company_name)
