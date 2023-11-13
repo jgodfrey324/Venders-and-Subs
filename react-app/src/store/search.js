@@ -1,5 +1,6 @@
 // constants
 const GET_RESULTS = 'search/GET_RESULTS';
+// const POST_RESULTS = 'search/'
 
 // actions
 const getResults = (results) => ({
