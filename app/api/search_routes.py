@@ -21,8 +21,6 @@ def search_results():
 
     else:
         company = request_body['companyName'].lower()
-        company_ids = Company.query.filter(Company.company_name.ilike(f'%{company}%'))
-        print('company names -> 💖', company_ids)
 
         contact_name = request_body['contactName'].split(' ')
         first_name = contact_name[0]
@@ -33,8 +31,14 @@ def search_results():
         category = request_body['category'].lower()
 
         # grabbing all entries
-        # entries = Entry.query.filter_by(company_ids = ).all()
-        entries = Entry.query.get(1)
+        # entries = Entry.query.all()
+        entries = Entry.query.join(Entry.company).filter(Company.company_name.ilike(f'%{company}%'))
+
+        print('entries 💖 -> ', entries)
+
+        # if company:
+        #     entries =
+        # entries = Entry.query.get(1)
 
         # print('entry company 💖 --> ', entries.company.company_name)
 
