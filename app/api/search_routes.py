@@ -103,5 +103,7 @@ def search_results():
         for ele in results:
                 new_ele = ele.to_dict()
                 return_obj[new_ele['id']] = new_ele
+    else:
+        return_obj = 'No results'
 
     return return_obj

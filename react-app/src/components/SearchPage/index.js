@@ -17,9 +17,16 @@ export default function SearchPage () {
     const [menu, setMenu] = useState(true)
 
 
+    let searchFromStorage = localStorage.getItem('searchRes') ? JSON.parse(localStorage.getItem('searchRes')) : null
+
+
     useEffect(() => {
-        dispatch(getSearchResults({}))
-    }, [])
+        if (!searchFromStorage) {
+            dispatch(getSearchResults({}))
+        }
+    }, [searchFromStorage])
+
+
 
     const submitForm = async (e) => {
         e.preventDefault();
@@ -32,7 +39,10 @@ export default function SearchPage () {
             companyName
         };
 
-        await dispatch(getSearchResults(formData))
+        const data = await dispatch(getSearchResults(formData))
+        const searchRes = JSON.stringify(Object.values(data))
+
+        localStorage.setItem('searchRes', searchRes)
 
         setCategory('')
         setSubCategory([])
@@ -40,6 +50,7 @@ export default function SearchPage () {
         setCompanyName('')
         setSubmitted(false)
     }
+
 
     if (!sessionUser) return <Redirect to='/login' />
 
@@ -1668,7 +1679,34 @@ export default function SearchPage () {
 
 
             </form>
-            {searchResults.length ? (
+
+            <button onClick={() => {
+                localStorage.removeItem('searchRes')
+                window.location.reload()
+                }}>Clear search</button>
+
+            {searchFromStorage ? (
+                <>
+                    {searchFromStorage.map(item => {
+                        return (
+                            <div key={item.id} className='entry-house'>
+                                <div className='entry-house-buttons'>
+                                    <button onClick={() => history.push(`/entries/${item.id}/update`)}>Update</button>
+                                    <button onClick={() => history.push(`/entries/${item.id}/delete`)}>Delete</button>
+                                </div>
+                                <div className='entry-house-details' onClick={() => history.push(`/entries/${item.id}`)}>
+                                    <h2>{item.company.company_name}</h2>
+                                    <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
+                                    <h3>Contact: </h3>
+                                    <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
+                                    <h3>Notes: </h3>
+                                    <p>{item.notes}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </>
+            ) : (
                 <>
                     {searchResults.map(item => {
                         return (
@@ -1689,7 +1727,7 @@ export default function SearchPage () {
                         )
                     })}
                 </>
-            ) : 'No Results'}
+            )}
         </div>
     )
 }
