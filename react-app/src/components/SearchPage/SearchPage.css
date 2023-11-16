@@ -4,13 +4,29 @@ h1 {
 }
 
 .entry-house {
-    border: 2px solid red;
+    border: 1px solid lightgray;
     margin: 25px 10px;
+    border-radius: 20px;
+    width: 75%;
+    box-shadow: 1px 1px 5px gray;
+
 }
 
-.search-res-house {
-    border: 3px solid blue;
+.search-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.entry-house:hover {
+    background-color: rgb(245, 248, 255);
+    cursor: pointer;
+    /* box-shadow: 1px 1px 5px gray; */
+}
+
+/* .search-res-house {
+    border: 3px solid blue;
+} */
 
 .entry-house-buttons > button {
     cursor: pointer;
@@ -18,6 +34,18 @@ h1 {
 
 .entry-house-details {
     cursor: pointer;
+    margin: 0 20px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.entry-house-details > h3 {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 5px;
+}
+
+.entry-house-details > p {
+    margin-top: 8px;
 }
 
 .filter-box-house {

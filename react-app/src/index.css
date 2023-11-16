@@ -68,3 +68,36 @@ select {
 textarea {
     resize: none;
 }
+
+.update-delete-button {
+    width: 100px;
+    margin-right: 10px;
+    height: 35px;
+    font-size: 15px;
+    cursor: pointer;
+    /* border: 1px solid rgb(63, 96, 106); */
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(212, 222, 255);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.update-delete-button-search {
+    width: 70px;
+    height: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(212, 222, 255);
+    margin: 20px 0 10px 20px
+}
+
+.update-delete-button:hover,
+.update-delete-button-search:hover {
+    color: black;
+    background-color: rgb(189, 201, 237);
+}

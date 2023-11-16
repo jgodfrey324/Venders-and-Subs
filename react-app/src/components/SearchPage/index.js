@@ -1695,49 +1695,52 @@ export default function SearchPage () {
                 window.location.reload()
                 }}>Clear search</button>
 
-            {searchFromStorage ? (
-                <>
-                    {searchFromStorage.map(item => {
-                        return (
-                            <div key={item.id} className='entry-house'>
-                                <div className='entry-house-buttons'>
-                                    <button onClick={() => history.push(`/entries/${item.id}/update`)}>Update</button>
-                                    <button onClick={() => history.push(`/entries/${item.id}/delete`)}>Delete</button>
+            <div className='search-items'>
+                {searchFromStorage ? (
+                    <>
+                        {searchFromStorage.map(item => {
+                            return (
+                                <div key={item.id} className='entry-house'>
+                                    <div className='entry-house-buttons'>
+                                        <button className='update-delete-button-search' onClick={() => history.push(`/entries/${item.id}/update`)}>Update</button>
+                                        <button className='update-delete-button-search' onClick={() => history.push(`/entries/${item.id}/delete`)}>Delete</button>
+                                    </div>
+                                    <div className='entry-house-details' onClick={() => history.push(`/entries/${item.id}`)}>
+                                        <h2>{item.company.company_name}</h2>
+                                        <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
+                                        <h3>Contact: </h3>
+                                        <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
+                                        <h3>Notes: </h3>
+                                        <p>{item.notes}</p>
+                                    </div>
                                 </div>
-                                <div className='entry-house-details' onClick={() => history.push(`/entries/${item.id}`)}>
-                                    <h2>{item.company.company_name}</h2>
-                                    <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
-                                    <h3>Contact: </h3>
-                                    <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
-                                    <h3>Notes: </h3>
-                                    <p>{item.notes}</p>
+                            )
+                        })}
+                    </>
+                ) : (
+                    <>
+                        {searchResults.map(item => {
+                            return (
+                                <div key={item.id} className='entry-house'>
+                                    <div className='entry-house-buttons'>
+                                        <button className='update-delete-button-search' onClick={() => history.push(`/entries/${item.id}/update`)}>Update</button>
+                                        <button className='update-delete-button-search' onClick={() => history.push(`/entries/${item.id}/delete`)}>Delete</button>
+                                    </div>
+                                    <div className='entry-house-details' onClick={() => history.push(`/entries/${item.id}`)}>
+                                        <h2>{item.company.company_name}</h2>
+                                        <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
+                                        <h3>Contact: </h3>
+                                        <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
+                                        <h3>Notes: </h3>
+                                        <p>{item.notes}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })}
-                </>
-            ) : (
-                <>
-                    {searchResults.map(item => {
-                        return (
-                            <div key={item.id} className='entry-house'>
-                                <div className='entry-house-buttons'>
-                                    <button onClick={() => history.push(`/entries/${item.id}/update`)}>Update</button>
-                                    <button onClick={() => history.push(`/entries/${item.id}/delete`)}>Delete</button>
-                                </div>
-                                <div className='entry-house-details' onClick={() => history.push(`/entries/${item.id}`)}>
-                                    <h2>{item.company.company_name}</h2>
-                                    <p><span>{item.location.city}</span>, <span>{item.location.state}</span> <span>{item.location.zip}</span></p>
-                                    <h3>Contact: </h3>
-                                    <p><span>{item.contact.first_name} {item.contact.last_name}</span> --- <span>{item.contact.phone_number}</span></p>
-                                    <h3>Notes: </h3>
-                                    <p>{item.notes}</p>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </>
-            )}
+                            )
+                        })}
+                    </>
+                )}
+            </div>
+
         </div>
     )
 }
