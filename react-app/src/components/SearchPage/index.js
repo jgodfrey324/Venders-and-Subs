@@ -1690,7 +1690,7 @@ export default function SearchPage () {
 
 
 
-            <button onClick={() => {
+            <button className='go-back-button' onClick={() => {
                 localStorage.removeItem('searchRes')
                 window.location.reload()
                 }}>Clear search</button>
