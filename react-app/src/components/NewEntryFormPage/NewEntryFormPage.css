@@ -1,26 +1,62 @@
 .new-entry-form-house {
-    border: 3px solid green;
+    /* border: 3px solid green; */
+    margin: 20px;
 }
 
 .new-entry-form {
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    width: 75%;
+    width: 100%;
+
+    /* padding-right: 20px; */
 }
 
-.new-entry-form > button {
-    margin-top: 30px;
-    width: 15%;
-    cursor: pointer;
+.new-entry-form-house > h3 {
+    /* margin-left: 15px; */
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
 }
 
-.new-entry-form > input {
+.contact-house > p,
+.location-house > p,
+.notes-textarea-house > p {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+    padding: 2px;
+}
+
+#format-phone-text > p {
+    color: darkblue;
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+.new-entry-form > input,
+.contact-house > input,
+.location-house > input {
     margin: 15px;
     width: 50%;
-    font-size: 16px;
+    font-size: 18px;
     height: 30px;
+}
+
+.city-state-input-house > input {
+    margin: 15px;
+    width: 30%;
+    font-size: 18px;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.contact-house > input,
+.location-house > input {
+    margin-bottom: 0;
 }
 
 .new-entry-form > select {
@@ -28,7 +64,7 @@
     margin-left: 15px;
     /* margin-bottom: 15px; */
     height: 30px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* .contact-house > input {
@@ -36,41 +72,72 @@
 } */
 
 .notes-textarea-house > textarea {
-    width: 80%;
+    width: 50%;
     height: 100px;
+    font-size: 18px;
+    margin: 15px;
 }
 
 #caret {
-    font-size: 30px;
-    margin-left: 5px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
 }
+
+#sub-cat-text {
+    font-size: 18px;
+}
+
+/* .sub-cat-house {
+    width: 50%;
+} */
 
 .sub-cat-selection-box {
     border: 1px solid black;
     width: fit-content;
     /* padding: 5px; */
     margin: 15px;
+    margin-bottom: 0;
+    font-size: 18px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    background-color: rgb(240, 243, 255);
 }
 
-/* .sub-cat-house > fieldset {
+/* .sub-cat-selection-box:focus {
+    border: 1px solid black;
+} */
+
+.sub-cat-house > fieldset {
     height: 200px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    width: 265px;
+    margin-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: rgb(240, 243, 255);
+
 }
 
-.sub-cat-house > fieldset > div {
-    border: 1px solid pink;
+fieldset > div {
+    border-bottom: 1px solid lightgray;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.sub-cat-house > fieldset > div > input {
+fieldset > div > input {
     width: fit-content;
     margin-right: 20px;
 }
 
-fieldset {
-    overflow-y: scroll;
-    width: 50%;
-} */
+fieldset > div > label {
+    font-size: 18px;
+}

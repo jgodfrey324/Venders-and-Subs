@@ -25,13 +25,13 @@ export default function EntryDetail () {
 
     return entry.user ? (
         <div className='details-page-house'>
-            <button onClick={() => history.goBack()}>Go Back</button>
+            <button className='go-back-button' onClick={() => history.goBack()}>Go Back</button>
 
             <div className='entry-detail-house'>
                 <div className='entry-detail-buttons'>
                     <div className='entry-house-buttons'>
-                        <button onClick={() => history.push(`/entries/${entryId}/update`)}>Update</button>
-                        <button onClick={() => history.push(`/entries/${entryId}/delete`)}>Delete</button>
+                        <button className='update-delete-button' onClick={() => history.push(`/entries/${entryId}/update`)}>Update</button>
+                        <button className='update-delete-button' onClick={() => history.push(`/entries/${entryId}/delete`)}>Delete</button>
                     </div>
                 </div>
                 <p id='created-by-tag'>Entry created by {entry.user.first_name}</p>
