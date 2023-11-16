@@ -4,6 +4,14 @@
 * {
     font-family: 'Abril Fatface', serif;
     font-family: 'Roboto', sans-serif;
+    /* background: url(https://imgur.com/MSxDigH); */
+}
+
+img {
+    z-index: -2;
+    position: fixed;
+    scale: 1.25;
+    opacity: 0.65;
 }
 
 .go-back-button {
@@ -70,6 +78,7 @@ select {
     border-radius: 5px;
     border: 1px solid lightgray;
     background-color: rgb(240, 243, 255);
+    /* background-color: white; */
 }
 
 textarea {
