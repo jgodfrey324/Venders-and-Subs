@@ -44,7 +44,7 @@ export default function EntryDetail () {
                 </div>
 
                 <h3>Sub-categories:</h3>
-                <div className='sub-cat-house'>
+                <div className='detail-sub-cat-house'>
                     {entry.sub_categories.map(cat => {
                         return (
                             <p key={cat}>{cat}</p>

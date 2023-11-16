@@ -48,7 +48,7 @@
 }
 
 .categories-house,
-.sub-cat-house,
+.detail-sub-cat-house,
 .detail-location-house,
 .detail-contact-house,
 .notes-house {
@@ -62,7 +62,7 @@
 }
 
 .categories-house > p,
-.sub-cat-house > p,
+.detail-sub-cat-house > p,
 .detail-location-house > p,
 .detail-contact-house > p,
 .notes-house > p {
