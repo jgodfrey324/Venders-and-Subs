@@ -128,7 +128,7 @@ h1 {
     }
 
     .filter-options-house > input {
-        margin: 8px 2px;
+        margin: 8px 0;
         width: 95%;
         font-size: 18px;
         padding: 5px;
@@ -141,5 +141,14 @@ h1 {
         width: 90%;
         box-shadow: 1px 1px 5px gray;
         background-color: white;
+    }
+
+    .filter-options-house > select {
+        margin: 8px 15px;
+        margin-bottom: 0;
+        margin-left: 0;
+        height: 30px;
+        font-size: 18px;
+        /* padding: 5px; */
     }
 }
