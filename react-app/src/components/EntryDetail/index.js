@@ -35,13 +35,16 @@ export default function EntryDetail () {
                     </div>
                 </div>
                 <p id='created-by-tag'>Entry created by {entry.user.first_name}</p>
+
                 <h1>{entry.company.company_name}</h1>
+
+                <h3>Category:</h3>
                 <div className='categories-house'>
-                    <h3>Category:</h3>
                     <p>{entry.category}</p>
                 </div>
-                <div className='sub-cat-house'>
-                    <h3>Sub-categories:</h3>
+
+                <h3>Sub-categories:</h3>
+                <div className='detail-sub-cat-house'>
                     {entry.sub_categories.map(cat => {
                         return (
                             <p key={cat}>{cat}</p>
@@ -50,19 +53,25 @@ export default function EntryDetail () {
                 </div>
 
                 <h3>Location: </h3>
-                <p>{entry.location.city}, {entry.location.state} {entry.location.zip}</p>
-                <p><span>Primary address: </span>{entry.company.address}</p>
-                <p><span>Secondary address: </span>{entry.company.address_2}</p>
+                <div className='detail-location-house'>
+                    <p>{entry.location.city}, {entry.location.state} {entry.location.zip}</p>
+                    <p><span>Primary address: </span>{entry.company.address}</p>
+                    <p><span>Secondary address: </span>{entry.company.address_2}</p>
+                </div>
 
                 <h3>Contact: </h3>
-                <p>{entry.contact.first_name} {entry.contact.last_name}</p>
-                <p>Email: {entry.contact.email}</p>
-                <p><span>Primary phone: </span>{entry.contact.phone_number}</p>
-                <p><span>Secondary phone: </span>{entry.contact.cell_number}</p>
-                <p><span>Fax Number: </span>{entry.contact.fax_number}</p>
+                <div className='detail-contact-house'>
+                    <p>{entry.contact.first_name} {entry.contact.last_name}</p>
+                    <p><span>Email: </span>{entry.contact.email}</p>
+                    <p><span>Primary phone: </span>{entry.contact.phone_number}</p>
+                    <p><span>Secondary phone: </span>{entry.contact.cell_number}</p>
+                    <p><span>Fax Number: </span>{entry.contact.fax_number}</p>
+                </div>
 
                 <h3>Notes:</h3>
-                <p>{entry.notes}</p>
+                <div className='notes-house'>
+                    <p>{entry.notes}</p>
+                </div>
             </div>
         </div>
     ) : null
