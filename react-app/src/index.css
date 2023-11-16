@@ -10,9 +10,11 @@
 img {
     z-index: -2;
     position: fixed;
-    scale: 1.25;
+    scale: 2.65;
     opacity: 0.65;
+    object-fit: cover;
 }
+
 
 .go-back-button {
     margin-left: 15px;
@@ -134,5 +136,22 @@ textarea {
         /* background-color: rgb(212, 222, 255); */
         /* font-weight: bold; */
         background-color: white;
+    }
+
+    img {
+        z-index: -2;
+        position: fixed;
+        scale: 1.2;
+        opacity: 0.65;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 2570px) {
+    img {
+        z-index: -2;
+        position: fixed;
+        scale: 4;
+        opacity: 0.65;
     }
 }

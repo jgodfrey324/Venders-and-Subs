@@ -79,4 +79,27 @@
         border-bottom: 1px solid lightgray;
         font-size: 28px;
     }
+
+    .categories-house,
+    .detail-sub-cat-house,
+    .detail-location-house,
+    .detail-contact-house,
+    .notes-house {
+        border: 1px solid lightgray;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        /* background-color: rgb(240, 243, 255); */
+        background-color: white;
+        margin-bottom: 30px;
+    }
+
+    .categories-house > p,
+    .detail-sub-cat-house > p,
+    .detail-location-house > p,
+    .detail-contact-house > p,
+    .notes-house > p {
+        font-size: 16px;
+    }
 }
