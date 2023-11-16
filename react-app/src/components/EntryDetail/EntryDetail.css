@@ -27,26 +27,6 @@
     margin-top: 0;
 }
 
-.update-delete-button {
-    width: 100px;
-    margin-right: 10px;
-    height: 35px;
-    font-size: 15px;
-    cursor: pointer;
-    /* border: 1px solid rgb(63, 96, 106); */
-    border: 1px solid black;
-    border-radius: 5px;
-    color: black;
-    background-color: rgb(212, 222, 255);
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.update-delete-button:hover {
-    color: black;
-    background-color: rgb(189, 201, 237);
-}
-
 .categories-house,
 .detail-sub-cat-house,
 .detail-location-house,
