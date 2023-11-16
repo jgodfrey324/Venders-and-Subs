@@ -54,7 +54,7 @@ export default function EntryDetail () {
 
                 <h3>Location: </h3>
                 <div className='detail-location-house'>
-                    <p>{entry.location.city}, {entry.location.state} {entry.location.zip}</p>
+                    <p>{entry.location.city} , {entry.location.state}<span> </span>{entry.location.zip}</p>
                     <p><span>Primary address: </span>{entry.company.address}</p>
                     <p><span>Secondary address: </span>{entry.company.address_2}</p>
                 </div>
