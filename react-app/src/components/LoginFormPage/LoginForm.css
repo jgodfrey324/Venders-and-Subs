@@ -1,19 +1,25 @@
-form {
+.login-container > form {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin: 20px;
 }
 
-label {
+.login-container > form > label {
     margin: 10px 0;
+    font-size: 20px;
 }
 
-input {
-    height: 25px;
+.login-container > form > label > input {
+    height: 35px;
     margin-left: 10px;
-    width: 200px;
-    font-size: 16px;
+    width: 400px;
+    font-size: 20px;
 }
 
 .login-container {
@@ -21,4 +27,39 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.login-container > h1 {
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+.login-button {
+    display: flex;
+    /* border: 1px solid red; */
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+}
+
+@media (max-width: 430px) {
+    .login-container > form {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    .login-container > form > label > input {
+        height: 35px;
+        /* margin-right: 10px; */
+        width: 195px;
+        font-size: 18px;
+    }
+
 }

@@ -37,7 +37,8 @@
     padding: 10px;
     border-radius: 5px;
     padding-left: 50px;
-    background-color: rgb(240, 243, 255);
+    /* background-color: rgb(240, 243, 255); */
+    background-color: white;
     margin-bottom: 30px;
 }
 
@@ -59,4 +60,46 @@
 .entry-detail-house > h3 {
     font-size: 20px;
     margin-bottom: 0;
+}
+
+
+@media (max-width: 430px) {
+    .entry-detail-house {
+        /* border: 2px solid orange; */
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 5px;
+        /* padding-left: 10%; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .entry-detail-house > h1 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+        font-size: 28px;
+    }
+
+    .categories-house,
+    .detail-sub-cat-house,
+    .detail-location-house,
+    .detail-contact-house,
+    .notes-house {
+        border: 1px solid lightgray;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        /* background-color: rgb(240, 243, 255); */
+        background-color: white;
+        margin-bottom: 30px;
+    }
+
+    .categories-house > p,
+    .detail-sub-cat-house > p,
+    .detail-location-house > p,
+    .detail-contact-house > p,
+    .notes-house > p {
+        font-size: 16px;
+    }
 }

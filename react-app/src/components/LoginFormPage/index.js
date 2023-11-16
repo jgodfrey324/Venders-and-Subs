@@ -23,6 +23,8 @@ function LoginFormPage() {
 
   return (
     <div className="login-container">
+      <img alt='daisy-wallpaper' src='https://i.imgur.com/MSxDigH.jpg' />
+
       <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         <ul>
@@ -48,7 +50,9 @@ function LoginFormPage() {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <div className="login-button">
+          <button className='update-add-entry-button' type="submit">Log In</button>
+        </div>
       </form>
     </div>
   );
