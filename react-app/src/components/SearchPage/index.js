@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
 import { getSearchResults } from '../../store/search';
+import { getAllEntries } from '../../store/entries';
 import "./SearchPage.css"
 
 export default function SearchPage () {
@@ -9,6 +10,7 @@ export default function SearchPage () {
     const history = useHistory()
 	const sessionUser = useSelector(state => state.session.user);
     const searchResults = Object.values(useSelector(state => state.searchResults));
+    const entries = useSelector(state => state.entries);
     const [category, setCategory] = useState('');
     const [subCategory, setSubCategory] = useState([]);
     const [contactName, setContactName] = useState('');
@@ -24,6 +26,7 @@ export default function SearchPage () {
         if (!searchFromStorage) {
             dispatch(getSearchResults({}))
         }
+
     }, [searchFromStorage])
 
 
