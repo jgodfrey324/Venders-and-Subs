@@ -1,4 +1,11 @@
 /* TODO Add site wide styles */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    font-family: 'Abril Fatface', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
 .go-back-button {
     margin-left: 15px;
     width: fit-content;

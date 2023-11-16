@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect, useHistory, useParams } from 'react-router-dom';
 import { deleteEntry } from '../../store/entries';
-// import "./SearchPage.css"
+import "./EntryDelete.css"
 
 export default function EntryDelete () {
     const urlParam = useParams()
@@ -14,13 +14,15 @@ export default function EntryDelete () {
     if (!sessionUser) return <Redirect to='/login' />
 
     return (
-        <div className='entry-update-house'>
-            <p>Do you wish to delete this entry?</p>
-            <button onClick={() => {
-                dispatch(deleteEntry(entryId))
-                history.push('/')
-            }}>Yes, delete</button>
-            <button onClick={() => history.goBack()}>No, go back</button>
+        <div className='entry-delete-house'>
+            <h3>Do you wish to delete this entry?</h3>
+            <div className='delete-buttons'>
+                <button onClick={() => {
+                    dispatch(deleteEntry(entryId))
+                    history.push('/')
+                }}>Yes, delete</button>
+                <button onClick={() => history.goBack()}>No, go back</button>
+            </div>
         </div>
     )
 }

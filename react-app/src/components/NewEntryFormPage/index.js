@@ -1722,6 +1722,12 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                             onChange={(e) => setContactName(e.target.value)}
                             />
 
+                            <input
+                            value={email}
+                            placeholder='Email'
+                            onChange={(e) => setEmail(e.target.value)}
+                            />
+
                             <div id='format-phone-text'>
                                 <p>* Format phone numbers: xxx-xxx-xxxx</p>
                             </div>
@@ -1737,12 +1743,6 @@ export default function NewEntryFormPage ({ entry, entryId }) {
                             value={secondaryPhone}
                             placeholder='Secondary phone'
                             onChange={(e) => setSecondaryPhone(e.target.value)}
-                            />
-
-                            <input
-                            value={email}
-                            placeholder='Email'
-                            onChange={(e) => setEmail(e.target.value)}
                             />
 
                             <input
