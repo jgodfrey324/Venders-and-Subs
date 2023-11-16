@@ -147,7 +147,16 @@ textarea {
     }
 }
 
-@media (min-width: 2570px) {
+@media (min-width: 431px) {
+    img {
+        z-index: -2;
+        position: fixed;
+        scale: 2;
+        opacity: 0.65;
+    }
+}
+
+@media (min-width: 2200px) {
     img {
         z-index: -2;
         position: fixed;
