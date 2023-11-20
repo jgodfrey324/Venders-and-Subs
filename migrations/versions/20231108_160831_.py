@@ -8,6 +8,11 @@ Create Date: 2023-11-08 16:08:31.587239
 from alembic import op
 import sqlalchemy as sa
 
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
+
+
 
 # revision identifiers, used by Alembic.
 revision = 'ac600eea8b96'
@@ -24,12 +29,16 @@ def upgrade():
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('category')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE categories SET SCHEMA {SCHEMA};")
     op.create_table('cities',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('city', sa.String(length=20), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('city')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE cities SET SCHEMA {SCHEMA};")
     op.create_table('companies',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('company_name', sa.String(length=50), nullable=False),
@@ -38,24 +47,32 @@ def upgrade():
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('company_name')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE companies SET SCHEMA {SCHEMA};")
     op.create_table('lists',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('list', sa.Integer(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('list')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE lists SET SCHEMA {SCHEMA};")
     op.create_table('states',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('state', sa.String(length=20), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('state')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE states SET SCHEMA {SCHEMA};")
     op.create_table('sub_categories',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('sub_category', sa.String(length=50), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('sub_category')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE sub_categories SET SCHEMA {SCHEMA};")
     op.create_table('users',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('first_name', sa.String(length=20), nullable=False),
@@ -65,12 +82,16 @@ def upgrade():
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
     op.create_table('zips',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('zip_code', sa.String(length=5), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('zip_code')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE zips SET SCHEMA {SCHEMA};")
     op.create_table('entries',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('first_name', sa.String(length=50), nullable=False),
@@ -96,6 +117,8 @@ def upgrade():
     sa.ForeignKeyConstraint(['zip_id'], ['zips.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE entries SET SCHEMA {SCHEMA};")
     op.create_table('entries_sub_categories',
     sa.Column('entry_id', sa.Integer(), nullable=False),
     sa.Column('sub_category_id', sa.Integer(), nullable=False),
@@ -103,7 +126,12 @@ def upgrade():
     sa.ForeignKeyConstraint(['sub_category_id'], ['sub_categories.id'], ),
     sa.PrimaryKeyConstraint('entry_id', 'sub_category_id')
     )
+    if environment == "production":
+            op.execute(f"ALTER TABLE entries_sub_categories SET SCHEMA {SCHEMA};")
     # ### end Alembic commands ###
+        
+     
+
 
 
 def downgrade():
