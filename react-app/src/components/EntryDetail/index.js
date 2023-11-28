@@ -25,7 +25,7 @@ export default function EntryDetail () {
 
     return entry.user ? (
         <div className='details-page-house'>
-            <img alt='daisy-wallpaper' src='https://i.imgur.com/MSxDigH.jpg' />
+            {/* <img alt='mountain-view' src='https://imgur.com/zpFRrxY' /> */}
 
             <button className='go-back-button' onClick={() => history.goBack()}>Go Back</button>
 

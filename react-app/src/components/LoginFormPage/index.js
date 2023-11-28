@@ -23,7 +23,7 @@ function LoginFormPage() {
 
   return (
     <div className="login-container">
-      <img alt='daisy-wallpaper' src='https://i.imgur.com/MSxDigH.jpg' />
+      {/* <img alt='mountain-view' src='https://i.imgur.com/zpFRrxY.jpg' /> */}
 
       <h1>Log In</h1>
       <form onSubmit={handleSubmit}>

@@ -7,12 +7,8 @@
     /* background: url(https://imgur.com/MSxDigH); */
 }
 
-img {
-    z-index: -2;
-    position: fixed;
-    scale: 2.65;
-    opacity: 0.65;
-    object-fit: cover;
+body {
+    background-color: rgb(243, 249, 253);
 }
 
 
@@ -141,8 +137,9 @@ textarea {
     img {
         z-index: -2;
         position: fixed;
-        scale: 1.2;
-        opacity: 0.65;
+        top: 250px;
+        scale: 2;
+        opacity: 0.25;
         object-fit: cover;
     }
 }
@@ -151,16 +148,28 @@ textarea {
     img {
         z-index: -2;
         position: fixed;
-        scale: 2;
-        opacity: 0.65;
+        top: 350px;
+        scale: 3;
+        opacity: 0.25;
     }
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 2200px) and (max-height: 1500px) {
     img {
         z-index: -2;
         position: fixed;
-        scale: 4;
-        opacity: 0.65;
+        top: 700px;
+        scale: 4.5;
+        opacity: 0.25;
+    }
+}
+
+@media (min-height: 1501px) and (min-width: 2200px) {
+    img {
+        z-index: -2;
+        position: fixed;
+        top: 1200px;
+        scale: 7;
+        opacity: 0.25;
     }
 }
