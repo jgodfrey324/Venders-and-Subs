@@ -60,7 +60,7 @@ export default function SearchPage () {
     return (
 
         <div className='search-res-house'>
-            <img alt='daisy-wallpaper' src='https://i.imgur.com/MSxDigH.jpg' />
+            {/* <img alt='mountain-view' src='https://i.imgur.com/zpFRrxY.jpg' /> */}
             <button className='go-back-button' onClick={() => history.push('/entries/new')}>Make new entry</button>
 
             <div className='filter-box-house'>

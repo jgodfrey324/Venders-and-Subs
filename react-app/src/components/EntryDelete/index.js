@@ -15,7 +15,7 @@ export default function EntryDelete () {
 
     return (
         <div className='entry-delete-house'>
-            <img alt='daisy-wallpaper' src='https://i.imgur.com/MSxDigH.jpg' />
+            {/* <img alt='moutain-view' src='https://imgur.com/zpFRrxY' /> */}
 
             <h3>Do you wish to delete this entry?</h3>
             <div className='delete-buttons'>
