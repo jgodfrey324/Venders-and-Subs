@@ -19,8 +19,9 @@ h1 {
 }
 
 .entry-house:hover {
-    background-color: rgb(243, 248, 255);
+    /* background-color: rgb(243, 248, 255); */
     cursor: pointer;
+    background-color: rgb(243, 243, 243);
     /* box-shadow: 1px 1px 5px gray; */
 }
 
@@ -106,7 +107,7 @@ h1 {
 
 .search-box-button:hover {
     color: black;
-    background-color: rgb(189, 201, 237);
+    background-color: rgb(199, 209, 240);
 }
 
 .search-box-button-house {
