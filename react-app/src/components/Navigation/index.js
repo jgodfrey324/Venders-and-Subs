@@ -16,7 +16,7 @@ function Navigation({ isLoaded }){
 		<ul>
 			{isLoaded && sessionUser && (
 				<li>
-					<button onClick={handleLogout}>Logout</button>
+					<button className='go-back-button' onClick={handleLogout}>Logout</button>
 				</li>
 			)}
 		</ul>
