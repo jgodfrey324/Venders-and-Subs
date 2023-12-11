@@ -5,7 +5,7 @@ const ADD_ENTRY = 'entries/ADD_ENTRY';
 const REMOVE_ENTRY = 'entries/REMOVE_ENTRY';
 const PUT_ENTRY = 'entries/PUT_ENTRY';
 
-// console.log('testing')
+console.log('testing')
 
 const getEntries = (entries) => ({
 	type: GET_ENTRIES,
